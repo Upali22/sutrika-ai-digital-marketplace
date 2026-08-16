@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SUTRIKA | Admin Login</title>
+
+
+        <!-- Google Font -->
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet">
+
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+        <!-- Admin CSS -->
+
+        <link rel="stylesheet" href="../CSS/admin.css">
+
+    </head>
+
+
+    <body>
+
+
+        <!-- ==========================================
+         ADMIN LOGIN PAGE
+    =========================================== -->
+
+        <main class="admin-login-page">
+
+
+            <!-- Decorative background -->
+
+            <div class="admin-pattern admin-pattern-one"></div>
+
+            <div class="admin-pattern admin-pattern-two"></div>
+
+
+            <!-- Login Card -->
+
+            <section class="admin-login-card">
+
+
+                <!-- Logo -->
+
+                <div class="admin-login-logo">
+
+                    <div class="admin-logo-diamond">
+
+                        <div class="admin-logo-inner">
+                            S
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Heading -->
+
+                <p class="admin-eyebrow">
+                    SUTRIKA
+                </p>
+
+
+                <h1>
+                    Admin Portal
+                </h1>
+
+
+                <p class="admin-subtitle">
+                    Manage the heritage marketplace
+                </p>
+
+
+                <!-- Gold Divider -->
+
+                <div class="admin-divider">
+
+                    <span></span>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- Login Form -->
+
+                <form id="adminLoginForm" autocomplete="off">
+
+
+                    <!-- Email -->
+
+                    <div class="admin-input-group">
+
+                        <label for="adminEmail">
+                            Email Address
+                        </label>
+
+                        <div class="admin-input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input type="email" id="adminEmail" placeholder="Enter admin email" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="admin-input-group">
+
+                        <label for="adminPassword">
+                            Password
+                        </label>
+
+                        <div class="admin-input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="adminPassword" placeholder="Enter password" required>
+
+                            <button type="button" id="togglePassword" class="password-toggle"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error -->
+
+                    <div id="adminLoginMessage" class="admin-login-message"></div>
+
+
+                    <!-- Login Button -->
+
+                    <button type="submit" class="admin-login-button">
+
+                        <span>
+                            Enter Admin Panel
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- Bottom Text -->
+
+                <p class="admin-secure-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure administrator access
+
+                </p>
+
+
+                <!-- Back to Website -->
+
+                <a href="../HTML/index.html" class="back-to-sutrika">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to SUTRIKA
+
+                </a>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- Admin Login JS -->
+
+        <script src="../JS/admin-login.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SUTRIKA | Admin Dashboard</title>
+
+
+        <!-- Google Fonts -->
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+
+
+        <!-- Font Awesome -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+        <!-- Admin CSS -->
+
+        <link rel="stylesheet" href="../CSS/admin.css">
+
+    </head>
+
+
+    <body>
+
+
+        <!-- ==========================================
+         ADMIN DASHBOARD
+    =========================================== -->
+
+        <div class="admin-dashboard">
+
+
+            <!-- ======================================
+             SIDEBAR
+        ======================================= -->
+
+            <aside class="admin-sidebar">
+
+
+                <!-- Brand -->
+
+                <div class="admin-brand">
+                
+                    <img src="../ASSETS/LOGO/sutrika-icon.png" alt="SUTRIKA Logo" class="admin-brand-logo">
+                
+                    <div>
+                
+                        <h2>SUTRIKA</h2>
+                
+                        <span>
+                            ADMIN PANEL
+                        </span>
+                
+                    </div>
+                
+                </div>
+
+
+                <!-- Navigation -->
+
+                <nav class="admin-navigation">
+
+
+                    <a href="#" class="admin-nav-item active" data-section="dashboard">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+
+
+                    <a href="#" class="admin-nav-item" data-section="products">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <span>Products</span>
+
+                    </a>
+
+
+                    <a href="#" class="admin-nav-item" data-section="orders">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <span>Orders</span>
+
+                    </a>
+
+
+                    <a href="#" class="admin-nav-item" data-section="users">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>Users</span>
+
+                    </a>
+
+
+                    <a href="#" class="admin-nav-item" data-section="custom-requests">
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <span>Custom Requests</span>
+
+                    </a>
+
+
+                </nav>
+
+
+                <!-- Sidebar Bottom -->
+
+                <div class="admin-sidebar-bottom">
+
+                    <a href="../HTML/index.html" class="admin-nav-item">
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <span>View Website</span>
+
+                    </a>
+
+
+                    <button type="button" id="adminLogoutBtn" class="admin-logout">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>Logout</span>
+
+                    </button>
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- ======================================
+             MAIN CONTENT
+        ======================================= -->
+
+            <main class="admin-main">
+
+
+                <!-- Top Bar -->
+
+                <header class="admin-topbar">
+
+
+                    <button type="button" id="adminMenuToggle" class="admin-menu-toggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="admin-page-title">
+
+                        <p>
+                            SUTRIKA ADMINISTRATION
+                        </p>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                    </div>
+
+
+                    <div class="admin-profile">
+
+                        <div class="admin-profile-icon">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong id="adminName">
+                                Sutrika Admin
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </header>
+
+
+
+                <!-- Dashboard Content -->
+
+                <section class="admin-content">
+
+                    <div id="adminDashboardHome">
+
+                   
+
+
+                    <!-- Welcome -->
+
+                    <div class="admin-welcome">
+
+                        <div>
+
+                            <span>
+                                ✦ AUTHENTIC ODIA HERITAGE
+                            </span>
+
+                            <h2>
+                                Welcome back,
+                                <strong id="welcomeAdminName">
+                                    Admin
+                                </strong>
+                            </h2>
+
+                            <p>
+                                Manage SUTRIKA's heritage marketplace,
+                                products, customers and custom creations.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-welcome-symbol">
+
+                            <span>
+                                S
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Statistics -->
+
+                    <div class="admin-stat-grid">
+
+
+                        <!-- Users -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-icon users">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    TOTAL USERS
+                                </span>
+
+                                <strong id="totalUsers">
+                                    —
+                                </strong>
+
+                                <small>
+                                    Registered customers
+                                </small>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- Products -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-icon products">
+
+                                <i class="fa-solid fa-box-open"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PRODUCTS
+                                </span>
+
+                                <strong id="totalProducts">
+                                    —
+                                </strong>
+
+                                <small>
+                                    Marketplace products
+                                </small>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- Orders -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-icon orders">
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    TOTAL ORDERS
+                                </span>
+
+                                <strong id="totalOrders">
+                                    —
+                                </strong>
+
+                                <small>
+                                    Customer orders
+                                </small>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- Custom Requests -->
+
+                        <article class="admin-stat-card">
+
+                            <div class="admin-stat-icon requests">
+
+                                <i class="fa-solid fa-palette"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CUSTOM REQUESTS
+                                </span>
+
+                                <strong id="totalRequests">
+                                    —
+                                </strong>
+
+                                <small>
+                                    Personalised creations
+                                </small>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- Quick Actions -->
+
+                    <section class="admin-section">
+
+
+                        <div class="admin-section-heading">
+
+                            <div>
+
+                                <span>
+                                    MANAGEMENT
+                                </span>
+
+                                <h2>
+                                    Quick Actions
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-action-grid">
+
+
+                            <button class="admin-action-card" data-section="products">
+
+                                <div>
+
+                                    <i class="fa-solid fa-box-open"></i>
+
+                                </div>
+
+                                <span>
+                                    Manage Products
+                                </span>
+
+                                <small>
+                                    Add, edit and organise products
+                                </small>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+
+                            <button class="admin-action-card" data-section="orders">
+
+                                <div>
+
+                                    <i class="fa-solid fa-bag-shopping"></i>
+
+                                </div>
+
+                                <span>
+                                    Manage Orders
+                                </span>
+
+                                <small>
+                                    View and update customer orders
+                                </small>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+
+                            <button class="admin-action-card" data-section="users">
+
+                                <div>
+
+                                    <i class="fa-solid fa-users"></i>
+
+                                </div>
+
+                                <span>
+                                    Manage Users
+                                </span>
+
+                                <small>
+                                    View registered customers
+                                </small>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+
+                            <button class="admin-action-card" data-section="custom-requests">
+
+                                <div>
+
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                                </div>
+
+                                <span>
+                                    Custom Requests
+                                </span>
+
+                                <small>
+                                    Review personalised designs
+                                </small>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- Heritage Quote -->
+
+                    <section class="admin-heritage-card">
+
+                        <div class="admin-heritage-symbol">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <span>
+                                THREADS OF TRADITION
+                            </span>
+
+                            <p>
+                                Preserving Odisha's heritage,
+                                one creation at a time.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <!-- ==========================================
+                     USERS MANAGEMENT
+                ========================================== -->
+                
+                <div id="adminUsersSection" class="admin-management-section">
+                
+                    <div class="admin-management-header">
+                
+                        <div>
+                
+                            <span>
+                                CUSTOMER MANAGEMENT
+                            </span>
+                
+                            <h2>
+                                Users
+                            </h2>
+                
+                            <p>
+                                View and manage registered SUTRIKA customers.
+                            </p>
+                
+                        </div>
+                
+                
+                        <div class="admin-management-count">
+                
+                            <strong id="usersTotalCount">
+                                0
+                            </strong>
+                
+                            <span>
+                                TOTAL USERS
+                            </span>
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- Search -->
+                
+                    <div class="admin-users-toolbar">
+                
+                        <div class="admin-search-box">
+                
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                
+                            <input type="search" id="adminUserSearch" placeholder="Search by name, email or phone..."
+                                autocomplete="off">
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- Users Table -->
+                
+                    <div class="admin-users-table-wrapper">
+                
+                        <table class="admin-users-table">
+                
+                            <thead>
+                
+                                <tr>
+                
+                                    <th>CUSTOMER</th>
+                
+                                    <th>EMAIL</th>
+                
+                                    <th>PHONE</th>
+                
+                                    <th>ROLE</th>
+                
+                                    <th>JOINED</th>
+                
+                                    <th>ACTION</th>
+                
+                                </tr>
+                
+                            </thead>
+                
+                
+                            <tbody id="adminUsersTableBody">
+                
+                                <tr>
+                
+                                    <td colspan="6" class="admin-table-loading">
+                
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                
+                                        Loading customers...
+                
+                                    </td>
+                
+                                </tr>
+                
+                            </tbody>
+                
+                        </table>
+                
+                    </div>
+                
+                
+                    <!-- Empty State -->
+                
+                    <div id="adminUsersEmpty" class="admin-users-empty">
+                
+                        <div>
+                
+                            <i class="fa-solid fa-users"></i>
+                
+                        </div>
+                
+                        <h3>
+                            No users found
+                        </h3>
+                
+                        <p>
+                            Try searching with a different name,
+                            email or phone number.
+                        </p>
+                
+                    </div>
+                
+                </div>
+
+                <!-- ==========================================
+                     PRODUCTS MANAGEMENT
+                ========================================== -->
+                
+                <div id="adminProductsSection" class="admin-management-section">
+                
+                
+                    <!-- Header -->
+                
+                    <div class="admin-management-header">
+                
+                        <div>
+                
+                            <span>
+                                CATALOG MANAGEMENT
+                            </span>
+                
+                            <h2>
+                                Products
+                            </h2>
+                
+                            <p>
+                                Manage SUTRIKA's heritage products.
+                            </p>
+                
+                        </div>
+                
+                
+                        <div class="admin-management-count">
+                
+                            <strong id="productsTotalCount">
+                                0
+                            </strong>
+                
+                            <span>
+                                TOTAL PRODUCTS
+                            </span>
+                
+                        </div>
+                        <button type="button" id="adminAddProductBtn" class="admin-add-product-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Product
+                        </button>
+                
+                    </div>
+                    <!-- ==========================================
+                         ADD PRODUCT FORM
+                    ========================================== -->
+                    
+                    <div id="adminProductForm" class="admin-product-form">
+                    
+                        <div class="admin-product-form-header">
+                    
+                            <div>
+                    
+                                <span>
+                                    PRODUCT CATALOG
+                                </span>
+                    
+                                <h3>
+                                    Add New Product
+                                </h3>
+                    
+                            </div>
+                    
+                            <button type="button" id="adminCloseProductForm" class="admin-close-product-form">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                    
+                        </div>
+                    
+                    
+                        <form id="adminProductCreateForm">
+                    
+                    
+                            <!-- PRODUCT NAME -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductName">
+                                    Product Name
+                                </label>
+                    
+                                <input type="text" id="adminProductName" placeholder="Enter product name" maxlength="150" required>
+                    
+                            </div>
+                    
+                    
+                            <!-- CATEGORY -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductCategory">
+                                    Category
+                                </label>
+                    
+                                <select id="adminProductCategory" required>
+                    
+                                    <option value="">
+                                        Select Category
+                                    </option>
+                    
+                                    <option value="1">
+                                        Women Collection
+                                    </option>
+                    
+                                    <option value="2">
+                                        Men Collection
+                                    </option>
+                    
+                                    <option value="3">
+                                        Handicrafts
+                                    </option>
+                    
+                                </select>
+                    
+                            </div>
+                    
+                    
+                            <!-- PRICE -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductPrice">
+                                    Price
+                                </label>
+                    
+                                <input type="number" id="adminProductPrice" placeholder="Enter price" min="0" step="0.01" required>
+                    
+                            </div>
+                    
+                    
+                            <!-- STOCK -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductStock">
+                                    Stock
+                                </label>
+                    
+                                <input type="number" id="adminProductStock" placeholder="Enter stock quantity" min="0" step="1" value="0">
+                    
+                            </div>
+                    
+                    
+                            <!-- IMAGE -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductImage">
+                                    Image Path
+                                </label>
+                    
+                                <input type="text" id="adminProductImage" placeholder="Example: ASSETS/IMAGES/product.jpg">
+                    
+                                <small>
+                                    Enter the existing image path from your project.
+                                </small>
+                    
+                            </div>
+                    
+                    
+                            <!-- ARTISAN -->
+                    
+                            <div class="admin-form-field">
+                    
+                                <label for="adminProductArtisan">
+                                    Artisan Name
+                                </label>
+                    
+                                <input type="text" id="adminProductArtisan" placeholder="Enter artisan name" maxlength="100">
+                    
+                            </div>
+                    
+                    
+                            <!-- DESCRIPTION -->
+                    
+                            <div class="admin-form-field admin-form-full">
+                    
+                                <label for="adminProductDescription">
+                                    Description
+                                </label>
+                    
+                                <textarea id="adminProductDescription" placeholder="Enter product description" rows="4"></textarea>
+                    
+                            </div>
+                    
+                    
+                            <!-- ACTIONS -->
+                    
+                            <div class="admin-product-form-actions">
+                    
+                                <button type="button" id="adminCancelProductBtn" class="admin-product-cancel-btn">
+                                    Cancel
+                                </button>
+                    
+                    
+                                <button type="submit" class="admin-product-save-btn">
+                    
+                                    <i class="fa-solid fa-plus"></i>
+                    
+                                    Add Product
+                    
+                                </button>
+                    
+                            </div>
+                    
+                    
+                        </form>
+                    
+                    </div>
+                
+                
+                    <!-- Search -->
+                
+                    <div class="admin-users-toolbar">
+                
+                        <div class="admin-search-box">
+                
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                
+                            <input type="search" id="adminProductSearch" placeholder="Search by product or category..."
+                                autocomplete="off">
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- Products Table -->
+                
+                    <div class="admin-users-table-wrapper">
+                
+                        <table class="admin-users-table">
+                
+                            <thead>
+                
+                                <tr>
+                
+                                    <th>
+                                        PRODUCT
+                                    </th>
+                
+                                    <th>
+                                        CATEGORY
+                                    </th>
+                
+                                    <th>
+                                        PRICE
+                                    </th>
+                
+                                    <th>
+                                        STOCK
+                                    </th>
+                
+                                    <th>
+                                        STATUS
+                                    </th>
+                
+                                    <th>
+                                        ACTION
+                                    </th>
+                
+                                </tr>
+                
+                            </thead>
+                
+                
+                            <tbody id="adminProductsTableBody">
+                
+                                <tr>
+                
+                                    <td colspan="6" class="admin-table-loading">
+                
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                
+                                        Loading products...
+                
+                                    </td>
+                
+                                </tr>
+                
+                            </tbody>
+                
+                        </table>
+                
+                    </div>
+                
+                
+                    <!-- Empty State -->
+                
+                    <div id="adminProductsEmpty" class="admin-users-empty">
+                
+                        <div>
+                
+                            <i class="fa-solid fa-box-open"></i>
+                
+                        </div>
+                
+                        <h3>
+                            No products found
+                        </h3>
+                
+                        <p>
+                            Try searching with a different product name or category.
+                        </p>
+                
+                    </div>
+                
+                
+                </div>
+
+                <!-- ==========================================
+                     ORDERS MANAGEMENT
+                ========================================== -->
+                
+                <div id="adminOrdersSection" class="admin-management-section">
+                
+                
+                    <!-- HEADER -->
+                
+                    <div class="admin-management-header">
+                
+                        <div>
+                
+                            <span>
+                                ORDER MANAGEMENT
+                            </span>
+                
+                            <h2>
+                                Orders
+                            </h2>
+                
+                            <p>
+                                View and manage customer orders.
+                            </p>
+                
+                        </div>
+                
+                
+                        <div class="admin-management-count">
+                
+                            <strong id="ordersTotalCount">
+                                0
+                            </strong>
+                
+                            <span>
+                                TOTAL ORDERS
+                            </span>
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- SEARCH -->
+                
+                    <div class="admin-users-toolbar">
+                
+                        <div class="admin-search-box">
+                
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                
+                            <input type="search" id="adminOrderSearch" placeholder="Search by order ID, customer or email..."
+                                autocomplete="off">
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- ORDERS TABLE -->
+                
+                    <div class="admin-users-table-wrapper">
+                
+                        <table class="admin-users-table">
+                
+                            <thead>
+                
+                                <tr>
+                
+                                    <th>
+                                        ORDER ID
+                                    </th>
+                
+                                    <th>
+                                        CUSTOMER
+                                    </th>
+                
+                                    <th>
+                                        EMAIL
+                                    </th>
+                
+                                    <th>
+                                        TOTAL
+                                    </th>
+                
+                                    <th>
+                                        STATUS
+                                    </th>
+                
+                                    <th>
+                                        DATE
+                                    </th>
+                
+                                    <th>
+                                        ACTION
+                                    </th>
+                
+                                </tr>
+                
+                            </thead>
+                
+                
+                            <tbody id="adminOrdersTableBody">
+                
+                                <tr>
+                
+                                    <td colspan="7" class="admin-table-loading">
+                
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                
+                                        Loading orders...
+                
+                                    </td>
+                
+                                </tr>
+                
+                            </tbody>
+                
+                        </table>
+                
+                    </div>
+                
+                
+                    <!-- EMPTY STATE -->
+                
+                    <div id="adminOrdersEmpty" class="admin-users-empty">
+                
+                        <div>
+                
+                            <i class="fa-solid fa-bag-shopping"></i>
+                
+                        </div>
+                
+                
+                        <h3>
+                            No orders found
+                        </h3>
+                
+                
+                        <p>
+                            Try searching with a different
+                            order ID or customer name.
+                        </p>
+                
+                    </div>
+                
+                
+                </div>
+
+                <!-- ==========================================
+                     CUSTOM REQUESTS MANAGEMENT
+                ========================================== -->
+                
+                <div id="adminRequestsSection" class="admin-management-section">
+                
+                    <!-- HEADER -->
+                    <div class="admin-management-header">
+                
+                        <div>
+                            <span>
+                                PERSONALISATION MANAGEMENT
+                            </span>
+                
+                            <h2>
+                                Custom Requests
+                            </h2>
+                
+                            <p>
+                                Review and manage personalised customer creations.
+                            </p>
+                        </div>
+                
+                        <div class="admin-management-count">
+                
+                            <strong id="requestsTotalCount">
+                                0
+                            </strong>
+                
+                            <span>
+                                TOTAL REQUESTS
+                            </span>
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- SEARCH -->
+                    <div class="admin-users-toolbar">
+                
+                        <div class="admin-search-box">
+                
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                
+                            <input type="search" id="adminRequestSearch" placeholder="Search by request ID, customer or fabric..."
+                                autocomplete="off">
+                
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- REQUESTS TABLE -->
+                    <div class="admin-users-table-wrapper">
+                
+                        <table class="admin-users-table">
+                
+                            <thead>
+                
+                                <tr>
+                
+                                    <th>
+                                        REQUEST ID
+                                    </th>
+                
+                                    <th>
+                                        CUSTOMER
+                                    </th>
+                
+                                    <th>
+                                        FABRIC
+                                    </th>
+                
+                                    <th>
+                                        COLOUR
+                                    </th>
+                
+                                    <th>
+                                        OCCASION
+                                    </th>
+                
+                                    <th>
+                                        STATUS
+                                    </th>
+                
+                                    <th>
+                                        DATE
+                                    </th>
+                
+                                    <th>
+                                        ACTION
+                                    </th>
+                
+                                </tr>
+                
+                            </thead>
+                
+                
+                            <tbody id="adminRequestsTableBody">
+                
+                                <tr>
+                
+                                    <td colspan="8" class="admin-table-loading">
+                
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                
+                                        Loading custom requests...
+                
+                                    </td>
+                
+                                </tr>
+                
+                            </tbody>
+                
+                        </table>
+                
+                    </div>
+                
+                
+                    <!-- EMPTY STATE -->
+                    <div id="adminRequestsEmpty" class="admin-users-empty">
+                
+                        <div>
+                
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                
+                        </div>
+                
+                        <h3>
+                            No custom requests found
+                        </h3>
+                
+                        <p>
+                            Personalised customer requests will appear here.
+                        </p>
+                
+                    </div>
+                
+                </div>
+
+
+                </section>
+
+            </main>
+
+
+        </div>
+
+
+        <!-- Admin JS -->
+
+        <script src="../JS/admin.js"></script>
+
+    </body>
+
+</html>

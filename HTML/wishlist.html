@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            Sutrika | Wishlist
+        </title>
+
+        <link rel="stylesheet" href="../CSS/style-new.css">
+        <link rel="stylesheet" href="../CSS/wishlist.css">
+        <link rel="stylesheet" href="../CSS/header-badges.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    </head>
+
+
+    <body>
+
+
+        <!-- ===========================
+                                HEADER
+                        ============================ -->
+        
+        <header class="header">
+        
+            <div class="container">
+        
+                <nav class="navbar">
+        
+                    <div class="logo">
+        
+                        <a href="index.html">
+        
+                            <img src="../ASSETS/LOGO/sutrika-icon.png" alt="Sutrika Logo">
+        
+                        </a>
+        
+                        <div class="logo-text">
+        
+                            <h2>SUTRIKA</h2>
+        
+                            <p>Threads of Tradition, Powered by Innovation</p>
+        
+                        </div>
+        
+                    </div>
+        
+                    <ul class="nav-links">
+        
+                        <li><a href="index.html">Home</a></li>
+        
+                        <li><a href="collection.html">Collection</a></li>
+        
+                        <li><a href="artisan.html">Artisans</a></li>
+        
+                        <li><a href="guide.html">Sutrika Guide</a></li>
+        
+                        <li><a href="personalise.html">Personalise</a></li>
+        
+                        <li><a href="story.html">Our Story</a></li>
+
+                        <li><a href="contact.html">Get in Touch</a></li>
+        
+                    </ul>
+        
+                    <div class="nav-icons">
+        
+                        <a href="account.html"><i class="fa-solid fa-user"></i></a>
+        
+                        <a class="active" href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+        
+                        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        
+                    </div>
+
+                    <!-- Mobile / Tablet Menu Button -->
+                    <button class="menu-toggle" aria-label="Open navigation menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+        
+                </nav>
+        
+            </div>
+        
+        </header>
+
+
+        <!-- ==========================================
+             WISHLIST HERO DASHBOARD
+        ========================================== -->
+        
+        <section class="wishlist-hero">
+        
+            <!-- Background Pattern -->
+            <div class="wishlist-pattern"></div>
+        
+            <div class="wishlist-hero-content">
+        
+                <!-- TOP ORNAMENT -->
+        
+                <div class="wishlist-ornament">
+        
+                    <span></span>
+        
+                    <i class="fa-solid fa-heart"></i>
+        
+                    <span></span>
+        
+                </div>
+        
+        
+                <!-- SMALL TITLE -->
+        
+                <p class="wishlist-eyebrow">
+                    YOUR CURATED COLLECTION
+                </p>
+        
+        
+                <!-- MAIN TITLE -->
+        
+                <h1>
+                    My Wishlist
+                </h1>
+        
+        
+                <!-- DESCRIPTION -->
+        
+                <p class="wishlist-subtitle">
+                    Treasures you've saved for another moment.
+                </p>
+        
+        
+                <!-- ======================================
+                     WISHLIST DASHBOARD CARDS
+                ======================================= -->
+        
+                <div class="wishlist-dashboard">
+        
+        
+                    <!-- CARD 1 -->
+        
+                    <div class="wishlist-dashboard-card">
+        
+                        <div class="wishlist-dashboard-icon">
+        
+                            <i class="fa-solid fa-heart"></i>
+        
+                        </div>
+        
+        
+                        <div class="wishlist-dashboard-info">
+        
+                            <span>
+                                SAVED ITEMS
+                            </span>
+        
+                            <strong id="wishlistHeroCount">
+                                0
+                            </strong>
+        
+                            <small>
+                                Your favourite treasures
+                            </small>
+        
+                        </div>
+        
+                    </div>
+        
+        
+                    <!-- CARD 2 -->
+        
+                    <div class="wishlist-dashboard-card">
+        
+                        <div class="wishlist-dashboard-icon">
+        
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+        
+                        </div>
+        
+        
+                        <div class="wishlist-dashboard-info">
+        
+                            <span>
+                                TOTAL VALUE
+                            </span>
+        
+                            <strong id="wishlistHeroValue">
+                                ₹0
+                            </strong>
+        
+                            <small>
+                                Value of saved pieces
+                            </small>
+        
+                        </div>
+        
+                    </div>
+        
+        
+                    <!-- CARD 3 -->
+        
+                    <div class="wishlist-dashboard-card wishlist-cart-card" onclick="window.location.href='cart.html'">
+        
+                        <div class="wishlist-dashboard-icon">
+        
+                            <i class="fa-solid fa-bag-shopping"></i>
+        
+                        </div>
+        
+        
+                        <div class="wishlist-dashboard-info">
+        
+                            <span>
+                                MOVE TO CART
+                            </span>
+        
+                            <strong>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </strong>
+        
+                            <small>
+                                Add your favourites to cart
+                            </small>
+        
+                        </div>
+        
+                    </div>
+        
+        
+                </div>
+        
+            </div>
+        
+        </section>
+        
+        
+        <!-- ==========================================
+             WISHLIST PRODUCTS
+        ========================================== -->
+        
+        <section class="wishlist-products-section">
+        
+            <div class="container">
+        
+                <div id="wishlistItems">
+        
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+    <!-- ==========================================
+                                        FOOTER
+                    ========================================== -->
+    
+    <footer class="footer">
+    
+        <div class="container">
+    
+            <div class="footer-grid">
+    
+                <!-- ABOUT -->
+    
+                <div class="footer-column">
+    
+                    <h3>SUTRIKA</h3>
+    
+                    <p>
+    
+                        Threads of Tradition, Powered by Innovation.
+    
+                        Discover authentic Odisha Handloom and Handicrafts
+                        while empowering local artisans.
+    
+                    </p>
+    
+                    <div class="social-icons">
+    
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+    
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+    
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+                <!-- QUICK LINKS -->
+    
+                <div class="footer-column">
+    
+                    <h3>Quick Links</h3>
+    
+                    <ul>
+    
+                        <li><a href="index.html">Home</a></li>
+    
+                        <li><a href="collection.html">Collections</a></li>
+    
+                        <li><a href="artisan.html">Artisans</a></li>
+    
+                        <li><a href="guide.html">Sutrika Guide</a></li>
+    
+                        <li><a href="personalise.html">Personalise</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CUSTOMER -->
+    
+                <div class="footer-column">
+    
+                    <h3>Customer Support</h3>
+    
+                    <ul>
+    
+                        <li><a href="contact.html">Contact Us</a></li>
+    
+                        <li><a href="#">FAQs</a></li>
+    
+                        <li><a href="#">Shipping Policy</a></li>
+    
+                        <li><a href="#">Privacy Policy</a></li>
+    
+                        <li><a href="#">Terms & Conditions</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CONTACT -->
+    
+                <div class="footer-column">
+    
+                    <h3>Contact</h3>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-location-dot"></i>
+    
+                        Bhubaneswar, Odisha, India
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-phone"></i>
+    
+                        +91 XXXXX XXXXX
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-envelope"></i>
+    
+                        support@sutrika.in
+    
+                    </p>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+            <hr>
+    
+    
+    
+            <div class="footer-bottom">
+    
+                <p>
+    
+                    © 2026 Sutrika. All Rights Reserved.
+    
+                </p>
+    
+                <p>
+    
+                    Designed with ❤️ to celebrate Odisha's Heritage.
+    
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+
+
+        <script src="../JS/script-new.js"></script>
+        <script src="../JS/wishlist.js"></script>
+        <script src="../JS/header-badges.js"></script>
+        <script src="../JS/mobile-menu.js"></script>
+
+
+    </body>
+
+</html>

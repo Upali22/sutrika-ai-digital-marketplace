@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <title>
+            Sutrika | User Account
+        </title>
+
+
+        <link rel="stylesheet" href="../CSS/style-new.css">
+        <link rel="stylesheet" href="../CSS/account.css">
+        <link rel="stylesheet" href="../CSS/header-badges.css">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    </head>
+
+
+    <body>
+
+            <!-- ===========================
+                        HEADER
+                ============================ -->
+            
+            <header class="header">
+            
+                <div class="container">
+            
+                    <nav class="navbar">
+            
+                        <div class="logo">
+            
+                            <a href="index.html">
+            
+                                <img src="../ASSETS/LOGO/sutrika-icon.png" alt="Sutrika Logo">
+            
+                            </a>
+            
+                            <div class="logo-text">
+            
+                                <h2>SUTRIKA</h2>
+            
+                                <p>Threads of Tradition, Powered by Innovation</p>
+            
+                            </div>
+            
+                        </div>
+            
+                        <ul class="nav-links">
+            
+                            <li><a href="index.html">Home</a></li>
+            
+                            <li><a href="collection.html">Collection</a></li>
+            
+                            <li><a href="artisan.html">Artisans</a></li>
+            
+                            <li><a href="guide.html">Sutrika Guide</a></li>
+            
+                            <li><a href="personalise.html">Personalise</a></li>
+            
+                            <li><a href="story.html">Our Story</a></li>
+
+                            <li><a href="contact.html">Get in Touch</a></li>
+            
+                        </ul>
+            
+                        <div class="nav-icons">
+            
+                            <a href="account.html"><i class="fa-solid fa-user"></i></a>
+            
+                            <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+            
+                            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            
+                        </div>
+
+                        <!-- Mobile / Tablet Menu Button -->
+                        <button class="menu-toggle" aria-label="Open navigation menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+            
+                    </nav>
+            
+                </div>
+            
+            </header>
+
+            <!-- =====================================
+                    SUTRIKA ACCOUNT EXPERIENCE
+            ===================================== -->
+
+            <!-- =====================================
+                        ACCOUNT HERO
+            ===================================== -->
+            
+            <section class="account-hero">
+            
+                <div class="account-bg"></div>
+            
+                <div class="account-overlay"></div>
+            
+                <div class="account-hero-content">
+            
+                    <span class="hero-tag">
+                        👋 Welcome Back,
+                    </span>
+            
+                    <!-- Dynamic Username -->
+                    <h1 id="welcomeUser">
+                        Guest
+                    </h1>
+            
+                    <p>
+                        Access your wishlist, saved collections, personalised creations,
+                        recent orders, and account settings — all from your own heritage
+                        dashboard.
+                    </p>
+            
+                    <div class="hero-buttons">
+
+                        <button class="login-hero-btn" id="heroLoginBtn">
+                        
+                            Login / Create Account
+                        
+                        </button>
+            
+                        <a href="#account-space" class="journey-btn">
+                            Go To Dashboard
+                        </a>
+            
+                        <a href="collection.html" class="outline-btn">
+                            Continue Shopping
+                        </a>
+            
+                    </div>
+            
+                </div>
+            
+            </section>
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- =====================================
+                    ACCOUNT SPACE
+            ===================================== -->
+            
+            
+            <section class="identity-section" id="account-space">
+            
+            
+                <div class="container">
+            
+            
+                    <div class="identity-card">
+            
+            
+            
+            
+            
+                        <!-- PROFILE -->
+                            <div class="profile-area">
+                            
+                                <div class="profile-avatar">
+                                
+                                    <img id="profileImage" src="../ASSETS/IMAGES/default-user.png" alt="Profile Picture">
+                                
+                                </div>
+                                
+                                <input type="file" id="profileUpload" accept="image/*" style="display:none;">
+                                
+                                
+                                <button id="changeProfileBtn" class="change-profile-btn">
+                                
+                                    Change Photo
+                                
+                                </button>
+                            
+                                <h2 id="profileName">
+                                    Sutrika Explorer
+                                </h2>
+
+                                <p id="profileEmail">
+                                    Email Address
+                                </p>
+                            
+                                <p>
+                                    Heritage Member
+                                </p>
+                            
+                                <div class="member-badge">
+                            
+                                    <i class="fa-solid fa-star"></i>
+                            
+                                    Sutrika Collector
+                            
+                                </div>
+                            
+                                <button id="logoutBtn" class="logout-btn">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Logout
+                                </button>
+                            
+                            </div>
+
+            
+            
+            
+            
+            
+            
+            
+                        <!-- ACCOUNT OPTIONS -->
+            
+            
+                        <div class="identity-navigation">
+            
+            
+            
+                            <a href="cart.html" class="identity-item">
+            
+            
+                                <i class="fa-solid fa-bag-shopping"></i>
+            
+            
+                                <h3>
+                                    My Cart
+                                </h3>
+            
+            
+                                <p>
+                                    Continue your shopping journey
+                                </p>
+            
+            
+                            </a>
+            
+            
+            
+            
+            
+            
+                            <a href="wishlist.html" class="identity-item">
+            
+            
+                                <i class="fa-solid fa-heart"></i>
+            
+            
+                                <h3>
+                                    My Wishlist
+                                </h3>
+            
+            
+                                <p>
+                                    Your favourite creations
+                                </p>
+            
+            
+                            </a>
+            
+            
+            
+            
+            
+            
+            
+                            <a href="order.html" class="identity-item">
+            
+            
+                                <i class="fa-solid fa-box-open"></i>
+            
+            
+                                <h3>
+                                    My Orders
+                                </h3>
+            
+            
+                                <p>
+                                    Track your purchases
+                                </p>
+            
+            
+                            </a>
+            
+            
+            
+            
+            
+            
+            
+                            <a href="custom-requests.html" class="identity-item">
+                            
+                                <i class="fa-solid fa-file-signature"></i>
+                            
+                                <h3>
+                                    My Custom Requests
+                                </h3>
+                            
+                                <p>
+                                    Track your personalised requests
+                                </p>
+                            
+                            </a>
+                        
+                        </div>
+            
+            
+                    </div>
+            
+            
+                </div>
+            
+            
+            </section>
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- =====================================
+                    SAVED STORIES
+            ===================================== -->
+            
+            
+            <section class="saved-story">
+            
+            
+                <div class="container">
+            
+            
+                    <h2>
+                        Your Saved Heritage Stories
+                    </h2>
+            
+            
+                    <p class="section-subtitle">
+            
+                        Every craft you love becomes part of your Sutrika journey.
+            
+                    </p>
+            
+            
+            
+            
+            
+                    <div class="story-cards">
+            
+            
+            
+                        <div class="saved-card">
+            
+            
+                            <div class="saved-icon">
+            
+                                <i class="fa-solid fa-shirt"></i>
+            
+                            </div>
+            
+            
+                            <h3>
+                                Favourite Collections
+                            </h3>
+            
+            
+                            <p>
+                                Explore your loved handloom and crafts.
+                            </p>
+            
+            
+                        </div>
+            
+            
+            
+            
+            
+            
+                        <div class="saved-card">
+            
+            
+                            <div class="saved-icon">
+            
+                                <i class="fa-solid fa-user-group"></i>
+            
+                            </div>
+            
+            
+                            <h3>
+                                Artisan Connections
+                            </h3>
+            
+            
+                            <p>
+                                Meet the creators behind every craft.
+                            </p>
+            
+            
+                        </div>
+            
+            
+            
+            
+            
+            
+                        <div class="saved-card">
+            
+            
+                            <div class="saved-icon">
+            
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            
+                            </div>
+            
+            
+                            <h3>
+                                Creative Studio
+                            </h3>
+            
+            
+                            <p>
+                                Your personalised creations.
+                            </p>
+            
+            
+                        </div>
+            
+            
+            
+                    </div>
+            
+            
+                </div>
+            
+            
+            </section>
+
+               
+
+
+    <!-- ==========================================
+                                    FOOTER
+                ========================================== -->
+    
+    <footer class="footer">
+    
+        <div class="container">
+    
+            <div class="footer-grid">
+    
+                <!-- ABOUT -->
+    
+                <div class="footer-column">
+    
+                    <h3>SUTRIKA</h3>
+    
+                    <p>
+    
+                        Threads of Tradition, Powered by Innovation.
+    
+                        Discover authentic Odisha Handloom and Handicrafts
+                        while empowering local artisans.
+    
+                    </p>
+    
+                    <div class="social-icons">
+    
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+    
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+    
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+                <!-- QUICK LINKS -->
+    
+                <div class="footer-column">
+    
+                    <h3>Quick Links</h3>
+    
+                    <ul>
+    
+                        <li><a href="index.html">Home</a></li>
+    
+                        <li><a href="collection.html">Collections</a></li>
+    
+                        <li><a href="artisan.html">Artisans</a></li>
+    
+                        <li><a href="guide.html">Sutrika Guide</a></li>
+    
+                        <li><a href="personalise.html">Personalise</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CUSTOMER -->
+    
+                <div class="footer-column">
+    
+                    <h3>Customer Support</h3>
+    
+                    <ul>
+    
+                        <li><a href="contact.html">Contact Us</a></li>
+    
+                        <li><a href="#">FAQs</a></li>
+    
+                        <li><a href="#">Shipping Policy</a></li>
+    
+                        <li><a href="#">Privacy Policy</a></li>
+    
+                        <li><a href="#">Terms & Conditions</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CONTACT -->
+    
+                <div class="footer-column">
+    
+                    <h3>Contact</h3>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-location-dot"></i>
+    
+                        Bhubaneswar, Odisha, India
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-phone"></i>
+    
+                        +91 XXXXX XXXXX
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-envelope"></i>
+    
+                        support@sutrika.in
+    
+                    </p>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+            <hr>
+    
+    
+    
+            <div class="footer-bottom">
+    
+                <p>
+    
+                    © 2026 Sutrika. All Rights Reserved.
+    
+                </p>
+    
+                <p>
+    
+                    Designed with ❤️ to celebrate Odisha's Heritage.
+    
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <!-- =====================================
+            REGISTER MODAL
+    ===================================== -->
+    
+    <div class="register-modal" id="registerModal">
+    
+        <div class="register-box">
+    
+            <span class="close-register">&times;</span>
+    
+            <h2>Create Your Sutrika Account</h2>
+
+            <form id="registerForm">
+            
+                <div class="register-input-box">
+                    <i class="fa-solid fa-user"></i>
+            
+                    <input type="text" id="regName" placeholder="Full Name" autocomplete="name" required>
+                </div>
+            
+            
+                <div class="register-input-box">
+                    <i class="fa-solid fa-envelope"></i>
+            
+                    <input type="email" id="regEmail" placeholder="Email Address" autocomplete="email" required>
+                </div>
+            
+            
+                <div class="register-input-box">
+                    <i class="fa-solid fa-phone"></i>
+            
+                    <input type="text" id="regPhone" placeholder="Phone Number" autocomplete="tel">
+                </div>
+            
+            
+                <div class="register-input-box password-box">
+            
+                    <i class="fa-solid fa-lock"></i>
+            
+                    <input type="password" id="regPassword" placeholder="Password" autocomplete="new-password" required>
+            
+                    <button type="button" class="password-toggle" id="toggleRegisterPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+            
+                </div>
+            
+            
+                <div class="password-strength">
+            
+                    <div class="strength-bar">
+                        <span id="strengthFill"></span>
+                    </div>
+            
+                    <p id="strengthText">
+                        Password strength
+                    </p>
+            
+                </div>
+            
+            
+                <div class="register-input-box password-box">
+            
+                    <i class="fa-solid fa-lock"></i>
+            
+                    <input type="password" id="regConfirmPassword" placeholder="Confirm Password" autocomplete="new-password"
+                        required>
+            
+                    <button type="button" class="password-toggle" id="toggleConfirmPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+            
+                </div>
+            
+            
+                <button type="submit" class="register-submit-btn">
+                    Create Account
+                </button>
+            
+            </form>
+    
+        </div>
+    
+    </div>
+
+    <!-- =====================================
+                                                                    LOGIN AREA
+                                                            ===================================== -->
+    
+    
+    <div class="login-modal" id="loginModal">
+    
+    
+        <div class="login-card">
+
+            <span id="closeLogin" class="close-login">&times;</span>
+    
+    
+            <h2>
+                Continue Your Journey
+            </h2>
+    
+    
+            <p>
+                Login to access your Sutrika account.
+            </p>
+    
+    
+    
+            <form id="loginForm">
+    
+    
+                <div class="input-box">
+    
+                    <i class="fa-solid fa-envelope"></i>
+    
+                <input type="email" id="loginEmail" placeholder="Email Address">
+    
+                </div>
+
+
+                <div class="input-box password-box">
+                
+                    <i class="fa-solid fa-lock"></i>
+                
+                    <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password">
+                
+                    <button type="button" class="password-toggle" id="toggleLoginPassword" aria-label="Show password">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                
+                </div>
+    
+    
+    
+    
+                <button type="submit">
+    
+                    Login
+    
+                </button>
+    
+    
+            </form>
+    
+    
+    
+            <p>
+    
+                New to Sutrika?
+    
+                <a href="#">
+                    Create Account
+                </a>
+    
+    
+            </p>
+    
+    
+        </div>
+
+            </div>
+            </div>
+        <script src="../JS/script-new.js"></script>
+        <script src="../JS/account.js"></script>
+        <script src="../JS/header-badges.js"></script>
+        <script src="../JS/mobile-menu.js"></script>
+    
+
+
+    </body>
+
+</html>

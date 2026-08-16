@@ -1,0 +1,6925 @@
+/* ==========================================================
+   SUTRIKA - STYLE NEW.CSS
+   PART 1 - GLOBAL STYLES
+========================================================== */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F8F4EE;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+/* VARIABLES */
+
+:root {
+
+    --wine: #6B1E35;
+    --wine-dark: #4A1024;
+    --gold: #C5A24A;
+    --gold-light: #DDB96A;
+
+    --cream: #F8F4EE;
+    --ivory: #FFFDF8;
+
+    --black: #222;
+    --gray: #666;
+    --light: #F5F5F5;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+    --transition: .35s ease;
+
+}
+
+/* CONTAINER */
+
+.container {
+
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+/* IMAGES */
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+/* LINKS */
+
+a {
+
+    text-decoration: none;
+    transition: var(--transition);
+
+}
+
+/* LIST */
+
+ul {
+
+    list-style: none;
+
+}
+
+/* SECTION */
+
+section {
+
+    padding: 90px 0;
+
+}
+
+/* SECTION TITLE */
+
+.section-title {
+
+    text-align: center;
+    margin-bottom: 70px;
+
+}
+
+.section-title span {
+
+    color: var(--gold);
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.section-title h2 {
+
+    font-family: 'Cinzel', serif;
+    font-size: 46px;
+    color: var(--wine-dark);
+    margin: 18px 0;
+
+}
+
+.section-title p {
+
+    max-width: 700px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 17px;
+
+}
+
+/* BUTTONS */
+
+.btn-primary {
+
+    display: inline-block;
+    padding: 15px 35px;
+
+    background: var(--wine);
+
+    color: #fff;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--gold);
+
+    color: var(--wine-dark);
+
+    transform: translateY(-4px);
+
+}
+
+.btn-secondary {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border: 2px solid #fff;
+
+    color: #fff;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: #fff;
+
+    color: var(--wine);
+
+}
+
+/* CARD */
+
+.card {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: 'Cinzel', serif;
+
+    font-weight: 600;
+
+}
+
+/* PARAGRAPH */
+
+p {
+
+    color: #555;
+
+}
+
+/* ICONS */
+
+i {
+
+    transition: var(--transition);
+
+}
+
+/* COMMON GRID */
+
+.grid-2 {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+
+}
+
+.grid-3 {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+.grid-4 {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+/* ANIMATION */
+
+.fade-up {
+
+    animation: fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   PART 2 - HEADER + NAVBAR + HERO SLIDER
+========================================================== */
+
+/* ================= HEADER ================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 1000;
+
+    background: rgba(74, 16, 36, 0.96);
+    backdrop-filter: blur(12px);
+
+    transition: .4s ease;
+
+    box-shadow: none;
+    /* Remove the shadow */
+}
+
+.navbar {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 2px;
+    letter-spacing: 2px;
+}
+
+.logo-text p {
+    color: var(--gold);
+    font-size: 12px;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.nav-links a::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: .35s;
+
+}
+
+/* Hover & Active Navigation */
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* ================= NAV ICONS ================= */
+
+.nav-icons {
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+}
+
+.nav-icons {
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+}
+
+/* ================= MOBILE / TABLET MENU BUTTON ================= */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    transition: .35s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--gold);
+    transform: scale(1.08);
+}
+
+.nav-icons a {
+
+    position: relative;
+    color: #fff;
+    font-size: 19px;
+    padding-bottom: 6px;
+    transition: .35s ease;
+
+}
+
+.nav-icons a::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: .35s ease;
+
+}
+
+.nav-icons a:hover,
+.nav-icons a.active {
+
+    color: var(--gold);
+
+}
+
+.nav-icons a:hover::after,
+.nav-icons a.active::after {
+
+    width: 100%;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 85px;
+
+}
+
+.hero-slider {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.hero-slide {
+
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 1s ease;
+
+}
+
+.hero-slide.active {
+
+    opacity: 1;
+    z-index: 2;
+
+}
+
+.hero-slide img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 8s ease-in-out infinite;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(rgba(35, 10, 20, .55),
+            rgba(35, 10, 20, .35));
+
+}
+
+/* ================= HERO CONTENT ================= */
+
+.hero-content {
+
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    color: #fff;
+    z-index: 5;
+
+}
+
+.hero-content span {
+
+    display: inline-block;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-weight: 600;
+
+}
+
+.hero-content h1 {
+
+    font-size: 68px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #fff;
+
+}
+
+.hero-content p {
+
+    color: #f2f2f2;
+    font-size: 18px;
+    margin-bottom: 35px;
+    max-width: 600px;
+
+}
+
+.hero-buttons {
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+/* ================= HERO ZOOM ================= */
+
+@keyframes heroZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE HEADER + MOBILE MENU
+   ========================================================== */
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+    /* Keep the header clean */
+    .navbar {
+        position: relative;
+    }
+
+    /* Hide desktop navigation */
+    .nav-links {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        background: rgba(74, 16, 36, 0.98);
+        backdrop-filter: blur(12px);
+
+        padding: 20px 0;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-15px);
+
+        transition:
+            opacity .35s ease,
+            transform .35s ease,
+            visibility .35s ease;
+
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .18);
+    }
+
+    /* Open menu */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* Mobile/tablet navigation links */
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    /* Keep logo + SUTRIKA + tagline */
+    .logo {
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .logo-text h2 {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+
+    .logo-text p {
+        font-size: 10px;
+        letter-spacing: .2px;
+    }
+
+        /* Keep the header icons on the right */
+        .nav-icons {
+            gap: 14px;
+            margin-left: auto;
+        }
+
+    .nav-icons a {
+        font-size: 17px;
+    }
+
+    /* Hero */
+    .hero .hero-content {
+        left: 5%;
+        max-width: 90%;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 48px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 75px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+    /* Keep logo visible */
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-text h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .logo-text p {
+        font-size: 8px;
+        line-height: 1.3;
+        max-width: 150px;
+    }
+
+    /* Icons */
+    .nav-icons {
+        gap: 9px;
+    }
+
+    .nav-icons a {
+        font-size: 15px;
+        padding-bottom: 3px;
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+        font-size: 22px;
+        padding: 6px;
+    }
+
+    /* Mobile menu position */
+    .nav-links {
+        top: 75px;
+    }
+
+    /* Hero */
+    .hero {
+        height: 650px;
+        margin-top: 75px;
+    }
+        .hero .hero-content h1 {
+            font-size: 36px;
+        }
+    
+        .hero .hero-content p {
+            font-size: 16px;
+        }
+    
+        .hero .hero-buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .logo-text h2 {
+        font-size: 18px;
+    }
+
+    .logo-text p {
+        font-size: 7px;
+        max-width: 125px;
+    }
+
+    .logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-icons {
+        gap: 7px;
+    }
+
+    .nav-icons a {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .hero .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ==========================================================
+   PART 3 - FEATURED COLLECTIONS
+========================================================== */
+
+.featured-collections {
+
+    background: #F8F4EE;
+
+}
+
+.collection-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+.collection-card {
+
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .10);
+
+}
+
+.collection-card img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s;
+
+}
+
+.collection-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.collection-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 35px;
+
+    background: linear-gradient(transparent,
+            rgba(30, 8, 15, .82));
+
+}
+
+.collection-overlay h3 {
+
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 12px;
+
+}
+
+.collection-overlay p {
+
+    color: #f4f4f4;
+    line-height: 1.7;
+    margin-bottom: 25px;
+
+}
+
+.collection-btn {
+
+    display: inline-block;
+
+    width: max-content;
+
+    background: var(--gold);
+
+    color: var(--wine-dark);
+
+    padding: 14px 32px;
+
+    border-radius: 40px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.collection-btn:hover {
+
+    background: #fff;
+
+    transform: translateY(-4px);
+
+}
+
+/* ===============================
+      HIGHLIGHT SECTION
+================================ */
+
+.collection-highlight {
+
+    background: #fff;
+
+}
+
+.highlight-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+}
+
+.highlight-box {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.highlight-box:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.highlight-box i {
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    background: rgba(197, 162, 74, .15);
+
+    color: var(--gold);
+
+    font-size: 34px;
+
+    margin-bottom: 25px;
+
+}
+
+.highlight-box h3 {
+
+    color: var(--wine-dark);
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+}
+
+.highlight-box p {
+
+    color: #666;
+    line-height: 1.8;
+
+}
+
+/* ===============================
+      RESPONSIVE
+================================ */
+
+@media(max-width:1100px) {
+
+    .collection-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .highlight-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .collection-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .highlight-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .collection-card {
+
+        height: 420px;
+
+    }
+
+    .collection-overlay h3 {
+
+        font-size: 28px;
+
+    }
+
+}
+/* ==========================================================
+   PART 4 - FEATURED ARTISANS
+========================================================== */
+
+.featured-artisans {
+
+    background: linear-gradient(180deg, #F8F4EE, #FFFDF8);
+
+}
+
+.artisan-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+.artisan-card {
+
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    transition: .4s;
+}
+
+.artisan-card:hover {
+
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+
+}
+
+.artisan-card img {
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .6s;
+
+}
+
+.artisan-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.artisan-content {
+
+    padding: 30px;
+
+}
+
+.artisan-content h3 {
+
+    color: var(--wine-dark);
+    font-size: 28px;
+    margin-bottom: 10px;
+
+}
+
+.artisan-content .craft {
+
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+
+.artisan-content span {
+
+    display: inline-block;
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 18px;
+
+}
+
+.artisan-content p {
+
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 22px;
+
+}
+
+.artisan-btn {
+
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--wine);
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: .35s;
+
+}
+
+.artisan-btn:hover {
+
+    background: var(--gold);
+    color: var(--wine-dark);
+
+}
+
+.artisan-button {
+
+    text-align: center;
+    margin-top: 60px;
+
+}
+
+/* ==========================================================
+   WHY CHOOSE SUTRIKA
+========================================================== */
+
+.why-sutrika {
+
+    background: #fff;
+
+}
+
+.why-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+}
+
+.why-card {
+
+    background: #FDFBF7;
+    border-radius: 20px;
+    padding: 40px 28px;
+    text-align: center;
+    transition: .4s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+
+}
+
+.why-card:hover {
+
+    transform: translateY(-10px);
+    background: var(--wine);
+
+}
+
+.why-card i {
+
+    font-size: 45px;
+    color: var(--gold);
+    margin-bottom: 22px;
+
+}
+
+.why-card h3 {
+
+    color: var(--wine-dark);
+    margin-bottom: 15px;
+    font-size: 24px;
+    transition: .3s;
+
+}
+
+.why-card p {
+
+    color: #666;
+    line-height: 1.8;
+    transition: .3s;
+
+}
+
+.why-card:hover h3 {
+
+    color: #fff;
+
+}
+
+.why-card:hover p {
+
+    color: #f5f5f5;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px) {
+
+    .artisan-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .why-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .artisan-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .artisan-card img {
+
+        height: 260px;
+
+    }
+
+}
+/* ==========================================================
+   PART 5 - AI GUIDE + PERSONALISATION + STATS
+========================================================== */
+
+/* ==========================
+      AI SECTION
+========================== */
+
+.ai-section {
+
+    background: #F8F4EE;
+
+}
+
+.ai-grid {
+
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+
+}
+
+/* CARD */
+
+.ai-card {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+}
+
+.ai-card.reverse .ai-image {
+
+    order: 2;
+
+}
+
+.ai-card.reverse .ai-content {
+
+    order: 1;
+
+}
+
+/* IMAGE */
+
+.ai-image {
+
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+
+}
+
+.ai-image img {
+
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: .6s;
+
+}
+
+.ai-image:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/* CONTENT */
+
+.ai-content span {
+
+    display: inline-block;
+
+    color: var(--gold);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+}
+
+.ai-content h2 {
+
+    font-size: 44px;
+
+    color: var(--wine-dark);
+
+    margin-bottom: 25px;
+
+}
+
+.ai-content p {
+
+    color: #666;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+}
+
+/* LIST */
+
+.ai-content ul {
+
+    margin-bottom: 35px;
+
+}
+
+.ai-content ul li {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #555;
+
+    font-weight: 500;
+
+}
+
+.ai-content ul li i {
+
+    color: var(--gold);
+
+    font-size: 18px;
+
+}
+
+/* ==========================
+      STATS
+========================== */
+
+.stats-section {
+
+    background: linear-gradient(135deg, var(--wine), var(--wine-dark));
+
+    padding: 80px 0;
+
+}
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+.stat-card {
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+.stat-card h2 {
+
+    font-size: 56px;
+
+    color: var(--gold);
+
+    margin-bottom: 12px;
+
+}
+
+.stat-card p {
+
+    color: #f2f2f2;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:1100px) {
+
+    .ai-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .ai-card.reverse .ai-image {
+
+        order: 1;
+
+    }
+
+    .ai-card.reverse .ai-content {
+
+        order: 2;
+
+    }
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .ai-image img {
+
+        height: 320px;
+
+    }
+
+    .ai-content {
+
+        text-align: center;
+
+    }
+
+    .ai-content ul li {
+
+        justify-content: center;
+
+    }
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .ai-content h2 {
+
+        font-size: 34px;
+
+    }
+
+    .stat-card h2 {
+
+        font-size: 42px;
+
+    }
+
+}
+/* ==========================================================
+   PART 6 - OUR STORY + TESTIMONIALS + CTA
+========================================================== */
+
+/* ==========================
+        OUR STORY
+========================== */
+
+.home-story {
+
+    background: #fff;
+
+}
+
+.story-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+
+}
+
+.story-image {
+
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+
+}
+
+.story-image img {
+
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: .6s;
+
+}
+
+.story-image:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.story-content span {
+
+    display: inline-block;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+.story-content h2 {
+
+    font-size: 46px;
+    color: var(--wine-dark);
+    margin-bottom: 25px;
+
+}
+
+.story-content p {
+
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 20px;
+
+}
+
+/* ==========================
+      TESTIMONIALS
+========================== */
+
+.testimonials {
+
+    background: #F8F4EE;
+
+}
+
+.testimonial-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+.testimonial-card {
+
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: .4s;
+
+}
+
+.testimonial-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.testimonial-card i {
+
+    font-size: 34px;
+    color: var(--gold);
+    margin-bottom: 20px;
+
+}
+
+.testimonial-card p {
+
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+
+}
+
+.testimonial-card h4 {
+
+    color: var(--wine-dark);
+    font-size: 22px;
+    margin-bottom: 6px;
+
+}
+
+.testimonial-card span {
+
+    color: var(--gold);
+    font-size: 15px;
+
+}
+
+/* ==========================
+      CALL TO ACTION
+========================== */
+
+.cta-section {
+
+    background: linear-gradient(rgba(74, 16, 36, .90),
+            rgba(74, 16, 36, .90)),
+        url("../ASSETS/IMAGES/home/cta-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    text-align: center;
+    padding: 120px 20px;
+
+}
+
+.cta-content {
+
+    max-width: 850px;
+    margin: auto;
+
+}
+
+.cta-content h2 {
+
+    color: #fff;
+    font-size: 54px;
+    margin-bottom: 20px;
+
+}
+
+.cta-content p {
+
+    color: #f3f3f3;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:1100px) {
+
+    .story-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .testimonial-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .story-image img {
+
+        height: 350px;
+
+    }
+
+    .story-content {
+
+        text-align: center;
+
+    }
+
+    .story-content h2 {
+
+        font-size: 34px;
+
+    }
+
+    .testimonial-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cta-content h2 {
+
+        font-size: 34px;
+
+    }
+
+    .cta-content p {
+
+        font-size: 16px;
+
+    }
+
+}
+/* ==========================================================
+   PART 7 - NEWSLETTER
+========================================================== */
+
+.newsletter {
+
+    background: linear-gradient(135deg, #F8F4EE, #FFFDF8);
+    padding: 100px 0;
+
+}
+
+.newsletter-content {
+
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.newsletter-content h2 {
+
+    font-size: 48px;
+    color: var(--wine-dark);
+    margin-bottom: 20px;
+
+}
+
+.newsletter-content p {
+
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 45px;
+
+}
+
+/* ==========================
+      FORM
+========================== */
+
+.newsletter-form {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.newsletter-form input {
+
+    width: 500px;
+    max-width: 100%;
+    padding: 18px 24px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.newsletter-form input::placeholder {
+
+    color: #999;
+
+}
+
+.newsletter-form button {
+
+    border: none;
+    cursor: pointer;
+    padding: 18px 38px;
+    border-radius: 50px;
+    background: var(--wine);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .10);
+
+}
+
+.newsletter-form button:hover {
+
+    background: var(--gold);
+    color: var(--wine-dark);
+    transform: translateY(-4px);
+
+}
+
+/* ==========================
+      DECORATIVE LINE
+========================== */
+
+.newsletter::before {
+
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--gold);
+    margin: 0 auto 40px;
+    border-radius: 10px;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:768px) {
+
+    .newsletter {
+
+        padding: 70px 20px;
+
+    }
+
+    .newsletter-content h2 {
+
+        font-size: 34px;
+
+    }
+
+    .newsletter-content p {
+
+        font-size: 16px;
+
+    }
+
+    .newsletter-form {
+
+        flex-direction: column;
+
+    }
+
+    .newsletter-form input {
+
+        width: 100%;
+
+    }
+
+    .newsletter-form button {
+
+        width: 100%;
+
+    }
+
+}
+/* ==========================================================
+   PART 8 - FOOTER + BACK TO TOP + FINAL RESPONSIVE
+========================================================== */
+
+/* ==========================
+          FOOTER
+========================== */
+
+.footer {
+
+    background: #4A1024;
+    color: #fff;
+    padding: 80px 0 30px;
+
+}
+
+.footer-grid {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 50px;
+
+}
+
+.footer-column h3 {
+
+    color: var(--gold);
+    margin-bottom: 25px;
+    font-size: 24px;
+
+}
+
+.footer-column p {
+
+    color: #ddd;
+    line-height: 1.9;
+    margin-bottom: 15px;
+
+}
+
+.footer-column ul {
+
+    padding: 0;
+
+}
+
+.footer-column ul li {
+
+    margin-bottom: 14px;
+
+}
+
+.footer-column ul li a {
+
+    color: #ddd;
+    transition: .3s;
+
+}
+
+.footer-column ul li a:hover {
+
+    color: var(--gold);
+    padding-left: 8px;
+
+}
+
+/* ==========================
+      SOCIAL ICONS
+========================== */
+
+.social-icons {
+
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+
+}
+
+.social-icons a {
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: .35s;
+
+}
+
+.social-icons a:hover {
+
+    background: var(--gold);
+    color: var(--wine-dark);
+    transform: translateY(-5px);
+
+}
+
+/* ==========================
+        FOOTER HR
+========================== */
+
+.footer hr {
+
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    margin: 35px 0;
+
+}
+
+/* ==========================
+      FOOTER BOTTOM
+========================== */
+
+.footer-bottom {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.footer-bottom p {
+
+    color: #ddd;
+    font-size: 15px;
+
+}
+
+/* ==========================
+      BACK TO TOP
+========================== */
+
+.back-to-top {
+
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: var(--wine-dark);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+
+    transition: .35s;
+
+    z-index: 999;
+
+}
+
+.back-to-top:hover {
+
+    transform: translateY(-6px);
+
+    background: #fff;
+
+}
+
+/* ==========================
+      SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #F8F4EE;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--wine);
+    border-radius: 30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--gold);
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:1200px) {
+
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .footer {
+
+        text-align: center;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+    .social-icons {
+
+        justify-content: center;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+    }
+
+    .back-to-top {
+
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    section {
+
+        padding: 70px 0;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 30px;
+
+    }
+
+    .section-title p {
+
+        font-size: 15px;
+
+    }
+
+    .btn-primary,
+    .btn-secondary {
+
+        padding: 14px 24px;
+        font-size: 15px;
+
+    }
+
+}
+/* Ripple Effect */
+
+.btn-primary,
+.btn-secondary,
+.collection-btn,
+.artisan-btn {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ripple {
+
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple .6s linear;
+    background: rgba(255, 255, 255, .4);
+    pointer-events: none;
+
+}
+
+@keyframes ripple {
+
+    to {
+
+        transform: scale(4);
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   SUTRIKA OPENING ANIMATION
+   ODISHA HERITAGE BACKGROUND
+========================================================== */
+
+.sutrika-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(55, 7, 22, 0.18),
+            rgba(55, 7, 22, 0.18)),
+        url("../ASSETS/LOGO/sutrika-opening-bg.png") center center / cover no-repeat;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+/* ==========================================================
+   SUBTLE CINEMATIC VIGNETTE
+========================================================== */
+
+.sutrika-intro::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(248, 244, 238, 0.08) 0%,
+            transparent 42%),
+        linear-gradient(90deg,
+            rgba(40, 5, 17, 0.28) 0%,
+            transparent 28%,
+            transparent 72%,
+            rgba(40, 5, 17, 0.28) 100%);
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* ==========================================================
+   SOFT GOLD HERITAGE GLOW
+========================================================== */
+
+.sutrika-intro::after {
+    content: "";
+
+    position: absolute;
+    width: 520px;
+    height: 520px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(197, 162, 74, 0.13) 0%,
+            rgba(197, 162, 74, 0.05) 35%,
+            transparent 70%);
+
+    pointer-events: none;
+    z-index: 1;
+
+    animation: sutrikaHeritageGlow 7s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   KEEP YOUR TEXT ABOVE THE BACKGROUND
+========================================================== */
+
+.sutrika-intro-inner {
+    position: relative;
+    z-index: 5;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation:
+        sutrikaIntroRise 1.2s ease both;
+}
+
+
+/* ==========================================================
+   CINEMATIC BACKGROUND MOTION
+========================================================== */
+
+@keyframes sutrikaHeritageGlow {
+
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.55;
+    }
+}
+
+/* OLD CSS TEXTILE FRAME - DISABLED
+   because the new heritage artwork is now the background
+*/
+
+.sutrika-weave-frame,
+.sutrika-bottom-weave {
+    display: none;
+}
+
+
+/* ================================
+   SUBTLE SAMBALPURI BORDER
+================================ */
+
+.sutrika-intro::before,
+.sutrika-intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid rgba(197, 162, 74, 0.28);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation:
+        sutrikaHeritageCircle 2s ease forwards;
+}
+
+
+.sutrika-intro::before {
+
+    top: -120px;
+    left: -120px;
+}
+
+
+.sutrika-intro::after {
+
+    right: -120px;
+    bottom: -120px;
+
+    animation-delay: 0.4s;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.sutrika-intro-inner {
+
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 620px);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation:
+        sutrikaIntroRise 1.2s ease both;
+}
+
+
+/* ================================
+   TOP ORNAMENT
+================================ */
+
+.sutrika-intro-ornament {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+
+    color: var(--gold);
+
+    opacity: 0;
+
+    animation:
+        sutrikaIntroFade 0.9s 0.8s ease forwards;
+}
+
+
+.sutrika-intro-ornament span {
+
+    display: block;
+
+    width: 75px;
+    height: 1px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            var(--gold));
+}
+
+
+.sutrika-intro-ornament span:last-child {
+
+    background:
+        linear-gradient(to left,
+            transparent,
+            var(--gold));
+}
+
+
+.sutrika-intro-ornament i {
+
+    font-size: 12px;
+
+    animation:
+        sutrikaGoldPulse 2s 1.2s infinite ease-in-out;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.sutrika-intro-logo {
+
+    width: 92px;
+    height: 92px;
+
+    object-fit: contain;
+
+    opacity: 0;
+
+    transform: scale(0.65);
+
+    animation:
+        sutrikaLogoReveal 1.2s 1.4s cubic-bezier(.2, .8, .2, 1) forwards;
+
+    filter:
+        drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+}
+
+
+/* ================================
+   SUTRIKA TITLE
+================================ */
+
+.sutrika-intro-title {
+
+    margin-top: 18px;
+
+    color: #F8F4EE;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    animation:
+        sutrikaTitleReveal 1s 2.5s ease forwards;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   GOLD LINE
+================================ */
+
+.sutrika-intro-line {
+
+    width: 0;
+
+    height: 2px;
+
+    margin: 22px 0 16px;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 12px rgba(197, 162, 74, 0.35);
+
+    animation:
+        sutrikaLineReveal 0.9s 3.5s ease forwards;
+}
+
+
+/* ================================
+   TAGLINE
+================================ */
+
+.sutrika-intro-tagline {
+
+    margin: 0;
+
+    color: #F8F4EE;
+
+    font-size: clamp(11px, 1.7vw, 15px);
+
+    letter-spacing: 2.5px;
+
+    font-weight: 400;
+
+    opacity: 0;
+
+    animation:
+        sutrikaIntroFade 0.9s 4.3s ease forwards;
+}
+
+
+/* ================================
+   ODISHA HERITAGE
+================================ */
+
+.sutrika-intro-bottom {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    color: #C5A24A;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    animation:
+        sutrikaIntroFade 0.9s 5.1s ease forwards;
+}
+
+
+/* ================================
+   HIDE INTRO
+================================ */
+
+.sutrika-intro.intro-hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes sutrikaIntroRise {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* GENERAL FADE */
+
+@keyframes sutrikaIntroFade {
+
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+/* LOGO */
+
+@keyframes sutrikaLogoReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.65) rotate(-6deg);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1) rotate(0);
+    }
+}
+
+
+/* TITLE */
+
+@keyframes sutrikaTitleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+        letter-spacing: 18px;
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        letter-spacing: 8px;
+    }
+}
+
+
+/* GOLD LINE */
+
+@keyframes sutrikaLineReveal {
+
+    from {
+
+        width: 0;
+
+        opacity: 0;
+    }
+
+    to {
+
+        width: 110px;
+
+        opacity: 1;
+    }
+}
+
+
+/* HERITAGE CIRCLES */
+
+@keyframes sutrikaHeritageCircle {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.75);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* GOLD ORNAMENT PULSE */
+
+@keyframes sutrikaGoldPulse {
+
+    0%,
+    100% {
+
+        opacity: 0.55;
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.25);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .sutrika-intro-logo {
+
+        width: 76px;
+        height: 76px;
+    }
+
+
+    .sutrika-intro-title {
+
+        font-size: 42px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .sutrika-intro-tagline {
+
+        padding: 0 20px;
+
+        line-height: 1.7;
+    }
+
+
+    .sutrika-intro-ornament span {
+
+        width: 45px;
+    }
+
+
+    .sutrika-intro-bottom {
+
+        margin-top: 22px;
+    }
+}
+
+
+/* ==========================================================
+   REDUCE MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sutrika-intro-inner,
+    .sutrika-intro-ornament,
+    .sutrika-intro-logo,
+    .sutrika-intro-title,
+    .sutrika-intro-line,
+    .sutrika-intro-tagline,
+    .sutrika-intro-bottom {
+
+        animation: none;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    .sutrika-intro-line {
+
+        width: 110px;
+    }
+}
+
+
+/* ==========================================================
+   SUTRIKA FINAL OPENING ANIMATION
+   MATCHES CURRENT HTML CLASSES
+========================================================== */
+
+/* ---------- BACKGROUND CINEMATIC MOTION ---------- */
+
+.sutrika-intro {
+    animation: sutrikaBackgroundZoom 9s ease-in-out infinite;
+}
+
+@keyframes sutrikaBackgroundZoom {
+
+    0% {
+        background-size: 100% auto;
+    }
+
+    50% {
+        background-size: 106% auto;
+    }
+
+    100% {
+        background-size: 100% auto;
+    }
+}
+
+
+/* ---------- TOP ORNAMENT ---------- */
+
+.sutrika-top-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    color: var(--gold);
+
+    opacity: 0;
+
+    animation:
+        sutrikaTopOrnament 1s .4s ease forwards;
+}
+
+.sutrika-top-ornament span {
+    display: block;
+
+    width: 75px;
+    height: 1px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            var(--gold));
+}
+
+.sutrika-top-ornament span:last-child {
+    background:
+        linear-gradient(to left,
+            transparent,
+            var(--gold));
+}
+
+.sutrika-top-ornament b {
+    font-size: 13px;
+
+    color: var(--gold);
+
+    animation:
+        sutrikaGoldPulse 2s 1.2s ease-in-out infinite;
+}
+
+@keyframes sutrikaTopOrnament {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ---------- S EMBLEM ---------- */
+
+.sutrika-emblem {
+    position: relative;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transform: scale(.5) rotate(-15deg);
+
+    animation:
+        sutrikaEmblemReveal 1.2s 1s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+.emblem-diamond {
+    position: absolute;
+
+    width: 82px;
+    height: 82px;
+
+    border: 1px solid var(--gold);
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 20px rgba(197, 162, 74, .25);
+
+    animation:
+        sutrikaDiamondPulse 3s 2s ease-in-out infinite;
+}
+
+.emblem-inner {
+    position: relative;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(197, 162, 74, .8);
+
+    border-radius: 50%;
+
+    background:
+        rgba(55, 7, 22, .45);
+
+    backdrop-filter: blur(3px);
+}
+
+.emblem-inner span {
+    font-family: 'Cinzel', serif;
+
+    font-size: 31px;
+    font-weight: 700;
+
+    color: var(--gold);
+
+    text-shadow:
+        0 0 15px rgba(197, 162, 74, .4);
+}
+
+@keyframes sutrikaEmblemReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(.5) rotate(-15deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes sutrikaDiamondPulse {
+
+    0%,
+    100% {
+        transform: rotate(45deg) scale(1);
+        opacity: .7;
+    }
+
+    50% {
+        transform: rotate(45deg) scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* ---------- SUTRIKA TITLE ---------- */
+
+.sutrika-intro-title {
+    margin-top: 20px;
+
+    color: #F8F4EE;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation:
+        sutrikaTitleFinal 1.1s 2s ease forwards;
+
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, .4);
+}
+
+@keyframes sutrikaTitleFinal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+        letter-spacing: 18px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 8px;
+    }
+}
+
+
+/* ---------- GOLD DIVIDER ---------- */
+
+.sutrika-gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    width: 180px;
+
+    margin: 24px 0 18px;
+
+    opacity: 0;
+
+    animation:
+        sutrikaDividerReveal .9s 3.1s ease forwards;
+}
+
+.sutrika-gold-divider span {
+    display: block;
+
+    width: 65px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.sutrika-gold-divider b {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    animation:
+        sutrikaGoldPulse 2s 3.8s ease-in-out infinite;
+}
+
+@keyframes sutrikaDividerReveal {
+
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
+/* ---------- TAGLINE ---------- */
+
+.sutrika-intro-tagline {
+    margin: 0;
+
+    color: #F8F4EE;
+
+    font-size: clamp(11px, 1.7vw, 15px);
+
+    letter-spacing: 2.5px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    animation:
+        sutrikaTaglineReveal .9s 3.8s ease forwards;
+}
+
+@keyframes sutrikaTaglineReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- BOTTOM ORNAMENT ---------- */
+
+.sutrika-bottom-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: var(--gold);
+
+    opacity: 0;
+
+    animation:
+        sutrikaBottomReveal .9s 4.4s ease forwards;
+}
+
+.sutrika-bottom-ornament span {
+    display: block;
+
+    width: 55px;
+    height: 1px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            var(--gold));
+}
+
+.sutrika-bottom-ornament span:last-child {
+    background:
+        linear-gradient(to left,
+            transparent,
+            var(--gold));
+}
+
+.sutrika-bottom-ornament b {
+    font-size: 11px;
+
+    animation:
+        sutrikaGoldPulse 2s 5s ease-in-out infinite;
+}
+
+@keyframes sutrikaBottomReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- ODISHA / HERITAGE ---------- */
+
+.sutrika-intro-bottom {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 22px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    animation:
+        sutrikaHeritageReveal .9s 4.9s ease forwards;
+}
+
+@keyframes sutrikaHeritageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- GOLD PULSE ---------- */
+
+@keyframes sutrikaGoldPulse {
+
+    0%,
+    100% {
+        opacity: .6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .sutrika-top-ornament span {
+        width: 45px;
+    }
+
+    .sutrika-emblem {
+        width: 85px;
+        height: 85px;
+    }
+
+    .emblem-diamond {
+        width: 65px;
+        height: 65px;
+    }
+
+    .emblem-inner {
+        width: 50px;
+        height: 50px;
+    }
+
+    .emblem-inner span {
+        font-size: 24px;
+    }
+
+    .sutrika-intro-title {
+        font-size: 42px;
+        letter-spacing: 5px;
+    }
+
+    .sutrika-gold-divider {
+        width: 150px;
+    }
+
+    .sutrika-gold-divider span {
+        width: 50px;
+    }
+
+    .sutrika-bottom-ornament span {
+        width: 40px;
+    }
+}
+
+
+/* ==========================================================
+   FINAL FIX — SUTRIKA OPENING SCREEN
+========================================================== */
+
+
+/* SHOW THE CONTENT CONTAINER */
+
+.sutrika-weave-frame {
+    display: contents !important;
+}
+
+.sutrika-textile-panel {
+    display: contents !important;
+}
+
+.ikat-pattern {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   RESTORE THE MAIN HERITAGE BACKGROUND
+========================================================== */
+
+.sutrika-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    width: auto;
+    height: auto;
+
+    border: none;
+
+    border-radius: 0;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    background:
+
+        radial-gradient(circle at center,
+            rgba(248, 244, 238, 0.08) 0%,
+            transparent 42%),
+
+        linear-gradient(90deg,
+            rgba(40, 5, 17, 0.28) 0%,
+            transparent 28%,
+            transparent 72%,
+            rgba(40, 5, 17, 0.28) 100%);
+}
+
+
+.sutrika-intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    left: 50%;
+    top: 50%;
+
+    right: auto;
+    bottom: auto;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: none;
+
+    border-radius: 50%;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(197, 162, 74, 0.13) 0%,
+            rgba(197, 162, 74, 0.05) 35%,
+            transparent 70%);
+
+    animation:
+        sutrikaHeritageGlow 7s ease-in-out infinite;
+}
+
+
+/* ==========================================================
+   KEEP CONTENT ABOVE BACKGROUND
+========================================================== */
+
+.sutrika-intro-inner {
+
+    position: relative !important;
+
+    z-index: 10 !important;
+
+    width: min(90%, 700px) !important;
+
+    text-align: center;
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ==========================================================
+   TOP ORNAMENT
+========================================================== */
+
+.sutrika-top-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+
+    color: #C5A24A;
+
+    opacity: 1;
+
+    animation:
+        sutrikaTopReveal .9s .5s ease both;
+}
+
+.sutrika-top-ornament span {
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            #C5A24A);
+}
+
+.sutrika-top-ornament span:last-child {
+
+    background:
+        linear-gradient(to left,
+            transparent,
+            #C5A24A);
+}
+
+.sutrika-top-ornament b {
+
+    color: #C5A24A;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   S EMBLEM
+========================================================== */
+
+.sutrika-emblem {
+
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 1;
+
+    animation:
+        sutrikaEmblemReveal 1.1s 1s ease both;
+}
+
+.emblem-diamond {
+
+    position: absolute;
+
+    width: 78px;
+
+    height: 78px;
+
+    border:
+        1px solid #C5A24A;
+
+    transform:
+        rotate(45deg);
+
+    box-shadow:
+        0 0 18px rgba(197, 162, 74, .25);
+}
+
+.emblem-inner {
+
+    position: relative;
+
+    width: 62px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(197, 162, 74, .9);
+
+    border-radius: 50%;
+
+    background:
+        rgba(55, 7, 22, .55);
+}
+
+.emblem-inner span {
+
+    color: #F8F4EE;
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   SUTRIKA TITLE
+========================================================== */
+
+.sutrika-intro-title {
+
+    margin-top: 22px;
+
+    color: #F8F4EE;
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    font-size:
+        clamp(42px, 7vw, 72px);
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    opacity: 1;
+
+    animation:
+        sutrikaTitleReveal 1s 2.1s ease both;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, .45);
+}
+
+
+/* ==========================================================
+   GOLD DIVIDER
+========================================================== */
+
+.sutrika-gold-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin:
+        24px 0 18px;
+
+    opacity: 1;
+
+    animation:
+        sutrikaDividerReveal .9s 3.1s ease both;
+}
+
+.sutrika-gold-divider span {
+
+    display: block;
+
+    width: 60px;
+
+    height: 1px;
+
+    background:
+        #C5A24A;
+}
+
+.sutrika-gold-divider b {
+
+    color:
+        #C5A24A;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   TAGLINE
+========================================================== */
+
+.sutrika-intro-tagline {
+
+    margin: 0;
+
+    color: #F8F4EE;
+
+    font-size:
+        clamp(11px, 1.7vw, 15px);
+
+    letter-spacing: 2.5px;
+
+    line-height: 1.7;
+
+    opacity: 1;
+
+    animation:
+        sutrikaTaglineReveal .9s 3.8s ease both;
+}
+
+
+/* ==========================================================
+   BOTTOM ORNAMENT
+========================================================== */
+
+.sutrika-bottom-ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: #C5A24A;
+
+    opacity: 1;
+
+    animation:
+        sutrikaBottomReveal .8s 4.5s ease both;
+}
+
+.sutrika-bottom-ornament span {
+
+    width: 50px;
+
+    height: 1px;
+
+    background:
+        #C5A24A;
+}
+
+.sutrika-bottom-ornament b {
+
+    color:
+        #C5A24A;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   ODISHA HERITAGE
+========================================================== */
+
+.sutrika-intro-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    color: #C5A24A;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    opacity: 1;
+
+    animation:
+        sutrikaHeritageReveal .8s 4.9s ease both;
+}
+
+
+/* ==========================================================
+   OPENING ANIMATION KEYFRAMES
+========================================================== */
+
+@keyframes sutrikaTopReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes sutrikaEmblemReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(.55) rotate(-12deg);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1) rotate(0);
+    }
+}
+
+
+@keyframes sutrikaTitleReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px);
+
+        letter-spacing:
+            18px;
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+
+        letter-spacing:
+            8px;
+    }
+}
+
+
+@keyframes sutrikaDividerReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scaleX(1);
+    }
+}
+
+
+@keyframes sutrikaTaglineReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes sutrikaBottomReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes sutrikaHeritageReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+/* ==========================================================
+   SUTRIKA FINAL OPENING ANIMATION
+   ========================================================== */
+
+.sutrika-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(rgba(55, 7, 22, 0.16),
+            rgba(55, 7, 22, 0.16)),
+        url("../ASSETS/LOGO/sutrika-opening-bg.png") center center / cover no-repeat;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+/* DARK WINE VIGNETTE */
+
+.sutrika-intro::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.08),
+            transparent 48%),
+        linear-gradient(90deg,
+            rgba(45, 4, 18, 0.35),
+            transparent 30%,
+            transparent 70%,
+            rgba(45, 4, 18, 0.35));
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* SOFT GOLD CENTRE GLOW */
+
+.sutrika-intro::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(197, 162, 74, 0.16),
+            rgba(197, 162, 74, 0.05) 35%,
+            transparent 70%);
+
+    pointer-events: none;
+    z-index: 2;
+
+    animation:
+        sutrikaOpeningGlow 7s ease-in-out infinite;
+}
+
+
+/* MAIN CONTENT */
+
+.sutrika-intro-inner {
+    position: relative;
+    z-index: 5;
+
+    width: min(90%, 700px);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* TOP ORNAMENT */
+
+.sutrika-intro-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+
+    color: #C5A24A;
+
+    opacity: 0;
+
+    animation:
+        sutrikaOpeningFade 0.9s 0.5s ease forwards;
+}
+
+.sutrika-intro-ornament span {
+    width: 75px;
+    height: 1px;
+
+    display: block;
+
+    background:
+        linear-gradient(to right,
+            transparent,
+            #C5A24A);
+}
+
+.sutrika-intro-ornament span:last-child {
+    background:
+        linear-gradient(to left,
+            transparent,
+            #C5A24A);
+}
+
+.sutrika-intro-ornament i {
+    font-style: normal;
+    font-size: 13px;
+
+    animation:
+        sutrikaOpeningPulse 2s 1s infinite ease-in-out;
+}
+
+
+/* REAL LOGO */
+
+.sutrika-intro-logo {
+    width: 105px;
+    height: 105px;
+
+    object-fit: contain;
+
+    opacity: 0;
+
+    filter:
+        drop-shadow(0 8px 22px rgba(0, 0, 0, 0.35));
+
+    animation:
+        sutrikaOpeningLogo 1.2s 0.9s cubic-bezier(.2, .8, .2, 1) forwards;
+}
+
+
+/* SUTRIKA TITLE */
+
+.sutrika-intro-title {
+    margin-top: 20px;
+
+    color: #F8F4EE;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(46px,
+            7vw,
+            78px);
+
+    font-weight: 700;
+
+    letter-spacing: 9px;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    text-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.4);
+
+    animation:
+        sutrikaOpeningTitle 1.1s 2.1s ease forwards;
+}
+
+
+/* GOLD DIVIDER */
+
+.sutrika-intro-line {
+    width: 0;
+    height: 2px;
+
+    margin: 24px 0 18px;
+
+    background: #C5A24A;
+
+    box-shadow:
+        0 0 15px rgba(197, 162, 74, 0.45);
+
+    animation:
+        sutrikaOpeningLine 0.9s 3.1s ease forwards;
+}
+
+
+/* TAGLINE */
+
+.sutrika-intro-tagline {
+    margin: 0;
+
+    color: #F8F4EE;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: clamp(12px,
+            1.7vw,
+            16px);
+
+    letter-spacing: 2.5px;
+
+    font-weight: 400;
+
+    opacity: 0;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+
+    animation:
+        sutrikaOpeningFade 0.9s 3.8s ease forwards;
+}
+
+
+/* ODISHA • HERITAGE */
+
+.sutrika-intro-bottom {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    color: #C5A24A;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    animation:
+        sutrikaOpeningFade 0.9s 4.6s ease forwards;
+}
+
+
+/* HIDE AFTER 7 SECONDS */
+
+.sutrika-intro.intro-hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   OPENING ANIMATIONS
+   ========================================================== */
+
+@keyframes sutrikaOpeningFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes sutrikaOpeningLogo {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.65) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            scale(1) translateY(0);
+    }
+}
+
+
+@keyframes sutrikaOpeningTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+        letter-spacing: 20px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 9px;
+    }
+}
+
+
+@keyframes sutrikaOpeningLine {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 115px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes sutrikaOpeningGlow {
+
+    0% {
+        transform:
+            translate(-50%, -50%) scale(0.9);
+
+        opacity: 0.5;
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%) scale(1.08);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%) scale(0.9);
+
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes sutrikaOpeningPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .sutrika-intro-logo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .sutrika-intro-title {
+        font-size: 42px;
+        letter-spacing: 5px;
+    }
+
+    .sutrika-intro-tagline {
+        padding: 0 20px;
+        line-height: 1.7;
+    }
+
+    .sutrika-intro-ornament span {
+        width: 45px;
+    }
+
+    .sutrika-intro-bottom {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ==========================================================
+   SUTRIKA HEADER CART & WISHLIST BADGES
+   ========================================================== */
+
+.nav-icons a {
+    position: relative;
+}
+
+
+/* Badge */
+
+.nav-icons .header-badge {
+
+    position: absolute;
+
+    top: -8px;
+    right: -9px;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #C5A24A;
+    color: #4A1024;
+
+    border: 2px solid #4A1024;
+
+    border-radius: 50%;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(0);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    z-index: 20;
+
+}
+
+
+/* Show badge */
+
+.nav-icons .header-badge.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+
+}
+
+
+/* Small golden glow */
+
+.nav-icons .header-badge.show {
+
+    box-shadow:
+        0 0 0 2px rgba(197, 162, 74, .12),
+        0 3px 8px rgba(0, 0, 0, .20);
+
+}
+
+
+/* ==========================================================
+   SUTRIKA GLOBAL BACK TO TOP
+   ========================================================== */
+
+.backToTop {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #8b1e3f;
+    color: #fff;
+
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease,
+        transform .4s ease,
+        background .3s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* Visible state */
+
+.backToTop.showTop {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* Hover */
+
+.backToTop:hover {
+
+    background: #C5A24A;
+
+    color: #4A1024;
+
+    transform: translateY(-5px);
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .backToTop {
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA - NEW HOME HERO STYLING
+   LIGHT HERITAGE EDITION
+========================================================== */
+
+
+/* =========================
+   HERO BASE
+========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 85px);
+    min-height: 0;
+    overflow: hidden;
+    margin-top: 85px;
+    background: #f8f1e5;
+}
+
+
+/* =========================
+   HERO SLIDES
+========================= */
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    animation: sutrikaHeroZoom 12s ease-in-out infinite;
+
+    transform-origin: center center;
+}
+
+
+/* Elegant slow zoom */
+
+@keyframes sutrikaHeroZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   LIGHT HERITAGE OVERLAY
+========================= */
+
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    /*
+       Very light overlay.
+       Keeps your image bright instead
+       of making it dark.
+    */
+
+    background:
+        linear-gradient(90deg,
+            rgba(239, 184, 239, 0.888) 0%,
+            rgba(248, 241, 229, 0.05) 42%,
+            rgba(50, 15, 25, 0.08) 75%,
+            rgba(30, 8, 15, 0.20) 100%);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+
+    position: absolute;
+
+    top: 50%;
+    left: 8%;
+
+    transform: translateY(-50%);
+
+    width: 540px;
+    max-width: 42%;
+
+    z-index: 5;
+
+    animation: heroContentReveal 1.2s ease forwards;
+}
+
+
+/* =========================
+   SMALL GOLD LABEL
+========================= */
+
+.hero-content span {
+
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--gold);
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+    position: relative;
+}
+
+
+/* Decorative line before label */
+
+.hero-content span::before {
+
+    content: "";
+
+    width: 38px;
+    height: 1px;
+
+    background: var(--gold);
+
+    margin-right: 12px;
+
+}
+
+
+/* =========================
+   MAIN HERO HEADING
+========================= */
+
+.hero-content h1 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(46px, 5vw, 70px);
+
+    line-height: 1.08;
+
+    font-weight: 600;
+
+    color: var(--wine-dark);
+
+    margin-bottom: 22px;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+
+/* Highlight important words */
+
+.hero-content h1 br+* {
+    color: var(--wine);
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero-content p {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #4b3a32;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+
+    margin-bottom: 32px;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Primary button */
+
+.hero-buttons .btn-primary {
+
+    background: var(--wine);
+
+    color: #fff;
+
+    border: 1px solid var(--wine);
+
+    padding: 14px 30px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    letter-spacing: .3px;
+
+    box-shadow:
+        0 8px 20px rgba(107, 30, 53, .18);
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.hero-buttons .btn-primary:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: var(--wine-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(197, 162, 74, .25);
+}
+
+
+/* Secondary button */
+
+.hero-buttons .btn-secondary {
+
+    background: rgba(255, 255, 255, .35);
+
+    color: var(--wine-dark);
+
+    border: 1px solid var(--wine);
+
+    padding: 14px 30px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    backdrop-filter: blur(4px);
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+
+.hero-buttons .btn-secondary:hover {
+
+    background: var(--wine);
+
+    color: #fff;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CONTENT ANIMATION
+========================= */
+
+@keyframes heroContentReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-45%) translateX(-35px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(-50%) translateX(0);
+    }
+
+}
+
+
+/* =========================
+   SLIDE INDICATORS
+========================= */
+
+.hero-slider::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 28px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80px;
+
+    height: 2px;
+
+    background:
+        linear-gradient(to right,
+            var(--gold) 0 30%,
+            rgba(255, 255, 255, .5) 30% 65%,
+            rgba(255, 255, 255, .35) 65% 100%);
+
+    z-index: 10;
+}
+
+
+/* ==========================================================
+   SLIDE 2
+   TABLET / SUTRIKA DIGITAL EXPERIENCE
+========================================================== */
+
+.hero-slide:nth-child(2) .hero-content h1 {
+
+    color: #fff;
+
+    text-shadow:
+        0 3px 15px rgba(246, 242, 242, 0.904);
+}
+
+
+.hero-slide:nth-child(2) .hero-content p {
+
+    color: #f7f3ed;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, .3);
+}
+
+
+.hero-slide:nth-child(2) .hero-overlay {
+
+        position: absolute;
+            inset: 0;
+            z-index: 1;
+        
+            background: linear-gradient(90deg,
+                    rgba(246, 232, 207, 0.15) 0%,
+                    rgba(246, 232, 207, 0.08) 25%,
+                    rgba(246, 232, 207, 0.02) 48%,
+                    rgba(246, 232, 207, 0) 70%,
+                    rgba(0, 0, 0, 0) 100%);
+}
+
+
+.hero-slide:nth-child(2) .btn-secondary {
+
+    color: #fff;
+
+    border-color: #fff;
+
+    background: transparent;
+}
+
+
+.hero-slide:nth-child(2) .btn-secondary:hover {
+
+    background: #fff;
+
+    color: var(--wine);
+}
+
+
+/* ==========================================================
+   SLIDE 3
+   ARTISAN / WEAVER
+========================================================== */
+
+.hero-slide:nth-child(3) .hero-content h1 {
+
+    color: #fff;
+
+}
+
+
+.hero-slide:nth-child(3) .hero-content p {
+
+    color: #f5f0e8;
+}
+
+
+.hero-slide:nth-child(3) .hero-overlay {
+
+        position: absolute;
+            inset: 0;
+            z-index: 1;
+        
+            background: linear-gradient(90deg,
+                    rgba(246, 232, 207, 0.15) 0%,
+                    rgba(246, 232, 207, 0.08) 25%,
+                    rgba(246, 232, 207, 0.02) 48%,
+                    rgba(246, 232, 207, 0) 70%,
+                    rgba(0, 0, 0, 0) 100%);
+}
+
+
+.hero-slide:nth-child(3) .btn-secondary {
+
+    color: #fff;
+
+    border-color: #fff;
+
+    background: transparent;
+}
+
+
+.hero-slide:nth-child(3) .btn-secondary:hover {
+
+    background: #fff;
+
+    color: var(--wine);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+
+        height: calc(100vh - 85px);
+
+        min-height: 600px;
+    }
+
+
+    .hero-content {
+
+        left: 6%;
+
+        max-width: 52%;
+
+        width: 520px;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        height: 650px;
+
+        min-height: 650px;
+
+        margin-top: 75px;
+    }
+
+
+    .hero-slide img {
+
+        object-position: 65% center;
+
+    }
+
+
+    .hero-content {
+
+        left: 7%;
+
+        top: 52%;
+
+        width: 86%;
+
+        max-width: none;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 38px;
+
+        line-height: 1.12;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        max-width: 450px;
+
+    }
+
+
+    .hero-content span {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero-content span::before {
+
+        width: 25px;
+
+    }
+
+
+    .hero-buttons {
+
+        gap: 10px;
+
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+
+        padding: 12px 22px;
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .hero {
+
+        height: 650px;
+
+    }
+
+
+    .hero-slide img {
+
+        object-position: 68% center;
+
+    }
+
+
+    .hero-content {
+
+        left: 6%;
+
+        width: 88%;
+
+        top: 50%;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 31px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+
+        width: auto;
+
+        min-width: 170px;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ==========================================================
+   SLIDE 1 TEXT FIX
+========================================================== */
+
+.hero-slide:first-child .hero-content {
+    z-index: 20;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide:first-child .hero-content span {
+    color: #C5A24A !important;
+}
+
+.hero-slide:first-child .hero-content h1 {
+    color: #5A162B !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.hero-slide:first-child .hero-content p {
+    color: #4A3830 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.hero-slide:first-child .hero-buttons {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ==========================================================
+   ALL HERO SLIDES — SAME STYLE AS SLIDE 1
+========================================================== */
+
+.hero-slide .hero-content {
+    z-index: 20 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Small gold label */
+.hero-slide .hero-content span {
+    color: #C5A24A !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Main heading — SAME AS SLIDE 1 */
+.hero-slide .hero-content h1 {
+    color: #5A162B !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Description — SAME AS SLIDE 1 */
+.hero-slide .hero-content p {
+    color: #4A3830 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Buttons */
+.hero-slide .hero-buttons {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SUTRIKA — HERO SLIDER
+   SAME STYLE FOR ALL 3 SLIDES
+   ========================================================= */
+
+
+/* =========================
+   HERO MAIN SECTION
+   ========================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 85px);
+    min-height: 600px;
+    overflow: hidden;
+    background: #f4e4c8;
+}
+
+
+/* =========================
+   HERO SLIDE
+   ========================= */
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+
+    overflow: hidden;
+}
+
+
+/* ACTIVE SLIDE */
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+/* =========================
+   HERO IMAGE
+   ========================= */
+
+.hero-slide img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+
+    transform: scale(1);
+    transition: transform 7s ease;
+}
+
+
+/* IMAGE ZOOM ON ACTIVE SLIDE */
+
+.hero-slide.active img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   HERO OVERLAY
+   SAME FOR ALL 3 SLIDES
+   ========================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    /*
+       Keeps the left side readable
+       while allowing the artwork
+       on the right side to remain visible.
+    */
+
+    background:
+        linear-gradient(90deg,
+            rgba(246, 232, 207, 0.96) 0%,
+            rgba(246, 232, 207, 0.90) 22%,
+            rgba(246, 232, 207, 0.70) 38%,
+            rgba(246, 232, 207, 0.28) 56%,
+            rgba(246, 232, 207, 0.04) 75%,
+            rgba(246, 232, 207, 0) 100%);
+}
+
+
+/* =========================
+   HERO CONTENT
+   SAME POSITION FOR ALL 3
+   ========================= */
+
+.hero-content {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 8%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 560px;
+    max-width: 42%;
+
+    color: #56152f;
+
+    text-align: left;
+}
+
+
+/* =========================
+   SMALL GOLD LABEL
+   ========================= */
+
+.hero-content>span {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 24px;
+
+    color: #b18a32;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* GOLD LINE BEFORE LABEL */
+
+.hero-content>span::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 42px;
+    height: 2px;
+
+    margin-right: 14px;
+
+    background: #b18a32;
+}
+
+
+/* =========================
+   MAIN HEADING
+   ========================= */
+
+.hero-content h1 {
+    margin: 0 0 25px 0;
+
+    color: #641633;
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(48px, 4.5vw, 78px);
+
+    font-weight: 600;
+
+    line-height: 1.08;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.hero-content p {
+    margin: 0 0 32px 0;
+
+    max-width: 520px;
+
+    color: #4d4038;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTON CONTAINER
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+   ========================= */
+
+.hero-buttons .btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding: 16px 28px;
+
+    border: 2px solid #701b3d;
+
+    border-radius: 4px;
+
+    background: #701b3d;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* PRIMARY HOVER */
+
+.hero-buttons .btn-primary:hover {
+    background: #54132d;
+
+    border-color: #54132d;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(86, 21, 47, 0.25);
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+   ========================= */
+
+.hero-buttons .btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding: 16px 28px;
+
+    border: 2px solid #701b3d;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: #641633;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    backdrop-filter: blur(3px);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* SECONDARY HOVER */
+
+.hero-buttons .btn-secondary:hover {
+    background: #701b3d;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(86, 21, 47, 0.22);
+}
+
+
+/* =========================================================
+   SLIDE CONTENT ANIMATION
+   SAME ANIMATION FOR ALL 3
+   ========================================================= */
+
+.hero-slide .hero-content>span,
+.hero-slide .hero-content h1,
+.hero-slide .hero-content p,
+.hero-slide .hero-content .hero-buttons {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* ACTIVE CONTENT */
+
+.hero-slide.active .hero-content>span {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition-delay: 0.2s;
+}
+
+
+.hero-slide.active .hero-content h1 {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition-delay: 0.35s;
+}
+
+
+.hero-slide.active .hero-content p {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition-delay: 0.5s;
+}
+
+
+.hero-slide.active .hero-content .hero-buttons {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition-delay: 0.65s;
+}
+
+
+/* =========================================================
+   DESKTOP — KEEP TEXT ON LEFT BLANK AREA
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero-content {
+        left: 8%;
+
+        width: 570px;
+
+        max-width: 43%;
+    }
+
+    .hero-content h1 {
+        font-size: 68px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .hero {
+        height: calc(100vh - 85px);
+
+        min-height: 570px;
+    }
+
+    .hero-content {
+        left: 7%;
+
+        width: 520px;
+
+        max-width: 45%;
+    }
+
+    .hero-content h1 {
+        font-size: 54px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        height: 650px;
+
+        min-height: 650px;
+    }
+
+    .hero-content {
+        left: 6%;
+
+        width: 500px;
+
+        max-width: 52%;
+    }
+
+    .hero-content>span {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+
+        line-height: 1.12;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .hero-slide img {
+        object-position: center center;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 720px;
+
+        min-height: 720px;
+    }
+
+
+    /* IMAGE */
+
+    .hero-slide img {
+        object-position: 62% center;
+    }
+
+
+    /* STRONGER LEFT FADE */
+
+    .hero-overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(246, 232, 207, 0.25) 0%,
+                rgba(246, 232, 207, 0.55) 45%,
+                rgba(246, 232, 207, 0.94) 72%,
+                rgba(246, 232, 207, 0.98) 100%);
+    }
+
+
+    /* CONTENT */
+
+    .hero-content {
+        left: 7%;
+
+        right: 7%;
+
+        top: auto;
+
+        bottom: 55px;
+
+        transform: none;
+
+        width: auto;
+
+        max-width: none;
+    }
+
+
+    .hero-content>span {
+        margin-bottom: 15px;
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .hero-content>span::before {
+        width: 28px;
+
+        margin-right: 9px;
+    }
+
+
+    .hero-content h1 {
+        margin-bottom: 18px;
+
+        font-size: 38px;
+
+        line-height: 1.1;
+    }
+
+
+    .hero-content p {
+        margin-bottom: 24px;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        min-width: auto;
+
+        padding: 12px 18px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        height: 680px;
+
+        min-height: 680px;
+    }
+
+    .hero-content {
+        bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 180px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(90deg,
+            rgba(246, 232, 207, 0.15) 0%,
+            rgba(246, 232, 207, 0.08) 25%,
+            rgba(246, 232, 207, 0.02) 48%,
+            rgba(246, 232, 207, 0) 70%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+
+
+
+/* ==========================================================
+   SUTRIKA OPENING ANIMATION
+   FINAL RESPONSIVE RECTANGULAR PANEL
+   ========================================================== */
+
+/* ---------- FULL SCREEN BACKDROP ---------- */
+
+.sutrika-intro {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    background: #4A1024 !important;
+
+    z-index: 10000 !important;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+/* ---------- REMOVE OLD FULL-SCREEN BACKGROUND ---------- */
+
+.sutrika-intro::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(197, 162, 74, 0.08),
+            transparent 55%);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* ---------- SOFT GOLD GLOW ---------- */
+
+.sutrika-intro::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(197, 162, 74, 0.12),
+            transparent 70%);
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   RECTANGULAR HERITAGE PANEL
+   ========================================================== */
+
+.sutrika-intro-inner {
+
+    position: relative !important;
+
+    z-index: 10 !important;
+
+    width: 92vw !important;
+
+    max-width: 1280px !important;
+
+    height: min(72vh, 720px) !important;
+
+    min-height: 480px;
+
+    padding: 40px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    overflow: hidden !important;
+
+    border: 1px solid rgba(197, 162, 74, 0.35);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35),
+        inset 0 0 80px rgba(45, 4, 18, 0.35);
+
+    background-image:
+        linear-gradient(rgba(55, 7, 22, 0.18),
+            rgba(55, 7, 22, 0.28)),
+        url("../ASSETS/LOGO/sutrika-opening-bg.png");
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    animation:
+        sutrikaOpeningPanelZoom 8s ease-in-out infinite;
+}
+
+
+/* ---------- PANEL ZOOM ---------- */
+
+@keyframes sutrikaOpeningPanelZoom {
+
+    0% {
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background-size: 106% 106%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.sutrika-intro-inner>* {
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* ---------- TOP ORNAMENT ---------- */
+
+.sutrika-intro-ornament {
+
+    margin-bottom: 20px !important;
+
+}
+
+
+/* ---------- LOGO ---------- */
+
+.sutrika-intro-logo {
+
+    width: 90px !important;
+    height: 90px !important;
+
+    object-fit: contain;
+
+}
+
+
+/* ---------- TITLE ---------- */
+
+.sutrika-intro-title {
+
+    font-size: clamp(42px,
+            5vw,
+            72px) !important;
+
+    letter-spacing: 8px !important;
+
+    margin-top: 15px !important;
+
+    margin-bottom: 0 !important;
+
+}
+
+
+/* ---------- GOLD LINE ---------- */
+
+.sutrika-intro-line {
+
+    margin: 20px 0 15px !important;
+
+}
+
+
+/* ---------- TAGLINE ---------- */
+
+.sutrika-intro-tagline {
+
+    font-size: clamp(11px,
+            1.4vw,
+            15px) !important;
+
+    letter-spacing: 2px !important;
+
+    padding: 0 15px;
+
+}
+
+
+/* ---------- ODISHA HERITAGE ---------- */
+
+.sutrika-intro-bottom {
+
+    margin-top: 20px !important;
+
+}
+
+
+/* ==========================================================
+   TABLET
+   768px – 992px
+   ========================================================== */
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .sutrika-intro-inner {
+
+        width: 92vw !important;
+
+        height: 58vh !important;
+
+        min-height: 430px !important;
+
+        max-height: 600px !important;
+
+        padding: 30px !important;
+
+    }
+
+
+    .sutrika-intro-logo {
+
+        width: 78px !important;
+
+        height: 78px !important;
+
+    }
+
+
+    .sutrika-intro-title {
+
+        font-size: 46px !important;
+
+        letter-spacing: 6px !important;
+
+    }
+
+
+    .sutrika-intro-tagline {
+
+        font-size: 12px !important;
+
+        letter-spacing: 1.8px !important;
+
+    }
+
+
+    .sutrika-intro-ornament span {
+
+        width: 55px !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .sutrika-intro-inner {
+
+        width: 92vw !important;
+
+        height: 62vh !important;
+
+        min-height: 400px !important;
+
+        padding: 25px 18px !important;
+
+    }
+
+
+    .sutrika-intro-logo {
+
+        width: 70px !important;
+
+        height: 70px !important;
+
+    }
+
+
+    .sutrika-intro-title {
+
+        font-size: 38px !important;
+
+        letter-spacing: 5px !important;
+
+    }
+
+
+    .sutrika-intro-line {
+
+        margin: 16px 0 12px !important;
+
+    }
+
+
+    .sutrika-intro-tagline {
+
+        font-size: 11px !important;
+
+        letter-spacing: 1.3px !important;
+
+        line-height: 1.6 !important;
+
+    }
+
+
+    .sutrika-intro-bottom {
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+
+    }
+
+
+    .sutrika-intro-ornament span {
+
+        width: 40px !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .sutrika-intro-inner {
+
+        width: 94vw !important;
+
+        height: 58vh !important;
+
+        min-height: 360px !important;
+
+        padding: 20px 12px !important;
+
+    }
+
+
+    .sutrika-intro-logo {
+
+        width: 62px !important;
+
+        height: 62px !important;
+
+    }
+
+
+    .sutrika-intro-title {
+
+        font-size: 32px !important;
+
+        letter-spacing: 4px !important;
+
+    }
+
+
+    .sutrika-intro-tagline {
+
+        font-size: 10px !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   INTRO HIDDEN STATE
+   ========================================================== */
+
+.sutrika-intro.intro-hide {
+
+    opacity: 0 !important;
+
+    visibility: hidden !important;
+
+    pointer-events: none !important;
+
+}
+
+
+
+/* ==========================================================
+   SUTRIKA OPENING — AUTOMATIC DEVICE FIT
+   ========================================================== */
+
+.sutrika-intro {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 4vh 4vw !important;
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    background: #4A1024 !important;
+}
+
+
+/* IMAGE PANEL */
+
+.sutrika-intro-inner {
+    position: relative !important;
+    z-index: 10 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 1400px !important;
+    max-height: 90dvh !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    background-image:
+        linear-gradient(rgba(55, 7, 22, 0.18),
+            rgba(55, 7, 22, 0.28)),
+        url("../ASSETS/LOGO/sutrika-opening-bg.png");
+
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    border: 1px solid rgba(197, 162, 74, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 0 70px rgba(45, 4, 18, 0.30);
+
+    border-radius: clamp(8px, 1vw, 18px);
+}
+
+
+/* ==========================================================
+   TABLET — AUTOMATIC FIT
+   ========================================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .sutrika-intro {
+        padding: 3vh 3vw !important;
+    }
+
+    .sutrika-intro-inner {
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 94vw !important;
+        max-height: 94dvh !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE — AUTOMATIC FIT
+   ========================================================== */
+
+@media (max-width: 599px) {
+
+    .sutrika-intro {
+        padding: 2.5vh 2.5vw !important;
+    }
+
+    .sutrika-intro-inner {
+        max-width: 95vw !important;
+        max-height: 95dvh !important;
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL SCREEN
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+    .sutrika-intro {
+        padding: 2vh 2vw !important;
+    }
+
+    .sutrika-intro-inner {
+        max-width: 96vw !important;
+        max-height: 96dvh !important;
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA OPENING ANIMATION
+   FULL SCREEN — RESPONSIVE TO EVERY DEVICE
+   ========================================================== */
+
+.sutrika-intro {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    /* FULL-SCREEN BACKGROUND */
+    background-image:
+        linear-gradient(rgba(55, 7, 22, 0.12),
+            rgba(55, 7, 22, 0.12)),
+        url("../ASSETS/LOGO/sutrika-opening-bg.png") !important;
+
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    z-index: 10000 !important;
+}
+
+
+/* ==========================================================
+   OPENING CONTENT
+   ========================================================== */
+
+.sutrika-intro-inner {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: 90% !important;
+    max-width: 700px !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    .sutrika-intro {
+        width: 100vw !important;
+        height: 100dvh !important;
+    }
+
+    .sutrika-intro-inner {
+        width: 80% !important;
+        max-width: 620px !important;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 599px) {
+
+    .sutrika-intro {
+        width: 100vw !important;
+        height: 100dvh !important;
+    }
+
+    .sutrika-intro-inner {
+        width: 88% !important;
+        max-width: 500px !important;
+    }
+}
+
+
+/* ==========================================================
+   SUTRIKA HOMEPAGE HERO — TABLET
+   RESPONSIVE RECTANGLE, NOT FULL SCREEN
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .hero {
+        width: 100% !important;
+
+        /* Keep the hero as a proportional rectangle */
+        height: auto !important;
+
+        aspect-ratio: 16 / 7 !important;
+
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-slide,
+    .hero-slide img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .hero-slide img {
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+}
+
+/* ==========================================================
+   SUTRIKA HOMEPAGE HERO
+   TABLET CONTENT FIX ONLY
+   DO NOT CHANGE HERO BANNER SIZE
+   ========================================================== */
+
+@media (min-width: 375px) and (max-width: 667px) {
+
+    /* =========================================
+       HERO CONTENT CONTAINER
+       ========================================= */
+
+    .hero .hero-content {
+
+        left: 7% !important;
+
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        width: 42% !important;
+
+        max-width: 42% !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =========================================
+       SMALL GOLD LABEL
+       ========================================= */
+
+    .hero .hero-content>span {
+
+        font-size: 9px !important;
+
+        letter-spacing: 2px !important;
+
+        margin-bottom: 10px !important;
+
+        line-height: 1.2 !important;
+    }
+
+
+    .hero .hero-content>span::before {
+
+        width: 25px !important;
+
+        height: 1px !important;
+
+        margin-right: 8px !important;
+    }
+
+
+    /* =========================================
+       MAIN HEADING
+       ========================================= */
+
+    .hero .hero-content h1 {
+
+        font-size: clamp(28px, 4vw, 38px) !important;
+
+        line-height: 1.02 !important;
+
+        letter-spacing: 0.3px !important;
+
+        margin: 0 0 14px 0 !important;
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+       ========================================= */
+
+    .hero .hero-content p {
+
+        max-width: 330px !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.5 !important;
+
+        margin: 0 0 16px 0 !important;
+    }
+
+
+    /* =========================================
+       BUTTONS
+       ========================================= */
+
+    .hero .hero-buttons {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+
+        flex-wrap: nowrap !important;
+    }
+
+
+    .hero .hero-buttons .btn-primary,
+    .hero .hero-buttons .btn-secondary {
+
+        min-width: auto !important;
+
+        padding: 9px 14px !important;
+
+        font-size: 9px !important;
+
+        line-height: 1.2 !important;
+
+        white-space: nowrap !important;
+    }
+}
+
+
+/* ==========================================================
+   SUTRIKA HERO — MOBILE USE TABLET LAYOUT
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        width: 100%;
+        height: 650px !important;
+        min-height: 650px !important;
+        margin-top: 75px;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    /* HERO IMAGE — SAME AS TABLET */
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+
+    /* HERO OVERLAY — SAME HORIZONTAL STYLE */
+    .hero-overlay {
+        background:
+            linear-gradient(90deg,
+                rgba(246, 232, 207, 0.96) 0%,
+                rgba(246, 232, 207, 0.90) 22%,
+                rgba(246, 232, 207, 0.70) 38%,
+                rgba(246, 232, 207, 0.28) 56%,
+                rgba(246, 232, 207, 0.04) 75%,
+                rgba(246, 232, 207, 0) 100%) !important;
+
+        z-index: 1;
+    }
+
+
+    /* HERO CONTENT — TABLET POSITION */
+    .hero-content {
+        position: absolute !important;
+
+        left: 6% !important;
+        right: auto !important;
+
+        top: 50% !important;
+        bottom: auto !important;
+
+        transform: translateY(-50%) !important;
+
+        width: 500px !important;
+        max-width: 52% !important;
+
+        text-align: left !important;
+
+        z-index: 20 !important;
+    }
+
+
+    /* GOLD LABEL */
+    .hero-content>span {
+        display: inline-flex !important;
+
+        font-size: 12px !important;
+        letter-spacing: 3px !important;
+
+        margin-bottom: 18px !important;
+
+        color: #C5A24A !important;
+    }
+
+
+    .hero-content>span::before {
+        width: 25px !important;
+        margin-right: 10px !important;
+    }
+
+
+    /* HEADING — TABLET SIZE */
+    .hero-content h1 {
+        font-size: 38px !important;
+        line-height: 1.12 !important;
+
+        margin-bottom: 20px !important;
+
+        color: #5A162B !important;
+
+        text-align: left !important;
+    }
+
+
+    /* DESCRIPTION — TABLET STYLE */
+    .hero-content p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+
+        max-width: 450px !important;
+
+        margin-bottom: 25px !important;
+
+        color: #4A3830 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* BUTTONS — KEEP HORIZONTAL LIKE TABLET */
+    .hero-buttons {
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        justify-content: flex-start !important;
+
+        gap: 10px !important;
+
+        flex-wrap: wrap !important;
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: auto !important;
+
+        min-width: 150px !important;
+
+        padding: 12px 18px !important;
+
+        font-size: 12px !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* FORCE HERO TEXT TO STAY VISIBLE */
+    .hero-slide .hero-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .hero-slide .hero-content span,
+    .hero-slide .hero-content h1,
+    .hero-slide .hero-content p,
+    .hero-slide .hero-content .hero-buttons {
+        visibility: visible !important;
+    }
+
+}
+
+
+/* ==========================================================
+   IPHONE SE / SMALL PHONES
+   KEEP TABLET LAYOUT
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+    .hero {
+        height: 650px !important;
+        min-height: 650px !important;
+    }
+
+    .hero-slide img {
+        object-position: center center !important;
+    }
+
+    .hero-content {
+        left: 6% !important;
+
+        top: 50% !important;
+        bottom: auto !important;
+
+        width: 500px !important;
+        max-width: 52% !important;
+
+        transform: translateY(-50%) !important;
+    }
+
+    .hero-content h1 {
+        font-size: 32px !important;
+        line-height: 1.12 !important;
+    }
+
+    .hero-content p {
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-buttons {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: auto !important;
+        min-width: 135px !important;
+        padding: 10px 12px !important;
+        font-size: 11px !important;
+    }
+}

@@ -1,0 +1,6191 @@
+/* =========================================
+   COLLECTION PAGE
+========================================= */
+
+/* =========================================
+   COLLECTION HERO
+========================================= */
+
+.collection-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding-top: 85px;
+    /* Header height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.collection-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+/* No glow overlay */
+.collection-banner::after {
+    display: none;
+}
+
+.banner-overlay {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.banner-content {
+    width: 100%;
+    max-width: 650px;
+    margin-left: 8%;
+    color: #fff;
+    padding: 70px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: #d7b86d;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.banner-content h1 {
+    font-size: 68px;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 25px;
+    font-family: "Playfair Display", serif;
+}
+
+.banner-content h3 {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .95);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.shop-btn,
+.guide-btn {
+    padding: 15px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.shop-btn {
+    background: #8b1e3f;
+    color: #fff;
+}
+
+.shop-btn:hover {
+    background: #a7284d;
+}
+
+.guide-btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.guide-btn:hover {
+    background: #fff;
+    color: #8b1e3f;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    box-shadow: none !important;
+    border-bottom: none !important;
+}
+
+.navbar {
+    height: 85px;
+    margin: 0;
+}
+
+@media (max-width:768px) {
+
+    .collection-banner {
+        height: 85vh;
+        padding-top: 85px;
+    }
+
+    .banner-content {
+        margin: 0 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 42px;
+    }
+
+    .banner-content h3 {
+        font-size: 18px;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Shop Area */
+.shop-area {
+    background: #f8f5ef;
+}
+
+
+/* Filter Buttons */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.filter-buttons button {
+    padding: 12px 26px;
+    border: 2px solid #6B1E35;
+    background: white;
+    color: #6B1E35;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Search */
+
+.product-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.product-search input {
+    width: 420px;
+    max-width: 90%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+}
+
+.product-search input:focus {
+    border-color: #6B1E35;
+}
+
+/* Category Tabs */
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.category-tabs div {
+    padding: 15px 28px;
+    background: white;
+    border: 1px solid #C5A24A;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.category-tabs div:hover,
+.category-tabs div.active {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Product Grid */
+
+.products-section {
+    background: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card */
+
+.product-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    color: #4A1024;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.product-info span {
+    display: inline-block;
+    color: #a67c00;
+    margin: 8px 0;
+}
+
+.product-info h4 {
+    color: #6B1E35;
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.availability {
+    color: green;
+    font-weight: 600;
+}
+
+/* Buttons */
+
+.product-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.product-buttons button,
+.product-buttons a {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.product-buttons button {
+    background: #6B1E35;
+    color: white;
+    border: none;
+}
+
+.product-buttons button:hover {
+    background: #4A1024;
+}
+
+.product-buttons a {
+    border: 2px solid #6B1E35;
+    color: #6B1E35;
+    background: white;
+}
+
+.product-buttons a:hover {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Hide Animation */
+
+.product-card.hide {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    .collection-hero {
+        height: 280px;
+    }
+
+    .collection-hero h1 {
+        font-size: 36px;
+    }
+
+    .collection-hero p {
+        font-size: 16px;
+    }
+
+    .product-buttons {
+        flex-direction: column;
+    }
+
+}
+
+/* =========================================
+   SUTRIKA COLLECTION PREMIUM ENHANCEMENTS
+========================================= */
+
+
+/* Product Card Luxury Effect */
+
+.product-card {
+
+    position: relative;
+    border: 1px solid rgba(197, 162, 74, 0.25);
+
+}
+
+
+.product-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 18px;
+
+    padding: 1px;
+
+    background: linear-gradient(135deg,
+            #c5a24a,
+            transparent,
+            #6B1E35);
+
+    opacity: 0;
+
+    transition: .4s;
+
+    pointer-events: none;
+
+}
+
+
+.product-card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+
+
+/* Product Image Premium Zoom */
+
+
+.product-card img {
+
+    transition:
+        transform .6s ease,
+        filter .4s ease;
+
+}
+
+
+.product-card:hover img {
+
+    transform: scale(1.08);
+
+    filter: brightness(1.05);
+
+}
+
+
+
+
+
+/* Product Information Animation */
+
+
+.product-info {
+
+    transition: .3s;
+
+}
+
+
+.product-card:hover .product-info {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+
+
+/* Search Premium Style */
+
+
+.product-search input {
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: .3s;
+
+}
+
+
+.product-search input:hover {
+
+    box-shadow:
+        0 8px 25px rgba(107, 30, 53, 0.18);
+
+}
+
+
+
+
+
+/* Category Tabs Animation */
+
+
+.category-tabs div {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.category-tabs div::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0%;
+
+    height: 3px;
+
+    background: #C5A24A;
+
+    transition: .3s;
+
+}
+
+
+.category-tabs div:hover::after {
+
+    width: 100%;
+
+}
+
+
+
+
+/* Button Shine Effect */
+
+
+.product-buttons button,
+.product-buttons a {
+
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.product-buttons button::after,
+.product-buttons a::after {
+
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(255, 255, 255, .25);
+
+    transition: .4s;
+
+}
+
+
+.product-buttons button:hover::after,
+.product-buttons a:hover::after {
+
+
+    left: 100%;
+
+}
+
+
+
+
+
+/* Smooth Product Appearance */
+
+
+.product-card {
+
+    animation: productShow .5s ease;
+
+}
+
+
+@keyframes productShow {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+/* Better Mobile Layout */
+
+
+@media(max-width:768px) {
+
+
+    .banner-content {
+
+        margin-left: 5%;
+
+    }
+
+
+    .banner-content h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .filter-buttons button {
+
+        width: 130px;
+
+    }
+
+
+}
+
+/* =========================================
+   SUTRIKA HERITAGE BACKGROUND UPGRADE
+========================================= */
+
+
+/* Filter Section Background */
+
+.shop-area {
+
+    background:
+
+        linear-gradient(135deg,
+            #f3ead8,
+            #fff8ed);
+
+    padding-bottom: 40px;
+
+}
+
+
+
+
+
+/* Product Area Background */
+
+.products-section {
+
+    background:
+
+        linear-gradient(180deg,
+            #fff8ed,
+            #f5e9d2);
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* Product Cards */
+
+.product-card {
+
+    background: #fffaf2;
+
+    border:
+
+        1px solid rgba(197, 162, 74, 0.35);
+
+}
+
+
+
+
+
+/* Search Box Premium Look */
+
+.product-search input {
+
+
+    background: #fffaf2;
+
+    border:
+
+        2px solid #c5a24a;
+
+
+    color: #4A1024;
+
+
+    box-shadow:
+
+        0 8px 25px rgba(107, 30, 53, .12);
+
+
+}
+
+
+
+.product-search input::placeholder {
+
+    color: #8b6b4a;
+
+}
+
+
+
+
+.product-search input:focus {
+
+
+    background: white;
+
+
+    border-color: #6B1E35;
+
+
+    box-shadow:
+
+        0 0 20px rgba(197, 162, 74, .35);
+
+
+}
+
+
+
+
+
+/* Category Tabs */
+
+.category-tabs div {
+
+
+    background:
+
+        rgba(255, 250, 242, .9);
+
+
+    border:
+
+        1px solid #c5a24a;
+
+
+}
+
+
+
+
+
+.category-tabs div:hover,
+.category-tabs div.active {
+
+
+    background: #6B1E35;
+
+    color: white;
+
+
+    box-shadow:
+
+        0 8px 20px rgba(107, 30, 53, .25);
+
+
+}
+
+
+
+
+
+/* Section Title Enhancement */
+
+.section-title h2 {
+
+    color: #4A1024;
+
+}
+
+
+.section-title p {
+
+    color: #8b1e3f;
+
+}
+
+/* =========================================
+   SOFT HERITAGE COLOR THEME
+========================================= */
+
+
+/* Collection Filter Area */
+
+.shop-area {
+
+    background: #eee2cf;
+
+}
+
+
+
+/* Product Section */
+
+.products-section {
+
+    background: #f4eadb;
+
+}
+
+
+
+/* Product Cards */
+
+.product-card {
+
+    background: #fff8ed;
+
+    border: 1px solid #dfc98a;
+
+}
+
+
+
+/* Search Box */
+
+.product-search input {
+
+    background: #fff3df;
+
+    border: 1px solid #b9934d;
+
+}
+
+
+
+/* Search Focus */
+
+.product-search input:focus {
+
+    background: #fffaf2;
+
+    border-color: #7b263f;
+
+}
+
+
+
+
+
+/* Category Tabs */
+
+.category-tabs div {
+
+    background: #f9eddb;
+
+}
+
+
+
+
+
+/* Hero Banner Softer Look */
+
+
+.collection-banner::after {
+
+    background:
+
+        linear-gradient(90deg,
+            rgba(70, 45, 35, 0.45),
+            rgba(139, 94, 52, 0.25),
+            rgba(0, 0, 0, 0.15));
+
+}
+
+
+
+
+/* Reduce Hero Zoom Intensity */
+
+
+.collection-banner::before {
+
+    animation:
+
+        collectionZoom 18s ease-in-out infinite;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header,
+.navbar {
+    margin: 0;
+    border: none;
+}
+
+.collection-banner::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* FINAL HERO FIX */
+
+.collection-banner::after {
+    display: none !important;
+}
+
+.banner-overlay::before {
+    display: none !important;
+}
+
+.shop-btn,
+.guide-btn {
+    box-shadow: none !important;
+}
+
+.collection-banner {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* =========================================
+   PREMIUM HERO EFFECT
+========================================= */
+
+.collection-banner::before {
+    animation: heroZoom 16s ease-in-out infinite !important;
+    transform-origin: center;
+}
+
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.collection-banner::after {
+    display: block !important;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background: linear-gradient(90deg,
+            rgba(74, 16, 36, .50),
+            rgba(39, 8, 19, 0.22),
+            rgba(40, 18, 18, 0.08));
+
+    pointer-events: none;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 3;
+}
+
+/* =========================================
+   PREMIUM COLLECTION HERO ENHANCEMENT
+   (Paste at the END of collection.css)
+========================================= */
+
+.collection-banner::before {
+    animation: premiumHeroZoom 18s ease-in-out infinite !important;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes premiumHeroZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Premium Wine Overlay */
+
+.collection-banner::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(100deg,
+            rgba(74, 16, 36, .58) 0%,
+            rgba(74, 16, 36, .30) 35%,
+            rgba(0, 0, 0, .12) 70%,
+            rgba(0, 0, 0, 0) 100%) !important;
+
+    pointer-events: none;
+}
+
+/* Slightly brighter text */
+
+.banner-content {
+    position: relative;
+    z-index: 5;
+}
+
+.banner-content h1 {
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .35);
+}
+
+.banner-content h3 {
+    color: rgba(255, 255, 255, .92);
+}
+
+.banner-content p {
+    color: #d8b66c;
+}
+
+/* Premium buttons */
+
+.shop-btn {
+
+    box-shadow:
+        0 12px 28px rgba(107, 30, 53, .35);
+
+}
+
+.shop-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(107, 30, 53, .55);
+
+}
+
+.guide-btn {
+
+    backdrop-filter: blur(6px);
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 2px solid rgba(255, 255, 255, .85);
+
+}
+
+.guide-btn:hover {
+
+    background: #6B1E35;
+
+    border-color: #6B1E35;
+
+    color: #fff;
+
+}
+
+/* ==========================================================
+   SUTRIKA - BACK TO TOP BUTTON
+========================================================== */
+
+.sutrika-back-to-top {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #C5A24A;
+
+    border-radius: 50%;
+
+    background: #4A1024;
+
+    color: #C5A24A;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .35s ease,
+        background .3s ease,
+        color .3s ease,
+        box-shadow .3s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* Show button */
+
+.sutrika-back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* Hover */
+
+.sutrika-back-to-top:hover {
+
+    background: #C5A24A;
+
+    color: #4A1024;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .22);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sutrika-back-to-top {
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION — PREMIUM HERITAGE HERO
+   ========================================================== */
+
+.collection-banner {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(48, 5, 20, 0.18),
+            rgba(48, 5, 20, 0.02)),
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Slow luxury movement */
+
+.collection-banner::before {
+    content: "";
+    position: absolute;
+    inset: -3%;
+
+    background:
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg") center / cover no-repeat;
+
+    z-index: 0;
+
+    animation: collectionHeroZoom 18s ease-in-out infinite alternate;
+}
+
+
+/* Dark cinematic overlay */
+
+.collection-banner::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(91, 16, 43, 0.92) 0%,
+            rgba(91, 16, 43, 0.58) 12%,
+            rgba(55, 5, 22, 0.38) 38%,
+            rgba(42, 4, 16, 0.42) 70%,
+            rgba(42, 4, 16, 0.58) 100%);
+}
+
+/* Hero content */
+
+.collection-banner .banner-content {
+    position: relative;
+    z-index: 3;
+
+    width: min(650px, 52%);
+
+    margin-left: 8%;
+
+    padding: 30px 0;
+}
+
+
+/* Small gold label */
+
+.collection-banner .banner-content p:first-child {
+    margin: 0 0 24px;
+
+    color: #C5A24A;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.collection-banner .banner-content h1 {
+    margin: 0;
+
+    max-width: 650px;
+
+    color: #F6F0E6;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(3.5rem, 5.8vw, 6rem);
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* Gold accent under heading */
+
+.collection-banner .banner-content h1::after {
+    content: "✦";
+
+    display: block;
+
+    width: 270px;
+
+    margin: 25px 0 20px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(197, 162, 74, 0.75);
+
+    color: #C5A24A;
+
+    font-size: 13px;
+
+    letter-spacing: 8px;
+}
+
+
+/* Description */
+
+.collection-banner .banner-content p:nth-of-type(2) {
+    max-width: 470px;
+
+    margin: 0 0 34px;
+
+    color: rgba(246, 240, 230, 0.92);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* Buttons container */
+
+.collection-banner .banner-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* Primary button */
+
+.collection-banner .primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 210px;
+
+    padding: 16px 25px;
+
+    background: #C5A24A;
+
+    border: 1px solid #D7B85C;
+
+    color: #3A0F20;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(10px 0,
+            calc(100% - 10px) 0,
+            100% 10px,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            10px 100%,
+            0 calc(100% - 10px),
+            0 10px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.collection-banner .primary-btn:hover {
+    background: #D7B85C;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Secondary button */
+
+.collection-banner .secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 190px;
+
+    padding: 15px 24px;
+
+    background: transparent;
+
+    border: 1px solid rgba(246, 240, 230, 0.85);
+
+    color: #F6F0E6;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.collection-banner .secondary-btn:hover {
+    background: #F6F0E6;
+
+    border-color: #F6F0E6;
+
+    color: #4A1024;
+}
+
+
+/* Hero zoom */
+
+@keyframes collectionHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    .collection-banner .banner-content {
+        width: 60%;
+
+        margin-left: 6%;
+    }
+
+    .collection-banner .banner-content h1 {
+        font-size: clamp(3rem, 7vw, 4.5rem);
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .collection-banner {
+        min-height: 680px;
+        height: 680px;
+
+        align-items: center;
+    }
+
+
+    .collection-banner .banner-content {
+        width: 82%;
+
+        margin-left: 7%;
+
+        padding-top: 20px;
+    }
+
+
+    .collection-banner .banner-content p:first-child {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .collection-banner .banner-content h1 {
+        font-size: clamp(2.6rem, 10vw, 4rem);
+
+        line-height: 1;
+    }
+
+
+    .collection-banner .banner-content h1::after {
+        width: 190px;
+
+        margin: 20px 0 17px;
+    }
+
+
+    .collection-banner .banner-content p:nth-of-type(2) {
+        max-width: 340px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+    }
+
+
+    .collection-banner .banner-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .collection-banner .primary-btn {
+        min-width: 190px;
+
+        padding: 14px 22px;
+    }
+
+
+    .collection-banner .secondary-btn {
+        min-width: auto;
+
+        padding: 8px 0;
+
+        border: none;
+
+        border-bottom: 1px solid #C5A24A;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .collection-banner .banner-content {
+        width: 88%;
+
+        margin-left: 6%;
+    }
+
+
+    .collection-banner .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION
+   PREMIUM EDITORIAL HERO
+   ========================================================== */
+
+.collection-banner {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(42, 4, 16, 0.12),
+            rgba(42, 4, 16, 0.02)),
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   CINEMATIC OVERLAY
+   ========================================================== */
+
+.collection-banner::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(91, 16, 43, 0.92) 0%,
+            rgba(91, 16, 43, 0.58) 12%,
+            rgba(55, 5, 22, 0.38) 38%,
+            rgba(42, 4, 16, 0.42) 70%,
+            rgba(42, 4, 16, 0.58) 100%);
+}
+
+
+/* ==========================================================
+   HERO CONTENT
+   ========================================================== */
+
+.collection-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 620px;
+
+    margin-left: 11%;
+
+    padding-top: 30px;
+
+}
+
+
+/* ==========================================================
+   SMALL LABEL
+   ========================================================== */
+
+.collection-hero-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 29px;
+
+    color: #C5A24A;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+.collection-hero-label span:first-child,
+.collection-hero-label span:last-child {
+
+    width: 45px;
+
+    height: 1px;
+
+    overflow: hidden;
+
+    color: #C5A24A;
+
+}
+
+
+.collection-hero-label span:nth-of-type(2) {
+
+    letter-spacing: 4px;
+
+}
+
+
+/* ==========================================================
+   MAIN TITLE
+   ========================================================== */
+
+.collection-hero-title {
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 6.2rem);
+
+    font-weight: 500;
+
+    line-height: 0.92;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* DISCOVER — ivory */
+
+.collection-hero-title span:nth-child(1) {
+
+    color: #F6F0E6;
+
+}
+
+
+/* TIMELESS + COLLECTIONS — gold */
+
+.collection-hero-title span:nth-child(2),
+.collection-hero-title span:nth-child(3) {
+
+    color: #C5A24A;
+
+}
+
+
+/* ==========================================================
+   DECORATIVE DIVIDER
+   ========================================================== */
+
+.collection-hero-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 360px;
+
+    margin: 30px 0 24px;
+
+    color: #C5A24A;
+
+    font-size: 13px;
+
+}
+
+
+.collection-hero-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #C5A24A);
+
+}
+
+
+.collection-hero-divider span:last-child {
+
+    background: linear-gradient(90deg,
+            #C5A24A,
+            transparent);
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.collection-hero-description {
+
+    margin: 0 0 34px;
+
+    max-width: 520px;
+
+    color: #EDE3D5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* ==========================================================
+   BUTTON AREA
+   ========================================================== */
+
+.collection-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+/* ==========================================================
+   GOLD PRIMARY BUTTON
+   ========================================================== */
+
+.collection-primary-btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 24px;
+
+    min-width: 235px;
+
+    height: 54px;
+
+    padding: 0 25px;
+
+    background: #C5A24A;
+
+    color: #32101D;
+
+    border: 1px solid #E0C66B;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(12px 0,
+            calc(100% - 12px) 0,
+            100% 12px,
+            100% calc(100% - 12px),
+            calc(100% - 12px) 100%,
+            12px 100%,
+            0 calc(100% - 12px),
+            0 12px);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.collection-primary-btn span {
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+.collection-primary-btn:hover {
+
+    background: #D8B95B;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.collection-primary-btn:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* ==========================================================
+   OUTLINED SECONDARY BUTTON
+   ========================================================== */
+
+.collection-secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    min-width: 235px;
+
+    height: 54px;
+
+    padding: 0 25px;
+
+    background: transparent;
+
+    color: #F6F0E6;
+
+    border: 1px solid rgba(246, 240, 230, 0.85);
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(12px 0,
+            calc(100% - 12px) 0,
+            100% 12px,
+            100% calc(100% - 12px),
+            calc(100% - 12px) 100%,
+            12px 100%,
+            0 calc(100% - 12px),
+            0 12px);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.collection-secondary-btn span {
+
+    color: #C5A24A;
+
+    font-size: 19px;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+.collection-secondary-btn:hover {
+
+    background: rgba(246, 240, 230, 0.95);
+
+    color: #4A1024;
+
+    border-color: #F6F0E6;
+
+}
+
+
+.collection-secondary-btn:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* ==========================================================
+   SUBTLE IMAGE MOVEMENT
+   ========================================================== */
+
+.collection-banner {
+
+    animation: collectionHeroBreath 18s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes collectionHeroBreath {
+
+    from {
+        background-size: 100% auto;
+    }
+
+    to {
+        background-size: 106% auto;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    .collection-hero-content {
+
+        width: 68%;
+
+        margin-left: 7%;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: clamp(3.2rem, 7vw, 5rem);
+
+    }
+
+
+    .collection-hero-description {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .collection-banner {
+
+        height: 680px;
+
+        min-height: 680px;
+
+        background-position: 63% center;
+
+    }
+
+
+    .collection-banner::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        z-index: 1;
+
+        background:
+            linear-gradient(180deg,
+                rgba(91, 16, 43, 0.92) 0%,
+                rgba(91, 16, 43, 0.58) 15%,
+                rgba(55, 5, 22, 0.38) 38%,
+                rgba(42, 4, 16, 0.42) 70%,
+                rgba(42, 4, 16, 0.58) 100%);
+    }
+
+
+    .collection-hero-content {
+
+        width: 84%;
+
+        margin-left: 8%;
+
+        padding-top: 15px;
+
+    }
+
+
+    .collection-hero-label {
+
+        gap: 8px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+
+        width: 22px;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: clamp(2.7rem, 10vw, 4rem);
+
+        line-height: 0.95;
+
+    }
+
+
+    .collection-hero-divider {
+
+        width: 200px;
+
+        margin: 20px 0;
+
+    }
+
+
+    .collection-hero-description {
+
+        max-width: 330px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .collection-hero-actions {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .collection-primary-btn {
+
+        min-width: 190px;
+
+        height: 50px;
+
+    }
+
+
+    .collection-secondary-btn {
+
+        min-width: 190px;
+
+        height: 48px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .collection-hero-content {
+
+        width: 88%;
+
+        margin-left: 6%;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: 2.55rem;
+
+    }
+
+
+    .collection-hero-description {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION — CINEMATIC HERO ENTRANCE
+   ========================================================== */
+
+/* ---------- BACKGROUND MOVEMENT ---------- */
+
+.collection-banner::before {
+    animation:
+        collectionCinematicZoom 16s ease-in-out infinite alternate !important;
+
+    transform-origin: center center;
+    will-change: transform;
+}
+
+
+/* ---------- HERO CONTENT BASE ---------- */
+
+.collection-hero-content {
+    animation: collectionHeroContent 1s ease-out forwards;
+}
+
+
+/* ---------- LABEL ---------- */
+
+.collection-hero-label {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.15s forwards;
+}
+
+
+/* ---------- MAIN HEADING ---------- */
+
+.collection-hero-title {
+    opacity: 0;
+    animation: collectionTitleReveal 1.1s cubic-bezier(.2, .8, .2, 1) 0.35s forwards;
+}
+
+
+/* ---------- DIVIDER ---------- */
+
+.collection-hero-divider {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.65s forwards;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.collection-hero-description {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.8s forwards;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.collection-hero-actions {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 1s forwards;
+}
+
+
+/* ==========================================================
+   BACKGROUND — SLOW CINEMATIC ZOOM
+   ========================================================== */
+
+@keyframes collectionCinematicZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+
+    100% {
+        transform: scale(1.07);
+    }
+
+}
+
+
+/* ==========================================================
+   HERO CONTENT — VERY SUBTLE MOVEMENT
+   ========================================================== */
+
+@keyframes collectionHeroContent {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   TEXT REVEAL
+   ========================================================== */
+
+@keyframes collectionTitleReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL ELEMENT REVEAL
+   ========================================================== */
+
+@keyframes collectionFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   BUTTON MICRO MOVEMENT
+   ========================================================== */
+
+.collection-primary-btn,
+.collection-secondary-btn {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Slight floating feeling after page loads */
+
+.collection-primary-btn {
+    animation: collectionButtonFloat 4s ease-in-out 2s infinite;
+}
+
+
+@keyframes collectionButtonFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCE MOTION FOR USERS WHO PREFER IT
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .collection-banner::before,
+    .collection-hero-content,
+    .collection-hero-label,
+    .collection-hero-title,
+    .collection-hero-divider,
+    .collection-hero-description,
+    .collection-hero-actions,
+    .collection-primary-btn {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   SUTRIKA COLLECTION HERO — TABLET FIX
+   SAME COMPACT STYLE AS HOME HERO
+   ========================================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* =========================================
+       HERO BANNER
+       ========================================= */
+
+    .collection-banner {
+
+        height: 420px !important;
+
+        min-height: 420px !important;
+
+        max-height: 420px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        overflow: hidden !important;
+
+    }
+
+
+    /* =========================================
+       HERO IMAGE POSITION
+       ========================================= */
+
+    .collection-banner::before {
+
+        background-position: center center !important;
+
+        transform-origin: center center !important;
+
+    }
+
+
+    /* =========================================
+       HERO OVERLAY
+       ========================================= */
+
+    .collection-banner::after {
+
+        background:
+            linear-gradient(90deg,
+                rgba(74, 16, 36, 0.82) 0%,
+                rgba(74, 16, 36, 0.58) 32%,
+                rgba(40, 18, 18, 0.20) 70%,
+                rgba(0, 0, 0, 0) 100%) !important;
+
+    }
+
+
+    /* =========================================
+       HERO CONTENT
+       ========================================= */
+
+    .collection-hero-content {
+
+        width: 46% !important;
+
+        max-width: 46% !important;
+
+        margin-left: 7% !important;
+
+        padding: 0 !important;
+
+        position: relative !important;
+
+        z-index: 5 !important;
+
+    }
+
+
+    /* =========================================
+       GOLD LABEL
+       ========================================= */
+
+    .collection-hero-label {
+
+        gap: 8px !important;
+
+        margin-bottom: 12px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+
+        line-height: 1.2 !important;
+
+    }
+
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+
+        width: 25px !important;
+
+    }
+
+
+    /* =========================================
+       MAIN TITLE
+       ========================================= */
+
+    .collection-hero-title {
+
+        font-size: clamp(2rem,
+                4.2vw,
+                3rem) !important;
+
+        line-height: 0.98 !important;
+
+        letter-spacing: 0.5px !important;
+
+    }
+
+
+    /* =========================================
+       DIVIDER
+       ========================================= */
+
+    .collection-hero-divider {
+
+        width: 190px !important;
+
+        margin: 13px 0 12px !important;
+
+        gap: 8px !important;
+
+        font-size: 9px !important;
+
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+       ========================================= */
+
+    .collection-hero-description {
+
+        max-width: 300px !important;
+
+        margin: 0 0 16px 0 !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 0.1px !important;
+
+    }
+
+
+    /* =========================================
+       BUTTON AREA
+       ========================================= */
+
+    .collection-hero-actions {
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+
+    }
+
+
+    /* =========================================
+       PRIMARY BUTTON
+       ========================================= */
+
+    .collection-primary-btn {
+
+        min-width: 145px !important;
+
+        width: auto !important;
+
+        height: 38px !important;
+
+        padding: 0 14px !important;
+
+        gap: 8px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1px !important;
+
+    }
+
+
+    .collection-primary-btn span {
+
+        font-size: 14px !important;
+
+    }
+
+
+    /* =========================================
+       SECONDARY BUTTON
+       ========================================= */
+
+    .collection-secondary-btn {
+
+        min-width: 135px !important;
+
+        width: auto !important;
+
+        height: 38px !important;
+
+        padding: 0 12px !important;
+
+        gap: 6px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1px !important;
+
+    }
+
+
+    .collection-secondary-btn span {
+
+        font-size: 13px !important;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   COLLECTION PAGE
+========================================= */
+
+/* =========================================
+   COLLECTION HERO
+========================================= */
+
+.collection-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding-top: 85px;
+    /* Header height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.collection-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+/* No glow overlay */
+.collection-banner::after {
+    display: none;
+}
+
+.banner-overlay {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.banner-content {
+    width: 100%;
+    max-width: 650px;
+    margin-left: 8%;
+    color: #fff;
+    padding: 70px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: #d7b86d;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.banner-content h1 {
+    font-size: 68px;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 25px;
+    font-family: "Playfair Display", serif;
+}
+
+.banner-content h3 {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, .95);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.shop-btn,
+.guide-btn {
+    padding: 15px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.shop-btn {
+    background: #8b1e3f;
+    color: #fff;
+}
+
+.shop-btn:hover {
+    background: #a7284d;
+}
+
+.guide-btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.guide-btn:hover {
+    background: #fff;
+    color: #8b1e3f;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    box-shadow: none !important;
+    border-bottom: none !important;
+}
+
+.navbar {
+    height: 85px;
+    margin: 0;
+}
+
+@media (max-width:768px) {
+
+    .collection-banner {
+        height: 85vh;
+        padding-top: 85px;
+    }
+
+    .banner-content {
+        margin: 0 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 42px;
+    }
+
+    .banner-content h3 {
+        font-size: 18px;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Shop Area */
+.shop-area {
+    background: #f8f5ef;
+}
+
+
+/* Filter Buttons */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.filter-buttons button {
+    padding: 12px 26px;
+    border: 2px solid #6B1E35;
+    background: white;
+    color: #6B1E35;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Search */
+
+.product-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.product-search input {
+    width: 420px;
+    max-width: 90%;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    font-size: 15px;
+}
+
+.product-search input:focus {
+    border-color: #6B1E35;
+}
+
+/* Category Tabs */
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.category-tabs div {
+    padding: 15px 28px;
+    background: white;
+    border: 1px solid #C5A24A;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.category-tabs div:hover,
+.category-tabs div.active {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Product Grid */
+
+.products-section {
+    background: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card */
+
+.product-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    color: #4A1024;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.product-info span {
+    display: inline-block;
+    color: #a67c00;
+    margin: 8px 0;
+}
+
+.product-info h4 {
+    color: #6B1E35;
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.availability {
+    color: green;
+    font-weight: 600;
+}
+
+/* Buttons */
+
+.product-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.product-buttons button,
+.product-buttons a {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.product-buttons button {
+    background: #6B1E35;
+    color: white;
+    border: none;
+}
+
+.product-buttons button:hover {
+    background: #4A1024;
+}
+
+.product-buttons a {
+    border: 2px solid #6B1E35;
+    color: #6B1E35;
+    background: white;
+}
+
+.product-buttons a:hover {
+    background: #6B1E35;
+    color: white;
+}
+
+/* Hide Animation */
+
+.product-card.hide {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+    .collection-hero {
+        height: 280px;
+    }
+
+    .collection-hero h1 {
+        font-size: 36px;
+    }
+
+    .collection-hero p {
+        font-size: 16px;
+    }
+
+    .product-buttons {
+        flex-direction: column;
+    }
+
+}
+
+/* =========================================
+   SUTRIKA COLLECTION PREMIUM ENHANCEMENTS
+========================================= */
+
+
+/* Product Card Luxury Effect */
+
+.product-card {
+
+    position: relative;
+    border: 1px solid rgba(197, 162, 74, 0.25);
+
+}
+
+
+.product-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 18px;
+
+    padding: 1px;
+
+    background: linear-gradient(135deg,
+            #c5a24a,
+            transparent,
+            #6B1E35);
+
+    opacity: 0;
+
+    transition: .4s;
+
+    pointer-events: none;
+
+}
+
+
+.product-card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+
+
+/* Product Image Premium Zoom */
+
+
+.product-card img {
+
+    transition:
+        transform .6s ease,
+        filter .4s ease;
+
+}
+
+
+.product-card:hover img {
+
+    transform: scale(1.08);
+
+    filter: brightness(1.05);
+
+}
+
+
+
+
+
+/* Product Information Animation */
+
+
+.product-info {
+
+    transition: .3s;
+
+}
+
+
+.product-card:hover .product-info {
+
+    transform: translateY(-5px);
+
+}
+
+
+
+
+
+/* Search Premium Style */
+
+
+.product-search input {
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: .3s;
+
+}
+
+
+.product-search input:hover {
+
+    box-shadow:
+        0 8px 25px rgba(107, 30, 53, 0.18);
+
+}
+
+
+
+
+
+/* Category Tabs Animation */
+
+
+.category-tabs div {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.category-tabs div::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0%;
+
+    height: 3px;
+
+    background: #C5A24A;
+
+    transition: .3s;
+
+}
+
+
+.category-tabs div:hover::after {
+
+    width: 100%;
+
+}
+
+
+
+
+/* Button Shine Effect */
+
+
+.product-buttons button,
+.product-buttons a {
+
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.product-buttons button::after,
+.product-buttons a::after {
+
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(255, 255, 255, .25);
+
+    transition: .4s;
+
+}
+
+
+.product-buttons button:hover::after,
+.product-buttons a:hover::after {
+
+
+    left: 100%;
+
+}
+
+
+
+
+
+/* Smooth Product Appearance */
+
+
+.product-card {
+
+    animation: productShow .5s ease;
+
+}
+
+
+@keyframes productShow {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+/* Better Mobile Layout */
+
+
+@media(max-width:768px) {
+
+
+    .banner-content {
+
+        margin-left: 5%;
+
+    }
+
+
+    .banner-content h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .filter-buttons button {
+
+        width: 130px;
+
+    }
+
+
+}
+
+/* =========================================
+   SUTRIKA HERITAGE BACKGROUND UPGRADE
+========================================= */
+
+
+/* Filter Section Background */
+
+.shop-area {
+
+    background:
+
+        linear-gradient(135deg,
+            #f3ead8,
+            #fff8ed);
+
+    padding-bottom: 40px;
+
+}
+
+
+
+
+
+/* Product Area Background */
+
+.products-section {
+
+    background:
+
+        linear-gradient(180deg,
+            #fff8ed,
+            #f5e9d2);
+
+    padding-bottom: 60px;
+
+}
+
+
+
+
+
+/* Product Cards */
+
+.product-card {
+
+    background: #fffaf2;
+
+    border:
+
+        1px solid rgba(197, 162, 74, 0.35);
+
+}
+
+
+
+
+
+/* Search Box Premium Look */
+
+.product-search input {
+
+
+    background: #fffaf2;
+
+    border:
+
+        2px solid #c5a24a;
+
+
+    color: #4A1024;
+
+
+    box-shadow:
+
+        0 8px 25px rgba(107, 30, 53, .12);
+
+
+}
+
+
+
+.product-search input::placeholder {
+
+    color: #8b6b4a;
+
+}
+
+
+
+
+.product-search input:focus {
+
+
+    background: white;
+
+
+    border-color: #6B1E35;
+
+
+    box-shadow:
+
+        0 0 20px rgba(197, 162, 74, .35);
+
+
+}
+
+
+
+
+
+/* Category Tabs */
+
+.category-tabs div {
+
+
+    background:
+
+        rgba(255, 250, 242, .9);
+
+
+    border:
+
+        1px solid #c5a24a;
+
+
+}
+
+
+
+
+
+.category-tabs div:hover,
+.category-tabs div.active {
+
+
+    background: #6B1E35;
+
+    color: white;
+
+
+    box-shadow:
+
+        0 8px 20px rgba(107, 30, 53, .25);
+
+
+}
+
+
+
+
+
+/* Section Title Enhancement */
+
+.section-title h2 {
+
+    color: #4A1024;
+
+}
+
+
+.section-title p {
+
+    color: #8b1e3f;
+
+}
+
+/* =========================================
+   SOFT HERITAGE COLOR THEME
+========================================= */
+
+
+/* Collection Filter Area */
+
+.shop-area {
+
+    background: #eee2cf;
+
+}
+
+
+
+/* Product Section */
+
+.products-section {
+
+    background: #f4eadb;
+
+}
+
+
+
+/* Product Cards */
+
+.product-card {
+
+    background: #fff8ed;
+
+    border: 1px solid #dfc98a;
+
+}
+
+
+
+/* Search Box */
+
+.product-search input {
+
+    background: #fff3df;
+
+    border: 1px solid #b9934d;
+
+}
+
+
+
+/* Search Focus */
+
+.product-search input:focus {
+
+    background: #fffaf2;
+
+    border-color: #7b263f;
+
+}
+
+
+
+
+
+/* Category Tabs */
+
+.category-tabs div {
+
+    background: #f9eddb;
+
+}
+
+
+
+
+
+/* Hero Banner Softer Look */
+
+
+.collection-banner::after {
+
+    background:
+
+        linear-gradient(90deg,
+            rgba(70, 45, 35, 0.45),
+            rgba(139, 94, 52, 0.25),
+            rgba(0, 0, 0, 0.15));
+
+}
+
+
+
+
+/* Reduce Hero Zoom Intensity */
+
+
+.collection-banner::before {
+
+    animation:
+
+        collectionZoom 18s ease-in-out infinite;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.header,
+.navbar {
+    margin: 0;
+    border: none;
+}
+
+.collection-banner::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* FINAL HERO FIX */
+
+.collection-banner::after {
+    display: none !important;
+}
+
+.banner-overlay::before {
+    display: none !important;
+}
+
+.shop-btn,
+.guide-btn {
+    box-shadow: none !important;
+}
+
+.collection-banner {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* =========================================
+   PREMIUM HERO EFFECT
+========================================= */
+
+.collection-banner::before {
+    animation: heroZoom 16s ease-in-out infinite !important;
+    transform-origin: center;
+}
+
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.collection-banner::after {
+    display: block !important;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background: linear-gradient(90deg,
+            rgba(74, 16, 36, .50),
+            rgba(39, 8, 19, 0.22),
+            rgba(40, 18, 18, 0.08));
+
+    pointer-events: none;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 3;
+}
+
+/* =========================================
+   PREMIUM COLLECTION HERO ENHANCEMENT
+   (Paste at the END of collection.css)
+========================================= */
+
+.collection-banner::before {
+    animation: premiumHeroZoom 18s ease-in-out infinite !important;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes premiumHeroZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Premium Wine Overlay */
+
+.collection-banner::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(100deg,
+            rgba(74, 16, 36, .58) 0%,
+            rgba(74, 16, 36, .30) 35%,
+            rgba(0, 0, 0, .12) 70%,
+            rgba(0, 0, 0, 0) 100%) !important;
+
+    pointer-events: none;
+}
+
+/* Slightly brighter text */
+
+.banner-content {
+    position: relative;
+    z-index: 5;
+}
+
+.banner-content h1 {
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .35);
+}
+
+.banner-content h3 {
+    color: rgba(255, 255, 255, .92);
+}
+
+.banner-content p {
+    color: #d8b66c;
+}
+
+/* Premium buttons */
+
+.shop-btn {
+
+    box-shadow:
+        0 12px 28px rgba(107, 30, 53, .35);
+
+}
+
+.shop-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(107, 30, 53, .55);
+
+}
+
+.guide-btn {
+
+    backdrop-filter: blur(6px);
+
+    background: rgba(255, 255, 255, .04);
+
+    border: 2px solid rgba(255, 255, 255, .85);
+
+}
+
+.guide-btn:hover {
+
+    background: #6B1E35;
+
+    border-color: #6B1E35;
+
+    color: #fff;
+
+}
+
+/* ==========================================================
+   SUTRIKA - BACK TO TOP BUTTON
+========================================================== */
+
+.sutrika-back-to-top {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #C5A24A;
+
+    border-radius: 50%;
+
+    background: #4A1024;
+
+    color: #C5A24A;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .35s ease,
+        background .3s ease,
+        color .3s ease,
+        box-shadow .3s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* Show button */
+
+.sutrika-back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* Hover */
+
+.sutrika-back-to-top:hover {
+
+    background: #C5A24A;
+
+    color: #4A1024;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .22);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sutrika-back-to-top {
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION — PREMIUM HERITAGE HERO
+   ========================================================== */
+
+.collection-banner {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(48, 5, 20, 0.18),
+            rgba(48, 5, 20, 0.02)),
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Slow luxury movement */
+
+.collection-banner::before {
+    content: "";
+    position: absolute;
+    inset: -3%;
+
+    background:
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg") center / cover no-repeat;
+
+    z-index: 0;
+
+    animation: collectionHeroZoom 18s ease-in-out infinite alternate;
+}
+
+
+/* Dark cinematic overlay */
+
+.collection-banner::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(91, 16, 43, 0.92) 0%,
+            rgba(91, 16, 43, 0.58) 12%,
+            rgba(55, 5, 22, 0.38) 38%,
+            rgba(42, 4, 16, 0.42) 70%,
+            rgba(42, 4, 16, 0.58) 100%);
+}
+
+/* Hero content */
+
+.collection-banner .banner-content {
+    position: relative;
+    z-index: 3;
+
+    width: min(650px, 52%);
+
+    margin-left: 8%;
+
+    padding: 30px 0;
+}
+
+
+/* Small gold label */
+
+.collection-banner .banner-content p:first-child {
+    margin: 0 0 24px;
+
+    color: #C5A24A;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.collection-banner .banner-content h1 {
+    margin: 0;
+
+    max-width: 650px;
+
+    color: #F6F0E6;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(3.5rem, 5.8vw, 6rem);
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* Gold accent under heading */
+
+.collection-banner .banner-content h1::after {
+    content: "✦";
+
+    display: block;
+
+    width: 270px;
+
+    margin: 25px 0 20px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(197, 162, 74, 0.75);
+
+    color: #C5A24A;
+
+    font-size: 13px;
+
+    letter-spacing: 8px;
+}
+
+
+/* Description */
+
+.collection-banner .banner-content p:nth-of-type(2) {
+    max-width: 470px;
+
+    margin: 0 0 34px;
+
+    color: rgba(246, 240, 230, 0.92);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* Buttons container */
+
+.collection-banner .banner-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+/* Primary button */
+
+.collection-banner .primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    min-width: 210px;
+
+    padding: 16px 25px;
+
+    background: #C5A24A;
+
+    border: 1px solid #D7B85C;
+
+    color: #3A0F20;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(10px 0,
+            calc(100% - 10px) 0,
+            100% 10px,
+            100% calc(100% - 10px),
+            calc(100% - 10px) 100%,
+            10px 100%,
+            0 calc(100% - 10px),
+            0 10px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.collection-banner .primary-btn:hover {
+    background: #D7B85C;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Secondary button */
+
+.collection-banner .secondary-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 190px;
+
+    padding: 15px 24px;
+
+    background: transparent;
+
+    border: 1px solid rgba(246, 240, 230, 0.85);
+
+    color: #F6F0E6;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.collection-banner .secondary-btn:hover {
+    background: #F6F0E6;
+
+    border-color: #F6F0E6;
+
+    color: #4A1024;
+}
+
+
+/* Hero zoom */
+
+@keyframes collectionHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    .collection-banner .banner-content {
+        width: 60%;
+
+        margin-left: 6%;
+    }
+
+    .collection-banner .banner-content h1 {
+        font-size: clamp(3rem, 7vw, 4.5rem);
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .collection-banner {
+        min-height: 680px;
+        height: 680px;
+
+        align-items: center;
+    }
+
+
+    .collection-banner .banner-content {
+        width: 82%;
+
+        margin-left: 7%;
+
+        padding-top: 20px;
+    }
+
+
+    .collection-banner .banner-content p:first-child {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .collection-banner .banner-content h1 {
+        font-size: clamp(2.6rem, 10vw, 4rem);
+
+        line-height: 1;
+    }
+
+
+    .collection-banner .banner-content h1::after {
+        width: 190px;
+
+        margin: 20px 0 17px;
+    }
+
+
+    .collection-banner .banner-content p:nth-of-type(2) {
+        max-width: 340px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+    }
+
+
+    .collection-banner .banner-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .collection-banner .primary-btn {
+        min-width: 190px;
+
+        padding: 14px 22px;
+    }
+
+
+    .collection-banner .secondary-btn {
+        min-width: auto;
+
+        padding: 8px 0;
+
+        border: none;
+
+        border-bottom: 1px solid #C5A24A;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .collection-banner .banner-content {
+        width: 88%;
+
+        margin-left: 6%;
+    }
+
+
+    .collection-banner .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION
+   PREMIUM EDITORIAL HERO
+   ========================================================== */
+
+.collection-banner {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(42, 4, 16, 0.12),
+            rgba(42, 4, 16, 0.02)),
+        url("../ASSETS/IMAGES/banners/collection-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    isolation: isolate;
+}
+
+
+/* ==========================================================
+   CINEMATIC OVERLAY
+   ========================================================== */
+
+.collection-banner::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(91, 16, 43, 0.92) 0%,
+            rgba(91, 16, 43, 0.58) 12%,
+            rgba(55, 5, 22, 0.38) 38%,
+            rgba(42, 4, 16, 0.42) 70%,
+            rgba(42, 4, 16, 0.58) 100%);
+}
+
+
+/* ==========================================================
+   HERO CONTENT
+   ========================================================== */
+
+.collection-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 620px;
+
+    margin-left: 11%;
+
+    padding-top: 30px;
+
+}
+
+
+/* ==========================================================
+   SMALL LABEL
+   ========================================================== */
+
+.collection-hero-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 29px;
+
+    color: #C5A24A;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+.collection-hero-label span:first-child,
+.collection-hero-label span:last-child {
+
+    width: 45px;
+
+    height: 1px;
+
+    overflow: hidden;
+
+    color: #C5A24A;
+
+}
+
+
+.collection-hero-label span:nth-of-type(2) {
+
+    letter-spacing: 4px;
+
+}
+
+
+/* ==========================================================
+   MAIN TITLE
+   ========================================================== */
+
+.collection-hero-title {
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: clamp(3rem, 5vw, 6.2rem);
+
+    font-weight: 500;
+
+    line-height: 0.92;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* DISCOVER — ivory */
+
+.collection-hero-title span:nth-child(1) {
+
+    color: #F6F0E6;
+
+}
+
+
+/* TIMELESS + COLLECTIONS — gold */
+
+.collection-hero-title span:nth-child(2),
+.collection-hero-title span:nth-child(3) {
+
+    color: #C5A24A;
+
+}
+
+
+/* ==========================================================
+   DECORATIVE DIVIDER
+   ========================================================== */
+
+.collection-hero-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 360px;
+
+    margin: 30px 0 24px;
+
+    color: #C5A24A;
+
+    font-size: 13px;
+
+}
+
+
+.collection-hero-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: linear-gradient(90deg,
+            transparent,
+            #C5A24A);
+
+}
+
+
+.collection-hero-divider span:last-child {
+
+    background: linear-gradient(90deg,
+            #C5A24A,
+            transparent);
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.collection-hero-description {
+
+    margin: 0 0 34px;
+
+    max-width: 520px;
+
+    color: #EDE3D5;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* ==========================================================
+   BUTTON AREA
+   ========================================================== */
+
+.collection-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+/* ==========================================================
+   GOLD PRIMARY BUTTON
+   ========================================================== */
+
+.collection-primary-btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 24px;
+
+    min-width: 235px;
+
+    height: 54px;
+
+    padding: 0 25px;
+
+    background: #C5A24A;
+
+    color: #32101D;
+
+    border: 1px solid #E0C66B;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(12px 0,
+            calc(100% - 12px) 0,
+            100% 12px,
+            100% calc(100% - 12px),
+            calc(100% - 12px) 100%,
+            12px 100%,
+            0 calc(100% - 12px),
+            0 12px);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.collection-primary-btn span {
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+.collection-primary-btn:hover {
+
+    background: #D8B95B;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.collection-primary-btn:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* ==========================================================
+   OUTLINED SECONDARY BUTTON
+   ========================================================== */
+
+.collection-secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    min-width: 235px;
+
+    height: 54px;
+
+    padding: 0 25px;
+
+    background: transparent;
+
+    color: #F6F0E6;
+
+    border: 1px solid rgba(246, 240, 230, 0.85);
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    clip-path: polygon(12px 0,
+            calc(100% - 12px) 0,
+            100% 12px,
+            100% calc(100% - 12px),
+            calc(100% - 12px) 100%,
+            12px 100%,
+            0 calc(100% - 12px),
+            0 12px);
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.collection-secondary-btn span {
+
+    color: #C5A24A;
+
+    font-size: 19px;
+
+    transition: transform 0.35s ease;
+
+}
+
+
+.collection-secondary-btn:hover {
+
+    background: rgba(246, 240, 230, 0.95);
+
+    color: #4A1024;
+
+    border-color: #F6F0E6;
+
+}
+
+
+.collection-secondary-btn:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+/* ==========================================================
+   SUBTLE IMAGE MOVEMENT
+   ========================================================== */
+
+.collection-banner {
+
+    animation: collectionHeroBreath 18s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes collectionHeroBreath {
+
+    from {
+        background-size: 100% auto;
+    }
+
+    to {
+        background-size: 106% auto;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    .collection-hero-content {
+
+        width: 68%;
+
+        margin-left: 7%;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: clamp(3.2rem, 7vw, 5rem);
+
+    }
+
+
+    .collection-hero-description {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    .collection-banner {
+
+        height: 680px;
+
+        min-height: 680px;
+
+        background-position: 63% center;
+
+    }
+
+
+    .collection-banner::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        z-index: 1;
+
+        background:
+            linear-gradient(180deg,
+                rgba(91, 16, 43, 0.92) 0%,
+                rgba(91, 16, 43, 0.58) 15%,
+                rgba(55, 5, 22, 0.38) 38%,
+                rgba(42, 4, 16, 0.42) 70%,
+                rgba(42, 4, 16, 0.58) 100%);
+    }
+
+
+    .collection-hero-content {
+
+        width: 84%;
+
+        margin-left: 8%;
+
+        padding-top: 15px;
+
+    }
+
+
+    .collection-hero-label {
+
+        gap: 8px;
+
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+
+        width: 22px;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: clamp(2.7rem, 10vw, 4rem);
+
+        line-height: 0.95;
+
+    }
+
+
+    .collection-hero-divider {
+
+        width: 200px;
+
+        margin: 20px 0;
+
+    }
+
+
+    .collection-hero-description {
+
+        max-width: 330px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .collection-hero-actions {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .collection-primary-btn {
+
+        min-width: 190px;
+
+        height: 50px;
+
+    }
+
+
+    .collection-secondary-btn {
+
+        min-width: 190px;
+
+        height: 48px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .collection-hero-content {
+
+        width: 88%;
+
+        margin-left: 6%;
+
+    }
+
+
+    .collection-hero-title {
+
+        font-size: 2.55rem;
+
+    }
+
+
+    .collection-hero-description {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION — CINEMATIC HERO ENTRANCE
+   ========================================================== */
+
+/* ---------- BACKGROUND MOVEMENT ---------- */
+
+.collection-banner::before {
+    animation:
+        collectionCinematicZoom 16s ease-in-out infinite alternate !important;
+
+    transform-origin: center center;
+    will-change: transform;
+}
+
+
+/* ---------- HERO CONTENT BASE ---------- */
+
+.collection-hero-content {
+    animation: collectionHeroContent 1s ease-out forwards;
+}
+
+
+/* ---------- LABEL ---------- */
+
+.collection-hero-label {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.15s forwards;
+}
+
+
+/* ---------- MAIN HEADING ---------- */
+
+.collection-hero-title {
+    opacity: 0;
+    animation: collectionTitleReveal 1.1s cubic-bezier(.2, .8, .2, 1) 0.35s forwards;
+}
+
+
+/* ---------- DIVIDER ---------- */
+
+.collection-hero-divider {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.65s forwards;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.collection-hero-description {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 0.8s forwards;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.collection-hero-actions {
+    opacity: 0;
+    animation: collectionFadeUp 0.8s ease-out 1s forwards;
+}
+
+
+/* ==========================================================
+   BACKGROUND — SLOW CINEMATIC ZOOM
+   ========================================================== */
+
+@keyframes collectionCinematicZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+
+    100% {
+        transform: scale(1.07);
+    }
+
+}
+
+
+/* ==========================================================
+   HERO CONTENT — VERY SUBTLE MOVEMENT
+   ========================================================== */
+
+@keyframes collectionHeroContent {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   TEXT REVEAL
+   ========================================================== */
+
+@keyframes collectionTitleReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL ELEMENT REVEAL
+   ========================================================== */
+
+@keyframes collectionFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================================
+   BUTTON MICRO MOVEMENT
+   ========================================================== */
+
+.collection-primary-btn,
+.collection-secondary-btn {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* Slight floating feeling after page loads */
+
+.collection-primary-btn {
+    animation: collectionButtonFloat 4s ease-in-out 2s infinite;
+}
+
+
+@keyframes collectionButtonFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCE MOTION FOR USERS WHO PREFER IT
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .collection-banner::before,
+    .collection-hero-content,
+    .collection-hero-label,
+    .collection-hero-title,
+    .collection-hero-divider,
+    .collection-hero-description,
+    .collection-hero-actions,
+    .collection-primary-btn {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   SUTRIKA COLLECTION HERO — TABLET FIX
+   SAME COMPACT STYLE AS HOME HERO
+   ========================================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* =========================================
+       HERO BANNER
+       ========================================= */
+
+    .collection-banner {
+
+        height: 420px !important;
+
+        min-height: 420px !important;
+
+        max-height: 420px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        overflow: hidden !important;
+
+    }
+
+
+    /* =========================================
+       HERO IMAGE POSITION
+       ========================================= */
+
+    .collection-banner::before {
+
+        background-position: center center !important;
+
+        transform-origin: center center !important;
+
+    }
+
+
+    /* =========================================
+       HERO OVERLAY
+       ========================================= */
+
+    .collection-banner::after {
+
+        background:
+            linear-gradient(90deg,
+                rgba(74, 16, 36, 0.82) 0%,
+                rgba(74, 16, 36, 0.58) 32%,
+                rgba(40, 18, 18, 0.20) 70%,
+                rgba(0, 0, 0, 0) 100%) !important;
+
+    }
+
+
+    /* =========================================
+       HERO CONTENT
+       ========================================= */
+
+    .collection-hero-content {
+
+        width: 46% !important;
+
+        max-width: 46% !important;
+
+        margin-left: 7% !important;
+
+        padding: 0 !important;
+
+        position: relative !important;
+
+        z-index: 5 !important;
+
+    }
+
+
+    /* =========================================
+       GOLD LABEL
+       ========================================= */
+
+    .collection-hero-label {
+
+        gap: 8px !important;
+
+        margin-bottom: 12px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 2.5px !important;
+
+        line-height: 1.2 !important;
+
+    }
+
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+
+        width: 25px !important;
+
+    }
+
+
+    /* =========================================
+       MAIN TITLE
+       ========================================= */
+
+    .collection-hero-title {
+
+        font-size: clamp(2rem,
+                4.2vw,
+                3rem) !important;
+
+        line-height: 0.98 !important;
+
+        letter-spacing: 0.5px !important;
+
+    }
+
+
+    /* =========================================
+       DIVIDER
+       ========================================= */
+
+    .collection-hero-divider {
+
+        width: 190px !important;
+
+        margin: 13px 0 12px !important;
+
+        gap: 8px !important;
+
+        font-size: 9px !important;
+
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+       ========================================= */
+
+    .collection-hero-description {
+
+        max-width: 300px !important;
+
+        margin: 0 0 16px 0 !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.5 !important;
+
+        letter-spacing: 0.1px !important;
+
+    }
+
+
+    /* =========================================
+       BUTTON AREA
+       ========================================= */
+
+    .collection-hero-actions {
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+
+        gap: 10px !important;
+
+    }
+
+
+    /* =========================================
+       PRIMARY BUTTON
+       ========================================= */
+
+    .collection-primary-btn {
+
+        min-width: 145px !important;
+
+        width: auto !important;
+
+        height: 38px !important;
+
+        padding: 0 14px !important;
+
+        gap: 8px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1px !important;
+
+    }
+
+
+    .collection-primary-btn span {
+
+        font-size: 14px !important;
+
+    }
+
+
+    /* =========================================
+       SECONDARY BUTTON
+       ========================================= */
+
+    .collection-secondary-btn {
+
+        min-width: 135px !important;
+
+        width: auto !important;
+
+        height: 38px !important;
+
+        padding: 0 12px !important;
+
+        gap: 6px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 1px !important;
+
+    }
+
+
+    .collection-secondary-btn span {
+
+        font-size: 13px !important;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+   SUTRIKA COLLECTION — MOBILE LANDSCAPE HERO FIX
+   Same visual direction as the Artisan mobile hero.
+   IMPORTANT: keep this block at the END of collection.css.
+   ========================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   PHONE HERO — REAL LANDSCAPE RECTANGLE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .collection-banner {
+        width: 100% !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+        display: block !important;
+
+        overflow: hidden !important;
+        isolation: isolate;
+
+        background: none !important;
+        animation: none !important;
+    }
+
+    /* Background image */
+    .collection-banner::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        background-image:
+            url("../ASSETS/IMAGES/banners/collection-banner.jpg") !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        transform: scale(1) !important;
+        animation: collectionMobileHeroZoom 12s ease-in-out infinite alternate !important;
+
+        z-index: 0 !important;
+        will-change: transform;
+    }
+
+    /* Readable cinematic overlay */
+    .collection-banner::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        background:
+            linear-gradient(90deg,
+                rgba(48, 5, 20, 0.82) 0%,
+                rgba(55, 8, 25, 0.58) 45%,
+                rgba(42, 4, 16, 0.18) 100%) !important;
+
+        z-index: 1 !important;
+        pointer-events: none;
+    }
+
+
+    /* ======================================================
+       HERO CONTENT
+       Keep EVERYTHING inside the landscape banner.
+       ====================================================== */
+
+    .collection-hero-content {
+        position: absolute !important;
+
+        left: 5% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+
+        width: 62% !important;
+        max-width: 62% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        z-index: 5 !important;
+    }
+
+
+    /* Small heritage label */
+
+    .collection-hero-label {
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 6px !important;
+
+        width: 100% !important;
+
+        margin: 0 0 9px !important;
+
+        color: #C5A24A !important;
+
+        font-size: 6px !important;
+        line-height: 1 !important;
+
+        letter-spacing: 1.7px !important;
+
+        white-space: nowrap !important;
+    }
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+        width: 18px !important;
+        min-width: 18px !important;
+        height: 1px !important;
+        flex-shrink: 0 !important;
+    }
+
+
+    /* Main title */
+
+    .collection-hero-title {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        font-size: clamp(24px, 7.8vw, 31px) !important;
+        line-height: 0.94 !important;
+
+        letter-spacing: 0.4px !important;
+    }
+
+    .collection-hero-title span {
+        display: block !important;
+    }
+
+
+    /* Divider */
+
+    .collection-hero-divider {
+        display: flex !important;
+        align-items: center !important;
+
+        width: 145px !important;
+
+        margin: 11px 0 9px !important;
+
+        gap: 7px !important;
+
+        font-size: 8px !important;
+        line-height: 1 !important;
+    }
+
+    .collection-hero-divider span {
+        height: 1px !important;
+    }
+
+
+    /* Description */
+
+    .collection-hero-description {
+        width: 100% !important;
+        max-width: 270px !important;
+
+        margin: 0 0 12px !important;
+
+        color: #EDE3D5 !important;
+
+        font-size: 8px !important;
+        line-height: 1.45 !important;
+
+        letter-spacing: 0 !important;
+    }
+
+    .collection-hero-description br {
+        display: none !important;
+    }
+
+
+    /* Buttons */
+
+    .collection-hero-actions {
+        display: flex !important;
+        align-items: center !important;
+        flex-direction: row !important;
+
+        gap: 8px !important;
+
+        width: 100% !important;
+    }
+
+    .collection-primary-btn,
+    .collection-secondary-btn {
+        min-width: 0 !important;
+
+        width: auto !important;
+        height: 31px !important;
+
+        padding: 0 10px !important;
+
+        font-size: 7px !important;
+        line-height: 1 !important;
+
+        letter-spacing: 0.6px !important;
+
+        gap: 6px !important;
+
+        clip-path: none !important;
+        border-radius: 2px !important;
+    }
+
+    .collection-primary-btn {
+        flex: 0 0 auto !important;
+    }
+
+    .collection-secondary-btn {
+        flex: 0 0 auto !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(246, 240, 230, 0.75) !important;
+    }
+
+    .collection-primary-btn span,
+    .collection-secondary-btn span {
+        font-size: 10px !important;
+    }
+
+
+    /* Disable entrance animations on the tiny hero.
+       Prevents content from being invisible during load. */
+
+    .collection-hero-content,
+    .collection-hero-label,
+    .collection-hero-title,
+    .collection-hero-divider,
+    .collection-hero-description,
+    .collection-hero-actions {
+        animation: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES — 360px AND BELOW
+   ========================================================== */
+
+@media (max-width: 360px) {
+
+    .collection-banner {
+        height: 285px !important;
+        min-height: 285px !important;
+        max-height: 285px !important;
+    }
+
+    .collection-hero-content {
+        left: 5% !important;
+        width: 68% !important;
+        max-width: 68% !important;
+    }
+
+    .collection-hero-label {
+        font-size: 5.5px !important;
+        letter-spacing: 1.4px !important;
+    }
+
+    .collection-hero-title {
+        font-size: 23px !important;
+    }
+
+    .collection-hero-divider {
+        width: 125px !important;
+        margin: 9px 0 8px !important;
+    }
+
+    .collection-hero-description {
+        max-width: 235px !important;
+        font-size: 7.5px !important;
+    }
+
+    .collection-primary-btn,
+    .collection-secondary-btn {
+        height: 29px !important;
+        padding: 0 8px !important;
+        font-size: 6.5px !important;
+    }
+}
+
+
+/* ==========================================================
+   TABLET — LANDSCAPE HERO
+   ========================================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .collection-banner {
+        width: 100% !important;
+        height: 420px !important;
+        min-height: 420px !important;
+        max-height: 420px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: block !important;
+        position: relative !important;
+        overflow: hidden !important;
+
+        background: none !important;
+        animation: none !important;
+    }
+
+    .collection-banner::before {
+        inset: 0 !important;
+
+        background-image:
+            url("../ASSETS/IMAGES/banners/collection-banner.jpg") !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        animation: collectionTabletHeroZoom 14s ease-in-out infinite alternate !important;
+        z-index: 0 !important;
+    }
+
+    .collection-banner::after {
+        inset: 0 !important;
+        z-index: 1 !important;
+
+        background:
+            linear-gradient(90deg,
+                rgba(48, 5, 20, 0.76),
+                rgba(55, 8, 25, 0.38),
+                rgba(42, 4, 16, 0.10)) !important;
+    }
+
+    .collection-hero-content {
+        position: absolute !important;
+
+        left: 7% !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        width: 52% !important;
+        max-width: 52% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        z-index: 5 !important;
+    }
+
+    .collection-hero-label {
+        font-size: 8px !important;
+        letter-spacing: 2.5px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .collection-hero-title {
+        font-size: clamp(38px, 5vw, 54px) !important;
+        line-height: 0.94 !important;
+    }
+
+    .collection-hero-divider {
+        width: 230px !important;
+        margin: 17px 0 14px !important;
+    }
+
+    .collection-hero-description {
+        max-width: 380px !important;
+        font-size: 12px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .collection-hero-actions {
+        flex-direction: row !important;
+        gap: 12px !important;
+    }
+
+    .collection-primary-btn,
+    .collection-secondary-btn {
+        min-width: 165px !important;
+        height: 42px !important;
+        padding: 0 16px !important;
+        font-size: 9px !important;
+        clip-path: none !important;
+        border-radius: 2px !important;
+    }
+}
+
+
+@keyframes collectionMobileHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.045);
+    }
+
+}
+
+
+@keyframes collectionTabletHeroZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.055);
+    }
+
+}
+
+/* ==========================================================
+   SUTRIKA COLLECTION — FINAL MOBILE LANDSCAPE HERO FIX
+   Add/keep this block at the VERY END of collection.css.
+   Purpose: compact rectangular hero like the Artisan page.
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* LANDSCAPE HERO */
+    .collection-banner {
+        width: 100% !important;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+
+        position: relative !important;
+        box-sizing: border-box !important;
+
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+
+    /* Keep the hero image completely inside the rectangle */
+    .collection-banner::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+
+        background-image:
+            url("../ASSETS/IMAGES/banners/collection-banner.jpg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        transform: none !important;
+        animation: collectionMobileHeroZoom 16s ease-in-out infinite !important;
+
+        z-index: 0 !important;
+    }
+
+    /* Readable cinematic overlay */
+    .collection-banner::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+
+        background:
+            linear-gradient(90deg,
+                rgba(55, 5, 22, 0.82) 0%,
+                rgba(74, 16, 36, 0.58) 43%,
+                rgba(35, 8, 18, 0.20) 76%,
+                rgba(0, 0, 0, 0.08) 100%) !important;
+
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    /* Content stays fully inside the banner */
+    .collection-hero-content {
+        position: relative !important;
+        z-index: 5 !important;
+
+        width: 82% !important;
+        max-width: 330px !important;
+
+        margin: 0 0 0 7% !important;
+        padding: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Small gold label */
+    .collection-hero-label {
+        display: flex !important;
+        align-items: center !important;
+        gap: 7px !important;
+
+        margin: 0 0 9px !important;
+
+        font-size: 8px !important;
+        letter-spacing: 2px !important;
+        line-height: 1 !important;
+    }
+
+    .collection-hero-label span:first-child,
+    .collection-hero-label span:last-child {
+        width: 18px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Main title — compact enough to never touch the header */
+    .collection-hero-title {
+        margin: 0 !important;
+
+        font-size: 30px !important;
+        line-height: 0.94 !important;
+        letter-spacing: 0.5px !important;
+
+        max-width: 300px !important;
+    }
+
+    /* Decorative divider */
+    .collection-hero-divider {
+        width: 150px !important;
+        margin: 11px 0 10px !important;
+        gap: 7px !important;
+
+        font-size: 8px !important;
+        line-height: 1 !important;
+    }
+
+    /* Description */
+    .collection-hero-description {
+        max-width: 290px !important;
+
+        margin: 0 0 14px !important;
+
+        font-size: 11px !important;
+        line-height: 1.45 !important;
+        letter-spacing: 0 !important;
+    }
+
+    /* Buttons stay side-by-side */
+    .collection-hero-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .collection-primary-btn {
+        min-width: 0 !important;
+        width: 135px !important;
+        height: 38px !important;
+
+        padding: 0 9px !important;
+        gap: 6px !important;
+
+        font-size: 8px !important;
+        letter-spacing: 0.8px !important;
+        white-space: nowrap !important;
+    }
+
+    .collection-primary-btn span {
+        font-size: 13px !important;
+    }
+
+    .collection-secondary-btn {
+        min-width: 0 !important;
+        width: 135px !important;
+        height: 38px !important;
+
+        padding: 0 8px !important;
+        gap: 5px !important;
+
+        border: 1px solid rgba(246, 240, 230, 0.9) !important;
+
+        font-size: 8px !important;
+        letter-spacing: 0.7px !important;
+        white-space: nowrap !important;
+    }
+
+    .collection-secondary-btn span {
+        font-size: 13px !important;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 390px) {
+
+    .collection-banner {
+        height: 290px !important;
+        min-height: 290px !important;
+        max-height: 290px !important;
+    }
+
+    .collection-hero-content {
+        width: 86% !important;
+        margin-left: 6% !important;
+    }
+
+    .collection-hero-title {
+        font-size: 28px !important;
+    }
+
+    .collection-hero-description {
+        font-size: 10.5px !important;
+        max-width: 270px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .collection-primary-btn,
+    .collection-secondary-btn {
+        width: 128px !important;
+        height: 36px !important;
+        font-size: 7.5px !important;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 350px) {
+
+    .collection-banner {
+        height: 285px !important;
+        min-height: 285px !important;
+        max-height: 285px !important;
+    }
+
+    .collection-hero-title {
+        font-size: 25px !important;
+    }
+
+    .collection-hero-divider {
+        width: 125px !important;
+        margin: 9px 0 !important;
+    }
+
+    .collection-hero-description {
+        font-size: 10px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .collection-primary-btn,
+    .collection-secondary-btn {
+        width: 118px !important;
+        height: 34px !important;
+        padding: 0 6px !important;
+        font-size: 7px !important;
+    }
+}
+
+@keyframes collectionMobileHeroZoom {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.035);
+    }
+}

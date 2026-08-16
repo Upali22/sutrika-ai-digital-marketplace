@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <title>
+            Sutrika | Cart & Checkout
+        </title>
+
+
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="../CSS/style-new.css">
+    <link rel="stylesheet" href="../CSS/header-badges.css">
+
+        
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    </head>
+
+
+    <body>
+
+            <!-- ===========================
+                        HEADER
+                ============================ -->
+            
+            <header class="header">
+            
+                <div class="container">
+            
+                    <nav class="navbar">
+            
+                        <div class="logo">
+            
+                            <a href="index.html">
+            
+                                <img src="../ASSETS/LOGO/sutrika-icon.png" alt="Sutrika Logo">
+            
+                            </a>
+            
+                            <div class="logo-text">
+            
+                                <h2>SUTRIKA</h2>
+            
+                                <p>Threads of Tradition, Powered by Innovation</p>
+            
+                            </div>
+            
+                        </div>
+            
+                        <ul class="nav-links">
+            
+                            <li><a href="index.html">Home</a></li>
+            
+                            <li><a href="collection.html">Collection</a></li>
+            
+                            <li><a href="artisan.html">Artisans</a></li>
+            
+                            <li><a href="guide.html">Sutrika Guide</a></li>
+            
+                            <li><a href="personalise.html">Personalise</a></li>
+            
+                            <li><a href="story.html">Our Story</a></li>
+
+                            <li><a href="contact.html">Get in Touch</a></li>
+            
+                        </ul>
+            
+                        <div class="nav-icons">
+            
+                            <a href="account.html"><i class="fa-solid fa-user"></i></a>
+            
+                            <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+            
+                            <a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            
+                        </div>
+
+                        <!-- Mobile / Tablet Menu Button -->
+                        <button class="menu-toggle" aria-label="Open navigation menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+            
+                    </nav>
+            
+                </div>
+            
+            </header>
+
+<!-- ================================
+     CART HERO DASHBOARD
+================================ -->
+
+<section class="cart-hero">
+
+    <div class="cart-hero-pattern"></div>
+
+    <div class="container cart-hero-content">
+
+        <div class="cart-ornament">
+            <span></span>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span></span>
+        </div>
+
+        <p class="cart-eyebrow">
+            YOUR SUTRIKA SELECTION
+        </p>
+
+        <h1>
+            My Heritage Cart
+        </h1>
+
+        <p class="cart-hero-subtitle">
+            Handpicked treasures waiting to become part of your story.
+        </p>
+
+
+        <!-- CART MINI DASHBOARD -->
+
+        <div class="cart-stats">
+
+            <!-- ITEMS -->
+
+            <div class="cart-stat-card">
+
+                <div class="cart-stat-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <div class="cart-stat-info">
+
+                    <span class="cart-stat-label">
+                        ITEMS IN CART
+                    </span>
+
+                    <strong id="cartHeroCount">
+                        0
+                    </strong>
+
+                    <small>
+                        Your selected treasures
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- VALUE -->
+
+            <div class="cart-stat-card">
+
+                <div class="cart-stat-icon">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div class="cart-stat-info">
+
+                    <span class="cart-stat-label">
+                        CART VALUE
+                    </span>
+
+                    <strong id="cartHeroValue">
+                        ₹0
+                    </strong>
+
+                    <small>
+                        Before delivery
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- WISHLIST -->
+
+            <div class="cart-stat-card wishlist-card" onclick="window.location.href='wishlist.html'">
+
+                <div class="cart-stat-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="cart-stat-info">
+
+                    <span class="cart-stat-label">
+                        WISHLIST
+                    </span>
+
+                    <strong>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </strong>
+
+                    <small>
+                        Discover saved favourites
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+        <!-- ================================
+        CART SECTION
+================================ -->
+
+
+        <section class="cart-section">
+
+
+            <div class="container">
+
+
+                <div class="cart-layout">
+                    <div class="cart-items">
+                    
+                    
+                        <h2>
+                            Shopping Cart
+                        </h2>
+                    
+                    
+                        <div id="cartItems">
+                    
+                            <!-- Products will load from JavaScript -->
+                    
+                        </div>
+                    
+                    
+                    </div>
+
+                    <!-- CHECKOUT -->
+
+
+                    <div class="checkout-box">
+
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <span id="cartSubtotal">
+                                ₹0
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <span>
+                                Free
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <span id="cartTotal">
+                                ₹0
+                            </span>
+
+                        </div>
+
+
+
+
+
+                        <h3>
+                            Delivery Details
+                        </h3>
+
+
+                        <input type="text" placeholder="Full Name">
+
+
+                        <input type="text" placeholder="Address">
+
+
+                        <input type="tel" placeholder="Phone Number">
+
+
+                        <button>
+                            Proceed To Checkout
+                        </button>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <!-- ================================
+        FOOTER
+================================ -->
+
+
+    <!-- ==========================================
+                                    FOOTER
+                ========================================== -->
+    
+    <footer class="footer">
+    
+        <div class="container">
+    
+            <div class="footer-grid">
+    
+                <!-- ABOUT -->
+    
+                <div class="footer-column">
+    
+                    <h3>SUTRIKA</h3>
+    
+                    <p>
+    
+                        Threads of Tradition, Powered by Innovation.
+    
+                        Discover authentic Odisha Handloom and Handicrafts
+                        while empowering local artisans.
+    
+                    </p>
+    
+                    <div class="social-icons">
+    
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+    
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+    
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+    
+    
+                <!-- QUICK LINKS -->
+    
+                <div class="footer-column">
+    
+                    <h3>Quick Links</h3>
+    
+                    <ul>
+    
+                        <li><a href="index.html">Home</a></li>
+    
+                        <li><a href="collection.html">Collections</a></li>
+    
+                        <li><a href="artisan.html">Artisans</a></li>
+    
+                        <li><a href="guide.html">Sutrika Guide</a></li>
+    
+                        <li><a href="personalise.html">Personalise</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CUSTOMER -->
+    
+                <div class="footer-column">
+    
+                    <h3>Customer Support</h3>
+    
+                    <ul>
+    
+                        <li><a href="contact.html">Contact Us</a></li>
+    
+                        <li><a href="#">FAQs</a></li>
+    
+                        <li><a href="#">Shipping Policy</a></li>
+    
+                        <li><a href="#">Privacy Policy</a></li>
+    
+                        <li><a href="#">Terms & Conditions</a></li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <!-- CONTACT -->
+    
+                <div class="footer-column">
+    
+                    <h3>Contact</h3>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-location-dot"></i>
+    
+                        Bhubaneswar, Odisha, India
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-phone"></i>
+    
+                        +91 XXXXX XXXXX
+    
+                    </p>
+    
+                    <p>
+    
+                        <i class="fa-solid fa-envelope"></i>
+    
+                        support@sutrika.in
+    
+                    </p>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+            <hr>
+    
+    
+    
+            <div class="footer-bottom">
+    
+                <p>
+    
+                    © 2026 Sutrika. All Rights Reserved.
+    
+                </p>
+    
+                <p>
+    
+                    Designed with ❤️ to celebrate Odisha's Heritage.
+    
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+
+        <script src="../JS/cart.js"></script>
+        <!-- <script src="../JS/script.js"></script> -->
+        <script src="../JS/header-badges.js"></script>
+        <script src="../JS/mobile-menu.js"></script>
+
+
+    </body>
+
+</html>

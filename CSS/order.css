@@ -1,0 +1,2324 @@
+/* =====================================
+        SUTRIKA ORDERS PAGE
+===================================== */
+/* =========================================================
+   SUTRIKA — PREMIUM ORDERS DASHBOARD
+   ========================================================= */
+
+.orders-dashboard {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 85px 0 75px;
+
+    background-color: #e7e3db;
+
+    background-image:
+        linear-gradient(rgba(237, 221, 184, 0.888),
+            rgba(248, 243, 232, 0.72)),
+        url("../ASSETS/ACCOUNT/account-banner.jpg");
+
+    background-size:
+        auto
+        
+
+}
+
+
+/* =========================================================
+   SOFT GOLDEN LIGHT
+   ========================================================= */
+
+.orders-dashboard::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: rgba(205, 165, 82, 0.12);
+
+    top: -260px;
+
+    left: -180px;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+}
+
+
+.orders-dashboard::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(116, 79, 38, 0.07);
+
+    bottom: -240px;
+
+    right: -150px;
+
+    filter: blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   PATTERN OVERLAY
+   ========================================================= */
+
+.dashboard-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(circle at 20% 30%,
+            rgba(255, 255, 255, 0.65),
+            transparent 20%),
+
+        radial-gradient(circle at 80% 70%,
+            rgba(255, 255, 255, 0.55),
+            transparent 22%);
+
+    z-index: 0;
+
+}
+
+
+/* =========================================================
+   GLOW ELEMENTS
+   ========================================================= */
+
+.dashboard-glow {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow-one {
+
+    width: 180px;
+
+    height: 180px;
+
+    top: 80px;
+
+    right: 8%;
+
+    background: rgba(214, 173, 86, 0.09);
+
+    filter: blur(45px);
+
+}
+
+
+.glow-two {
+
+    width: 150px;
+
+    height: 150px;
+
+    bottom: 70px;
+
+    left: 7%;
+
+    background: rgba(126, 88, 45, 0.07);
+
+    filter: blur(40px);
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.orders-dashboard .container {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0 40px;
+
+}
+
+
+/* =========================================================
+   DASHBOARD HEADING
+   ========================================================= */
+
+.dashboard-heading {
+
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 65px;
+
+}
+
+
+/* =========================================================
+   DECORATIVE HEADING
+   ========================================================= */
+
+.heading-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.heading-decoration span {
+
+    display: block;
+
+    width: 85px;
+
+    height: 1px;
+
+    background: linear-gradient(to right,
+            transparent,
+            #C69B4A);
+
+}
+
+
+.heading-decoration span:last-child {
+
+    background: linear-gradient(to left,
+            transparent,
+            #C69B4A);
+
+}
+
+
+.heading-decoration i {
+
+    font-size: 10px;
+
+    color: #B78328;
+
+    transform: rotate(45deg);
+
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.dashboard-eyebrow {
+
+    margin: 0 0 12px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #A5792D;
+
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.dashboard-heading h1 {
+
+    margin: 0;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 64px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: 3px;
+
+    color: #30251D;
+
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.dashboard-subtitle {
+
+    margin: 20px auto 0;
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #756555;
+
+}
+
+
+/* =========================================================
+   STATISTICS GRID
+   ========================================================= */
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.stat-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 235px;
+
+    background: rgba(255, 255, 255, 0.91);
+
+    border: 1px solid rgba(194, 155, 78, 0.25);
+
+    border-radius: 22px;
+
+    box-shadow:
+
+        0 10px 25px rgba(66, 49, 29, 0.07),
+
+        0 25px 50px rgba(66, 49, 29, 0.05);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+}
+
+
+/* =========================================================
+   GOLD TOP LINE
+   ========================================================= */
+
+.stat-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: linear-gradient(90deg,
+            #B9852E,
+            #E6C46D,
+            #B9852E);
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.stat-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: rgba(194, 155, 78, 0.55);
+
+    box-shadow:
+
+        0 18px 35px rgba(66, 49, 29, 0.10),
+
+        0 30px 65px rgba(66, 49, 29, 0.09);
+
+}
+
+
+/* =========================================================
+   CARD INNER
+   ========================================================= */
+
+.stat-card-inner {
+
+    min-height: 235px;
+
+    padding: 35px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.stat-icon {
+
+    flex-shrink: 0;
+
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(145deg,
+            #FFF9EC,
+            #F4E7C7);
+
+    border: 1px solid #D9B96C;
+
+    box-shadow:
+
+        inset 0 0 0 6px rgba(255, 255, 255, 0.5),
+
+        0 7px 18px rgba(177, 132, 45, 0.12);
+
+}
+
+
+.stat-icon i {
+
+    font-size: 28px;
+
+    color: #A8731D;
+
+}
+
+
+/* =========================================================
+   STAT CONTENT
+   ========================================================= */
+
+.stat-content {
+
+    flex: 1;
+
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.stat-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #9B7A46;
+
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.stat-card h2 {
+
+    margin: 2px 0 5px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 52px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #30251D;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.stat-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #8A7A69;
+
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+   ========================================================= */
+
+.card-shine {
+
+    position: absolute;
+
+    width: 160px;
+
+    height: 160px;
+
+    border-radius: 50%;
+
+    right: -85px;
+
+    bottom: -85px;
+
+    background: rgba(205, 165, 82, 0.08);
+
+    transition: 0.5s;
+
+}
+
+
+.stat-card:hover .card-shine {
+
+    transform: scale(1.5);
+
+}
+
+
+/* =========================================================
+   CARD DIFFERENTIATION
+   ========================================================= */
+
+.total-card .stat-icon {
+
+    background: linear-gradient(145deg,
+            #FFF9EC,
+            #F1E2C0);
+
+}
+
+
+.pending-card .stat-icon {
+
+    background: linear-gradient(145deg,
+            #FFF9EC,
+            #F5E8D1);
+
+}
+
+
+.delivered-card .stat-icon {
+
+    background: linear-gradient(145deg,
+            #FFF9EC,
+            #E9E5D5);
+
+}
+
+
+/* =========================================================
+   BOTTOM DECORATIVE DIVIDER
+   ========================================================= */
+
+.dashboard-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 65px;
+
+}
+
+
+.dashboard-divider span {
+
+    width: 130px;
+
+    height: 1px;
+
+    background: linear-gradient(to right,
+            transparent,
+            #C69B4A);
+
+}
+
+
+.dashboard-divider span:last-child {
+
+    background: linear-gradient(to left,
+            transparent,
+            #C69B4A);
+
+}
+
+
+.dashboard-divider i {
+
+    font-size: 14px;
+
+    color: #B78328;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-heading h1 {
+
+        font-size: 52px;
+
+    }
+
+    .dashboard-stats {
+
+        grid-template-columns: 1fr;
+
+        max-width: 650px;
+
+        margin: auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .orders-dashboard {
+
+        padding: 60px 0 50px;
+
+    }
+
+    .orders-dashboard .container {
+
+        padding: 0 20px;
+
+    }
+
+    .dashboard-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+    .dashboard-heading h1 {
+
+        font-size: 40px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .dashboard-subtitle {
+
+        font-size: 16px;
+
+    }
+
+    .heading-decoration span {
+
+        width: 45px;
+
+    }
+
+    .dashboard-eyebrow {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+    }
+
+    .stat-card-inner {
+
+        min-height: 190px;
+
+        padding: 28px 24px;
+
+        gap: 20px;
+
+    }
+
+    .stat-icon {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .stat-icon i {
+
+        font-size: 23px;
+
+    }
+
+    .stat-card h2 {
+
+        font-size: 42px;
+
+    }
+
+    .dashboard-divider {
+
+        margin-top: 45px;
+
+    }
+
+    .dashboard-divider span {
+
+        width: 60px;
+
+    }
+
+}
+
+/* ================================
+        EMPTY ORDER SECTION
+================================ */
+
+
+.orders-section {
+
+
+    padding: 100px 0;
+
+    background: #faf5ed;
+
+
+}
+
+
+
+.orders-card {
+
+
+    max-width: 650px;
+
+    margin: auto;
+
+
+    background: white;
+
+
+    padding: 60px 40px;
+
+
+    text-align: center;
+
+
+    border-radius: 40px;
+
+
+    box-shadow:
+
+        0 25px 60px rgba(0, 0, 0, .12);
+
+
+    animation:
+
+        fadeUp 1s ease;
+
+
+}
+
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+.order-icon {
+
+
+    width: 110px;
+
+    height: 110px;
+
+
+    margin: auto;
+
+
+    border-radius: 50%;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    background: #6b3e26;
+
+
+    color: #d6a15d;
+
+
+    font-size: 45px;
+
+
+}
+
+
+
+
+
+.orders-card h2 {
+
+
+    margin-top: 30px;
+
+
+    font-size: 40px;
+
+
+    font-family: Georgia, serif;
+
+
+    color: #6b3e26;
+
+
+}
+
+
+
+
+
+.orders-card p {
+
+
+    color: #666;
+
+
+    font-size: 18px;
+
+
+    line-height: 1.8;
+
+
+    margin: 25px 0;
+
+
+}
+
+
+
+
+
+.orders-card a {
+
+
+    display: inline-block;
+
+
+    padding: 15px 40px;
+
+
+    border-radius: 50px;
+
+
+    background:
+
+
+        linear-gradient(135deg,
+            #d6a15d,
+            #8b5a2b);
+
+
+    color: white;
+
+
+    text-decoration: none;
+
+
+    transition: .4s;
+
+
+}
+
+
+
+
+
+.orders-card a:hover {
+
+
+    transform: translateY(-6px);
+
+
+}
+
+
+
+
+
+
+
+/* ================================
+        ORDER FEATURES
+================================ */
+
+
+.order-features {
+
+
+    padding: 90px 0;
+
+
+    background: white;
+
+
+}
+
+
+
+
+
+.feature-grid {
+
+
+    display: grid;
+
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+    gap: 30px;
+
+
+}
+
+
+
+
+
+.feature-card {
+
+
+    padding: 40px 30px;
+
+
+    text-align: center;
+
+
+    border-radius: 30px;
+
+
+    background: #faf5ed;
+
+
+    transition: .4s;
+
+
+}
+
+
+
+
+
+.feature-card:hover {
+
+
+    transform: translateY(-10px);
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0, 0, 0, .12);
+
+
+}
+
+
+
+
+
+.feature-card i {
+
+
+    font-size: 40px;
+
+
+    color: #c48b4a;
+
+
+}
+
+
+
+
+
+.feature-card h3 {
+
+
+    margin: 20px 0 10px;
+
+
+    color: #6b3e26;
+
+
+    font-size: 25px;
+
+
+}
+
+
+
+
+
+.feature-card p {
+
+
+    color: #777;
+
+
+    line-height: 1.6;
+
+
+}
+
+
+
+
+
+
+
+/* ================================
+        RESPONSIVE
+================================ */
+
+
+@media(max-width:900px) {
+
+
+    .orders-content h1 {
+
+        font-size: 50px;
+
+    }
+
+
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px) {
+
+
+    .orders-content h1 {
+
+        font-size: 38px;
+
+    }
+
+
+
+    .orders-content p {
+
+        font-size: 17px;
+
+    }
+
+
+
+    .orders-card {
+
+        padding: 40px 20px;
+
+    }
+
+
+}
+/* =====================================================
+   SUTRIKA — PREMIUM ORDER CARDS
+   Ivory • Antique Gold • Heritage Luxury
+===================================================== */
+
+#ordersContainer {
+
+    width: min(1400px, 92%);
+
+    margin: -100px auto 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 32px;
+
+}
+
+
+/* =====================================================
+   MAIN ORDER CARD
+===================================================== */
+
+.order-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 230px 1fr;
+
+    align-items: center;
+
+    gap: 42px;
+
+    padding: 34px;
+
+    background: #fffdf8;
+
+    border: 1px solid rgba(190, 145, 58, 0.28);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 10px 30px rgba(62, 45, 27, 0.06),
+        0 25px 60px rgba(62, 45, 27, 0.05);
+
+    overflow: hidden;
+
+    transition: all .4s ease;
+
+}
+
+
+/* =====================================================
+   GOLD TOP LINE
+===================================================== */
+
+.order-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            #B78328,
+            #E3C66F,
+            #B78328);
+
+}
+
+
+/* =====================================================
+   DECORATIVE GOLD CORNER
+===================================================== */
+
+.order-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+
+    height: 190px;
+
+    right: -100px;
+
+    bottom: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(198, 155, 74, 0.08);
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.order-item:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(190, 145, 58, 0.55);
+
+    box-shadow:
+        0 18px 40px rgba(62, 45, 27, 0.09),
+        0 30px 70px rgba(62, 45, 27, 0.08);
+
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.order-item img {
+
+    width: 230px;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    padding: 6px;
+
+    border-radius: 22px;
+
+    background: #f5ecdc;
+
+    border: 1px solid rgba(190, 145, 58, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(62, 45, 27, 0.08);
+
+    transition: transform .4s ease;
+
+}
+
+
+.order-item:hover img {
+
+    transform: scale(1.025);
+
+}
+
+
+/* =====================================================
+   DETAILS AREA
+===================================================== */
+
+.order-details {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   PRODUCT TITLE
+===================================================== */
+
+.order-details h3 {
+
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 31px;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+    color: #30251D;
+
+}
+
+
+/* GOLD UNDERLINE */
+
+.order-details h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 2px;
+
+    margin-top: 11px;
+
+    background:
+        linear-gradient(90deg,
+            #B78328,
+            transparent);
+
+}
+
+
+/* =====================================================
+   INFORMATION ROWS
+===================================================== */
+
+.order-details p {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 9px 0;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    color: #6F6255;
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.order-details strong {
+
+    min-width: 125px;
+
+    color: #9A7028;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: .2px;
+
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.order-details p:nth-last-of-type(4) {
+
+    color: #30251D;
+
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 16px;
+
+    margin-left: 3px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: .4px;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* STATUS DOT */
+
+.status::before {
+
+    content: "";
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+}
+
+
+/* =====================================================
+   PENDING
+===================================================== */
+
+.status.pending {
+
+    background: #C8952E;
+
+}
+
+
+/* =====================================================
+   SHIPPED
+===================================================== */
+
+.status.shipped {
+
+    background: #8A7040;
+
+}
+
+
+/* =====================================================
+   DELIVERED
+===================================================== */
+
+.status.delivered {
+
+    background: #58745B;
+
+}
+
+
+/* =====================================================
+   CANCELLED
+===================================================== */
+
+.status.cancelled {
+
+    background: #A85B4F;
+
+}
+
+
+/* =====================================================
+   ORDER CARD ANIMATION
+===================================================== */
+
+.order-item {
+
+    animation: orderReveal .7s ease both;
+
+}
+
+
+@keyframes orderReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   STAGGER
+===================================================== */
+
+.order-item:nth-child(2) {
+
+    animation-delay: .08s;
+
+}
+
+.order-item:nth-child(3) {
+
+    animation-delay: .16s;
+
+}
+
+.order-item:nth-child(4) {
+
+    animation-delay: .24s;
+
+}
+
+.order-item:nth-child(5) {
+
+    animation-delay: .32s;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .order-item {
+
+        grid-template-columns: 170px 1fr;
+
+        gap: 28px;
+
+        padding: 25px;
+
+    }
+
+
+    .order-item img {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+    .order-details h3 {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    #ordersContainer {
+
+        width: 92%;
+
+        margin-top: 45px;
+
+    }
+
+
+    .order-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 22px;
+
+    }
+
+
+    .order-item img {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        height: 270px;
+
+        margin: auto;
+
+    }
+
+
+    .order-details h3 {
+
+        font-size: 24px;
+
+    }
+
+
+    .order-details p {
+
+        align-items: flex-start;
+
+        font-size: 14px;
+
+    }
+
+
+    .order-details strong {
+
+        min-width: 105px;
+
+    }
+
+}
+.status {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    color: white;
+
+}
+
+.status.pending {
+
+    background: #E6A817;
+
+}
+
+.status.shipped {
+
+    background: #2196F3;
+
+}
+
+.status.delivered {
+
+    background: #2E7D32;
+
+}
+
+.status.cancelled {
+
+    background: #C62828;
+
+}
+/* =====================================
+        CANCEL ORDER BUTTON
+===================================== */
+
+.cancel-order-btn {
+    margin-top: 18px;
+    padding: 12px 24px;
+
+    border: 1px solid #c48b4a;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #9b6b20;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.cancel-order-btn:hover {
+    background: #9b6b20;
+    color: #fff;
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(155, 107, 32, 0.20);
+}
+
+.cancel-order-btn i {
+    font-size: 13px;
+}
+
+/* ==========================================================
+   SUTRIKA - BACK TO TOP BUTTON
+========================================================== */
+
+.sutrika-back-to-top {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid #C5A24A;
+
+    border-radius: 50%;
+
+    background: #4A1024;
+
+    color: #C5A24A;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease,
+        transform .35s ease,
+        background .3s ease,
+        color .3s ease,
+        box-shadow .3s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* Show button */
+
+.sutrika-back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+/* Hover */
+
+.sutrika-back-to-top:hover {
+
+    background: #C5A24A;
+
+    color: #4A1024;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .22);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sutrika-back-to-top {
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+
+
+
+/* =====================================
+   CONFIRMED ORDER STATUS
+===================================== */
+
+.status.confirmed {
+    background: linear-gradient(135deg, #6B1E35, #8A2948);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 5px 14px rgba(107, 30, 53, 0.20);
+}
+
+/* Small status dot */
+.status.confirmed::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #E6C46D;
+}
+
+/* Hover effect */
+.status.confirmed:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(107, 30, 53, 0.25);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SUTRIKA — ORDER STATUS BUTTONS
+   Premium Heritage Style
+===================================================== */
+
+/* -----------------------------
+   BASE STATUS BUTTON
+----------------------------- */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-width: 95px;
+    padding: 8px 18px;
+
+    border: none;
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    line-height: 1;
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* -----------------------------
+   STATUS DOT
+----------------------------- */
+
+.status::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   CONFIRMED
+   Wine Red + Antique Gold
+===================================================== */
+
+.status.confirmed {
+    background: linear-gradient(135deg,
+            #6B1E35,
+            #8A2948);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(107, 30, 53, 0.25);
+}
+
+.status.confirmed::before {
+    background: #E6C46D;
+}
+
+.status.confirmed:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(107, 30, 53, 0.32);
+}
+
+
+/* =====================================================
+   PENDING
+   Antique Gold
+===================================================== */
+
+.status.pending {
+    background: linear-gradient(135deg,
+            #C8952E,
+            #E0B84F);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(200, 149, 46, 0.25);
+}
+
+.status.pending::before {
+    background: #FFF4D2;
+}
+
+.status.pending:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(200, 149, 46, 0.32);
+}
+
+
+/* =====================================================
+   SHIPPED
+   Heritage Blue
+===================================================== */
+
+.status.shipped {
+    background: linear-gradient(135deg,
+            #526D82,
+            #6F8FA8);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(82, 109, 130, 0.24);
+}
+
+.status.shipped::before {
+    background: #DCEAF4;
+}
+
+.status.shipped:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(82, 109, 130, 0.30);
+}
+
+
+/* =====================================================
+   DELIVERED
+   Heritage Green
+===================================================== */
+
+.status.delivered {
+    background: linear-gradient(135deg,
+            #4F7055,
+            #6F9275);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(79, 112, 85, 0.24);
+}
+
+.status.delivered::before {
+    background: #DCEEDB;
+}
+
+.status.delivered:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(79, 112, 85, 0.30);
+}
+
+
+/* =====================================================
+   CANCELLED
+   Muted Terracotta Red
+===================================================== */
+
+.status.cancelled {
+    background: linear-gradient(135deg,
+            #A85B4F,
+            #C47769);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(168, 91, 79, 0.24);
+}
+
+.status.cancelled::before {
+    background: #FFE0DA;
+}
+
+.status.cancelled:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(168, 91, 79, 0.30);
+}
+
+
+/* =====================================================
+   OPTIONAL — DISABLE HOVER WHEN NOT CLICKABLE
+===================================================== */
+
+.status {
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SUTRIKA — DARK HERITAGE ORDER STATUS
+===================================================== */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-width: 105px;
+    padding: 9px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    line-height: 1;
+    white-space: nowrap;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s ease;
+
+    cursor: default;
+}
+
+
+/* STATUS DOT */
+
+.status::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   CONFIRMED — DEEP WINE
+===================================================== */
+
+.status.confirmed {
+    background: linear-gradient(135deg,
+            #4A1024,
+            #681B35);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(74, 16, 36, 0.30);
+}
+
+.status.confirmed::before {
+    background: #D8B45A;
+}
+
+.status.confirmed:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(74, 16, 36, 0.40);
+}
+
+
+/* =====================================================
+   PENDING — DARK ANTIQUE GOLD
+===================================================== */
+
+.status.pending {
+    background: linear-gradient(135deg,
+            #8A641D,
+            #A77B24);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(138, 100, 29, 0.30);
+}
+
+.status.pending::before {
+    background: #F3D98A;
+}
+
+.status.pending:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(138, 100, 29, 0.40);
+}
+
+
+/* =====================================================
+   SHIPPED — DEEP ROYAL BLUE
+===================================================== */
+
+.status.shipped {
+    background: linear-gradient(135deg,
+            #273B63,
+            #354F7D);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(39, 59, 99, 0.30);
+}
+
+.status.shipped::before {
+    background: #AFC8E8;
+}
+
+.status.shipped:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(39, 59, 99, 0.40);
+}
+
+
+/* =====================================================
+   DELIVERED — DEEP EMERALD
+===================================================== */
+
+.status.delivered {
+    background: linear-gradient(135deg,
+            #164A3A,
+            #23644F);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(22, 74, 58, 0.30);
+}
+
+.status.delivered::before {
+    background: #A8D6BD;
+}
+
+.status.delivered:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(22, 74, 58, 0.40);
+}
+
+
+/* =====================================================
+   CANCELLED — DEEP TERRACOTTA RED
+===================================================== */
+
+.status.cancelled {
+    background: linear-gradient(135deg,
+            #7A3028,
+            #963D34);
+
+    color: #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(122, 48, 40, 0.30);
+}
+
+.status.cancelled::before {
+    background: #F0B5A8;
+}
+
+.status.cancelled:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(122, 48, 40, 0.40);
+}

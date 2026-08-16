@@ -1,0 +1,95 @@
+/* ==========================================================
+   SUTRIKA - GLOBAL CART & WISHLIST BADGES
+========================================================== */
+
+.nav-icons a {
+    position: relative;
+}
+
+
+/* Badge */
+
+.nav-icons .header-badge {
+
+    position: absolute;
+
+    top: -8px;
+    right: -9px;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #C5A24A;
+
+    color: #4A1024;
+
+    border: 2px solid #4A1024;
+
+    border-radius: 50%;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(0);
+
+    transition:
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease;
+
+    z-index: 50;
+}
+
+
+/* SHOW */
+
+.nav-icons .header-badge.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+
+    box-shadow:
+        0 0 0 2px rgba(197, 162, 74, .12),
+
+        0 3px 8px rgba(0, 0, 0, .20);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .nav-icons .header-badge {
+
+        top: -7px;
+
+        right: -8px;
+
+        min-width: 17px;
+
+        height: 17px;
+
+        font-size: 9px;
+
+    }
+
+}
