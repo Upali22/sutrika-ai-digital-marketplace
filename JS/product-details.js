@@ -85,7 +85,7 @@ try {
 
     title.textContent = product.product_name;
 
-    price.textContent = `?${product.price}`;
+    price.textContent = `\u20B9${product.price}`;
 
     description.forEach(text => {
 
@@ -365,7 +365,7 @@ wishlistButton?.addEventListener("click", () => {
 
                         <h3>${item.product_name}</h3>
 
-                        <h4>?${Number(item.price).toLocaleString()}</h4>
+                        <h4>\u20B9${Number(item.price).toLocaleString()}</h4>
 
 
                         <a href="product-details.html?id=${item.id}">
