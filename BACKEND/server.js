@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -30,8 +31,17 @@ app.get("/test", (req, res) => {
 
 
 app.get("/", (req, res) => {
-    res.send("🚀 SUTRIKA Backend Running Successfully");
+    res.sendFile(path.join(__dirname, "../HTML/index.html"));
 });
+
+// ================================
+// SERVE SUTRIKA FRONTEND
+// ================================
+
+app.use("/HTML", express.static(path.join(__dirname, "../HTML")));
+app.use("/CSS", express.static(path.join(__dirname, "../CSS")));
+app.use("/JS", express.static(path.join(__dirname, "../JS")));
+app.use("/ASSETS", express.static(path.join(__dirname, "../ASSETS")));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/cart", cartRoutes);
