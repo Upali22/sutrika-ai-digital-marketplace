@@ -1,0 +1,8 @@
+{
+  "name": "sutrika-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve HTML -l $PORT"
+  }
+}
