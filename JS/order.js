@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
 
         const response = await fetch(
-    `http://localhost:5000/api/order/user/${user.id}`
+    `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/order/user/${user.id}`
 );
 
         const orders = await response.json();
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/order/cancel/${orderId}`,
+            `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/order/cancel/${orderId}`,
             {
                 method: "PUT",
                 headers: {
@@ -245,4 +245,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 };
 
 });
+
 

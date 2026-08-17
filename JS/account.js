@@ -118,7 +118,7 @@ if (loginForm) {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/auth/login", {
+            const response = await fetch("https://sutrika-ai-digital-marketplace-production.up.railway.app/api/auth/login", {
 
                 method: "POST",
 
@@ -368,7 +368,7 @@ const password=document.getElementById("regPassword").value.trim();
 
 try{
 
-const response=await fetch("http://localhost:5000/api/auth/register",{
+const response=await fetch("https://sutrika-ai-digital-marketplace-production.up.railway.app/api/auth/register",{
 
 method:"POST",
 
@@ -913,4 +913,5 @@ if (registerForm && confirmPassword) {
     );
 
 }
+
 

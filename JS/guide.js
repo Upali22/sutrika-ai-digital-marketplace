@@ -146,7 +146,7 @@ async function askQuestion() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/guide/chat",
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/guide/chat",
                 {
 
                     method: "POST",
@@ -1169,3 +1169,4 @@ window.addEventListener("scroll",()=>{
     }
 
 });
+

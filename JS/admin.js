@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/admin/dashboard",
+                    "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/dashboard",
                     {
                         method: "GET",
 
@@ -416,7 +416,7 @@ async function loadAdminUsers() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/admin/users",
+            "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/users",
             {
                 method: "GET",
 
@@ -1111,8 +1111,8 @@ if (createProductForm) {
 
 const requestUrl =
     isEditing
-        ? `http://localhost:5000/api/admin/products/${editingProductId}`
-        : "http://localhost:5000/api/admin/products";
+        ? `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/products/${editingProductId}`
+        : "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/products";
 
 
 const requestMethod =
@@ -1323,7 +1323,7 @@ async function loadAdminProducts() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/product"
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/product"
             );
 
 
@@ -1727,7 +1727,7 @@ async function loadAdminOrders() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/order",
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/order",
                 {
                     method: "GET",
 
@@ -2175,7 +2175,7 @@ async function loadAdminCustomRequests() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/admin/custom-requests",
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/custom-requests",
                 {
                     method: "GET",
 
@@ -2927,7 +2927,7 @@ if (
 
                 const response =
                     await fetch(
-                        `http://localhost:5000/api/order/${order.id}`,
+                        `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/order/${order.id}`,
                         {
                             method: "PATCH",
 
@@ -3329,7 +3329,7 @@ function attachProductDeleteButtons() {
 
                     const response =
                         await fetch(
-                            `http://localhost:5000/api/admin/products/${productId}`,
+                            `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/admin/products/${productId}`,
                             {
                                 method: "DELETE",
 

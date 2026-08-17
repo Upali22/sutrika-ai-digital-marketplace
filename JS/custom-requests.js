@@ -80,7 +80,7 @@ document.addEventListener(
 
             const response =
                 await fetch(
-                    `http://localhost:5000/api/personalise/my-requests?user_id=${user.id}`
+                    `https://sutrika-ai-digital-marketplace-production.up.railway.app/api/personalise/my-requests?user_id=${user.id}`
                 );
 
 

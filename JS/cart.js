@@ -294,7 +294,7 @@ console.log("USER ID =", user.id);
 console.log("ORDER ITEMS =", orderItems);
 
             const response = await fetch(
-                "http://localhost:5000/api/order",
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/order",
                 {
                     method: "POST",
                     headers: {

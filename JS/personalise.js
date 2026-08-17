@@ -88,7 +88,7 @@ const requestData = {
                ============================================= */
 
             const response = await fetch(
-                "http://localhost:5000/api/personalise/request",
+                "https://sutrika-ai-digital-marketplace-production.up.railway.app/api/personalise/request",
                 {
                     method: "POST",
 
@@ -265,3 +265,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+

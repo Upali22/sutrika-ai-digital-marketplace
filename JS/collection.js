@@ -26,7 +26,7 @@ async function loadProducts() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/product");
+        const response = await fetch("https://sutrika-ai-digital-marketplace-production.up.railway.app/api/product");
 
         products = await response.json();
 

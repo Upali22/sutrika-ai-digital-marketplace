@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", async () => {
     /* ==========================================
    LOGIN CHECK
 ========================================== */
@@ -24,7 +24,7 @@ let catalog = [];
 
 try {
 
-    const response = await fetch("http://localhost:5000/api/product");
+    const response = await fetch("https://sutrika-ai-digital-marketplace-production.up.railway.app/api/product");
 
     catalog = await response.json();
 
@@ -85,7 +85,7 @@ try {
 
     title.textContent = product.product_name;
 
-    price.textContent = `₹${product.price}`;
+    price.textContent = `?${product.price}`;
 
     description.forEach(text => {
 
@@ -289,7 +289,7 @@ wishlistButton?.addEventListener("click", () => {
 
     if(!user || !user.login || !token){
 
-        alert("Please login to add wishlist ❤️");
+        alert("Please login to add wishlist ??");
 
         window.location.href="account.html";
 
@@ -322,14 +322,14 @@ wishlistButton?.addEventListener("click", () => {
         );
 
 
-        alert("Added to Wishlist ❤️");
+        alert("Added to Wishlist ??");
 
 
     }
     else{
 
 
-        alert("Already in Wishlist ❤️");
+        alert("Already in Wishlist ??");
 
 
     }
@@ -365,7 +365,7 @@ wishlistButton?.addEventListener("click", () => {
 
                         <h3>${item.product_name}</h3>
 
-                        <h4>₹${Number(item.price).toLocaleString()}</h4>
+                        <h4>?${Number(item.price).toLocaleString()}</h4>
 
 
                         <a href="product-details.html?id=${item.id}">
@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.createElement("button");
 
     backToTop.className = "sutrika-back-to-top";
-    backToTop.innerHTML = "↑";
+    backToTop.innerHTML = "?";
 
     backToTop.setAttribute("aria-label", "Back to top");
     backToTop.setAttribute("title", "Back to top");
