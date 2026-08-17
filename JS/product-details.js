@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.createElement("button");
 
     backToTop.className = "sutrika-back-to-top";
-    backToTop.innerHTML = "?";
+    backToTop.innerHTML = "\u2191";
 
     backToTop.setAttribute("aria-label", "Back to top");
     backToTop.setAttribute("title", "Back to top");
