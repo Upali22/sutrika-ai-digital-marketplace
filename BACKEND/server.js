@@ -38,7 +38,6 @@ app.use("/api/cart", cartRoutes);
 console.log("✅ Mounting Order Routes");
 app.use("/api/order", orderRoutes);
 
-app.use("/api/order", orderRoutes);
 app.use("/api/product", productRoutes);
 
 app.use("/api/guide", guideRoutes);
