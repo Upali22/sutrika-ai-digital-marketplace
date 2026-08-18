@@ -4,8 +4,6 @@ const cors = require("cors");
 require("dotenv").config();
 
 const db = require("./config/db");
-
-const path = require("path");
 console.log("Loading Route File:", path.resolve(__dirname, "routes", "order.js"));
 
 const authRoutes = require("./routes/auth");
